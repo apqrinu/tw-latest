@@ -613,6 +613,37 @@
                     "icon": "sicon-format-fill",
                     "value": "#004956",
                     "required": false
+                },
+                {
+                    "id": "banner_time_s",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "هل تود ظهور عد تنازلي ؟",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "banner_time",
+                    "type": "string",
+                    "format": "datetime",
+                    "inputType": "datetime-local",
+                    "label": "العدد التنازلي",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-calendar-time",
+                    "value": "2028-10-08T15:23",
+                    "required": false,
+                    "conditions": [
+                        {
+                            "id": "banner_time_s",
+                            "operation": "=",
+                            "value": true
+                        }
+                    ]
                 }
             ]
         }
