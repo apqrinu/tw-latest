@@ -616,256 +616,720 @@
         }
       ]
     },
-     {
-            "key": "8e163317-3bd8-468a-a163-654c524d8eef",
-            "title": 
-                 " نبذة عنا - وعد",
-           
-            "icon": "sicon-store",
-            "name": "about-us",
-            "fields": [
-                {
-                    "id": "section_preview_image",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/mrRRS5SB/f729037a-534f-4ee4-ab7c-ee773e71de25.webp'></div>",
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "component_settings_header",
-                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
-                },
-                {
-                    "id": "notmrb",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إزالة المسافة السفلية للمكون",
-                    "description": "فعّل الخيار إذا تبي تلغي الفراغ اللي تحت هذا المكون مباشرة، عشان يجي ملاصق للمكون اللي بعده بدون أي مسافة.",
-                    "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
-                    "required": false
-                },
-                {
-                    "id": "has_container",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "حط المكون داخل إطار (Container)",
-                    "description": "فعّل هذا الخيار إذا تبي تحدد عرض المكون وتخليه بمنتصف الصفحة بشكل مرتب، بدل ما يتمدد على كامل الشاشة.",
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "side-settings",
-                    "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
-                },
-                {
-                    "id": "banner_image",
-                    "type": "string",
-                    "format": "image",
-                    "label": "صورة البانر (الخلفية)",
-                    "description": "ارفع صورة تظهر كخلفية للبانر. يفضّل تكون بجودة عالية وبمقاس 16:9 عشان تطلع بشكل احترافي.",
-                    "labelHTML": null,
-                    "placeholder": "مثال: https://example.com/banner-image.jpg",
-                    "icon": "sicon-image",
-                    "value": "https://cdn.files.salla.network/homepage/1553595151/76ea7a16-fe8c-41fe-890b-7546dae8e1e1.webp",
-                    "required": false
-                },
-                {
-                    "id": "img_overlay",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إضافة طبقة داكنة فوق الصورة",
-                    "description": "فعّل الخيار إذا تبي تضيف طبقة شفافة (غامقة) فوق الصورة عشان النص يكون أوضح وأسهل في القراءة.",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "img_overlay_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون الطبقة الشفافة",
-                    "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#323839",
-                    "required": false,
-                    "conditions": [
-                        {
-                            "id": "img_overlay",
-                            "operation": "=",
-                            "value": true
-                        }
-                    ]
-                },
-                {
-                    "id": "img_overlay_opacity",
-                    "type": "number",
-                    "format": "slider",
-                    "inputType": "range",
-                    "label": "شفافية الطبقة",
-                    "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
-                    "labelHTML": null,
-                    "icon": "sicon-pin",
-                    "value": 50,
-                    "required": false,
-                    "step": "1",
-                    "minimum": "0",
-                    "maximum": "100",
-                    "conditions": [
-                        {
-                            "id": "img_overlay",
-                            "operation": "=",
-                            "value": true
-                        }
-                    ]
-                },
-                {
-                    "id": "banner_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "عنوان البانر",
-                    "description": "اكتب العنوان الرئيسي اللي بيظهر داخل البانر. حاول يكون قصير وجذاب ويوضح الفكرة بسرعة  يكون لون النص هو اللون الاساسي للموقع.",
-                    "labelHTML": null,
-                    "placeholder": "مثال: عروض خاصة لفترة محدودة ",
-                    "icon": "sicon-format-text-alt",
-                    "value": "رحلتك للجمال تبدأ معنا",
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "25"
-                },
-                {
-                    "id": "banner_description",
-                    "type": "string",
-                    "format": "text",
-                    "label": "وصف البانر",
-                    "description": "اكتب وصف بسيط يوضح تفاصيل العرض أو المحتوى تحت العنوان مباشرة يكون لون النص هو اللون الاساسي للموقع ",
-                    "labelHTML": null,
-                    "placeholder": "مثال: خصومات تصل إلى 50% على منتجات مختارة",
-                    "icon": "sicon-format-text-alt",
-                    "value": "نحن متجر متخصص في العناية بالبشرة والمكياج، نوفر منتجات مختارة بعناية تناسب جميع أنواع البشرة. هدفنا نساعدك تبرزين جمالك الطبيعي بثقة من خلال جودة عالية وتجربة تسوق سهلة ومريحة.",
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "200"
-                },
-                {
-                    "id": "banner_btn_text",
-                    "type": "string",
-                    "format": "text",
-                    "label": "نص زر البانر",
-                    "description": "اكتب النص اللي يظهر داخل الزر، ويفضّل يكون واضح ويشجع المستخدم يضغط.",
-                    "labelHTML": null,
-                    "placeholder": "مثال: تسوق الآن",
-                    "icon": "sicon-format-text-alt",
-                    "value": "تصفح الآن",
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "20"
-                },
-                {
-                    "id": "banner_btn_text_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون نص الزر",
-                    "description": "حدد لون الكلام اللي داخل الزر بحيث يكون واضح ومناسب مع الخلفية.",
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#000000",
-                    "required": false
-                },
-                {
-                    "id": "banner_btn_bg_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون خلفية الزر",
-                    "description": "اختر لون خلفية الزر بحيث يكون جذاب ويبرز للمستخدم.",
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#ffffff",
-                    "required": false
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-link",
-                    "label": "رابط الزر",
-                    "id": "url",
-                    "value": [],
-                    "description": "حدد الصفحة اللي يروح لها المستخدم لما يضغط على الزر. إذا ما اخترت شيء، راح يستخدم الرابط الافتراضي.",
-                    "required": false,
-                    "format": "variable-list",
-                    "searchable": true,
-                    "source": "custom",
-                    "sources": [
-                        {
-                            "label": "منتج",
-                            "key": "products",
-                            "value": "products"
-                        },
-                        {
-                            "label": "تصنيف",
-                            "key": "categories",
-                            "value": "categories"
-                        },
-                        {
-                            "label": "ماركة تجارية",
-                            "key": "brands",
-                            "value": "brands"
-                        },
-                        {
-                            "label": "صفحة تعريفية",
-                            "key": "pages",
-                            "value": "pages"
-                        },
-                        {
-                            "label": "مقالة",
-                            "key": "blog_articles",
-                            "value": "blog_articles"
-                        },
-                        {
-                            "label": "تصنيف ضمن المدونة",
-                            "key": "blog_categories",
-                            "value": "blog_categories"
-                        },
-                        {
-                            "label": "التخفيضات",
-                            "key": "offers_link",
-                            "value": "offers_link"
-                        },
-                        {
-                            "label": "الماركات التجارية",
-                            "key": "brands_link",
-                            "value": "brands_link"
-                        },
-                        {
-                            "label": "المدونة",
-                            "key": "blog_link",
-                            "value": "blog_link"
-                        },
-                        {
-                            "label": "رابط خارجي",
-                            "key": "custom",
-                            "value": "custom"
-                        }
-                    ]
-                }
-            ]
+    {
+      "key": "8e163317-3bd8-468a-a163-654c524d8eef",
+      "title": " نبذة عنا ",
+      "icon": "sicon-store",
+      "name": "about-us",
+      "fields": [
+        {
+          "id": "section_preview_image",
+          "type": "static",
+          "format": "description",
+          "label": null,
+          "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/mrRRS5SB/f729037a-534f-4ee4-ab7c-ee773e71de25.webp'></div>",
+          "variant": "h1",
+          "icon": "sicon-format-size"
+        },
+        {
+          "type": "static",
+          "format": "description",
+          "id": "component_settings_header",
+          "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
+        },
+        {
+          "id": "notmrb",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إزالة المسافة السفلية للمكون",
+          "description": "فعّل الخيار إذا تبي تلغي الفراغ اللي تحت هذا المكون مباشرة، عشان يجي ملاصق للمكون اللي بعده بدون أي مسافة.",
+          "icon": "sicon-toggle-off",
+          "value": false,
+          "selected": false,
+          "required": false
+        },
+        {
+          "id": "has_container",
+          "type": "boolean",
+          "format": "switch",
+          "label": "حط المكون داخل إطار (Container)",
+          "description": "فعّل هذا الخيار إذا تبي تحدد عرض المكون وتخليه بمنتصف الصفحة بشكل مرتب، بدل ما يتمدد على كامل الشاشة.",
+          "icon": "sicon-toggle-off",
+          "value": true,
+          "selected": true,
+          "required": false
+        },
+        {
+          "type": "static",
+          "format": "description",
+          "id": "side-settings",
+          "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
+        },
+        {
+          "id": "banner_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة البانر (الخلفية)",
+          "description": "ارفع صورة تظهر كخلفية للبانر. يفضّل تكون بجودة عالية وبمقاس 16:9 عشان تطلع بشكل احترافي.",
+          "labelHTML": null,
+          "placeholder": "مثال: https://example.com/banner-image.jpg",
+          "icon": "sicon-image",
+          "value": "https://cdn.files.salla.network/homepage/1553595151/76ea7a16-fe8c-41fe-890b-7546dae8e1e1.webp",
+          "required": false
+        },
+        {
+          "id": "img_overlay",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إضافة طبقة داكنة فوق الصورة",
+          "description": "فعّل الخيار إذا تبي تضيف طبقة شفافة (غامقة) فوق الصورة عشان النص يكون أوضح وأسهل في القراءة.",
+          "labelHTML": null,
+          "icon": "sicon-toggle-off",
+          "value": true,
+          "selected": true,
+          "required": false
+        },
+        {
+          "id": "img_overlay_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون الطبقة الشفافة",
+          "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#323839",
+          "required": false,
+          "conditions": [
+            {
+              "id": "img_overlay",
+              "operation": "=",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "img_overlay_opacity",
+          "type": "number",
+          "format": "slider",
+          "inputType": "range",
+          "label": "شفافية الطبقة",
+          "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
+          "labelHTML": null,
+          "icon": "sicon-pin",
+          "value": 50,
+          "required": false,
+          "step": "1",
+          "minimum": "0",
+          "maximum": "100",
+          "conditions": [
+            {
+              "id": "img_overlay",
+              "operation": "=",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "banner_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان البانر",
+          "description": "اكتب العنوان الرئيسي اللي بيظهر داخل البانر. حاول يكون قصير وجذاب ويوضح الفكرة بسرعة  يكون لون النص هو اللون الاساسي للموقع.",
+          "labelHTML": null,
+          "placeholder": "مثال: عروض خاصة لفترة محدودة ",
+          "icon": "sicon-format-text-alt",
+          "value": "رحلتك للجمال تبدأ معنا",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "25"
+        },
+        {
+          "id": "banner_description",
+          "type": "string",
+          "format": "text",
+          "label": "وصف البانر",
+          "description": "اكتب وصف بسيط يوضح تفاصيل العرض أو المحتوى تحت العنوان مباشرة يكون لون النص هو اللون الاساسي للموقع ",
+          "labelHTML": null,
+          "placeholder": "مثال: خصومات تصل إلى 50% على منتجات مختارة",
+          "icon": "sicon-format-text-alt",
+          "value": "نحن متجر متخصص في العناية بالبشرة والمكياج، نوفر منتجات مختارة بعناية تناسب جميع أنواع البشرة. هدفنا نساعدك تبرزين جمالك الطبيعي بثقة من خلال جودة عالية وتجربة تسوق سهلة ومريحة.",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "200"
+        },
+        {
+          "id": "banner_btn_text",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر البانر",
+          "description": "اكتب النص اللي يظهر داخل الزر، ويفضّل يكون واضح ويشجع المستخدم يضغط.",
+          "labelHTML": null,
+          "placeholder": "مثال: تسوق الآن",
+          "icon": "sicon-format-text-alt",
+          "value": "تصفح الآن",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "20"
+        },
+        {
+          "id": "banner_btn_text_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون نص الزر",
+          "description": "حدد لون الكلام اللي داخل الزر بحيث يكون واضح ومناسب مع الخلفية.",
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#000000",
+          "required": false
+        },
+        {
+          "id": "banner_btn_bg_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون خلفية الزر",
+          "description": "اختر لون خلفية الزر بحيث يكون جذاب ويبرز للمستخدم.",
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#ffffff",
+          "required": false
+        },
+        {
+          "type": "items",
+          "icon": "sicon-link",
+          "label": "رابط الزر",
+          "id": "url",
+          "value": [],
+          "description": "حدد الصفحة اللي يروح لها المستخدم لما يضغط على الزر. إذا ما اخترت شيء، راح يستخدم الرابط الافتراضي.",
+          "required": false,
+          "format": "variable-list",
+          "searchable": true,
+          "source": "custom",
+          "sources": [
+            {
+              "label": "منتج",
+              "key": "products",
+              "value": "products"
+            },
+            {
+              "label": "تصنيف",
+              "key": "categories",
+              "value": "categories"
+            },
+            {
+              "label": "ماركة تجارية",
+              "key": "brands",
+              "value": "brands"
+            },
+            {
+              "label": "صفحة تعريفية",
+              "key": "pages",
+              "value": "pages"
+            },
+            {
+              "label": "مقالة",
+              "key": "blog_articles",
+              "value": "blog_articles"
+            },
+            {
+              "label": "تصنيف ضمن المدونة",
+              "key": "blog_categories",
+              "value": "blog_categories"
+            },
+            {
+              "label": "التخفيضات",
+              "key": "offers_link",
+              "value": "offers_link"
+            },
+            {
+              "label": "الماركات التجارية",
+              "key": "brands_link",
+              "value": "brands_link"
+            },
+            {
+              "label": "المدونة",
+              "key": "blog_link",
+              "value": "blog_link"
+            },
+            {
+              "label": "رابط خارجي",
+              "key": "custom",
+              "value": "custom"
+            }
+          ]
         }
+      ]
+    },
+    {
+      "key": "1f152413-6ca3-45c6-9664-e538a6f1912c",
+      "title": 
+       "بنر التصنيفات",
+     
+      "icon": "sicon-grid",
+      "name": "categories-banner",
+      "fields": [
+        {
+          "id": "section_preview_image",
+          "type": "static",
+          "format": "description",
+          "label": null,
+          "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/Kxx92d57/0a462cff-5bb4-4f3d-b418-0af1129c1df5.webp'></div>",
+          "variant": "h1",
+          "icon": "sicon-format-size"
+        },
+        {
+          "type": "static",
+          "format": "description",
+          "id": "component_settings_header",
+          "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
+        },
+        {
+          "id": "notmrb",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إزالة المسافة السفلية للمكون",
+          "description": "فعّل هذا الخيار إذا تبي تشيل الفراغ اللي تحت المكون مباشرةً — مفيد لما تبي المكونات تكون ملتصقة ببعض.",
+          "icon": "sicon-toggle-off",
+          "value": false,
+          "selected": false,
+          "required": false
+        },
+        {
+          "id": "has_container",
+          "type": "boolean",
+          "format": "switch",
+          "label": "تغليف المكون داخل حاوية (Container)",
+          "description": "فعّل هذا الخيار عشان المكون يكون محاط بحاوية تحدد عرضه وتمنعه من الامتداد لأطراف الشاشة — يعطي شكل أنيق ومنظم.",
+          "icon": "sicon-toggle-off",
+          "value": true,
+          "selected": true,
+          "required": false
+        },
+        {
+          "type": "static",
+          "format": "description",
+          "id": "side-settings",
+          "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
+        },
+        {
+          "id": "banner_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة البانر",
+          "description": "اضف الصورة الي تبيها تظهر كخلفية للبطاقة تفضل ان تكون الصورة بدون خلفية",
+          "labelHTML": null,
+          "placeholder": "https://cdn.files.salla.network/homepage/1553595151/684ce35d-cf02-4519-88f4-4d811450c58a.webp",
+          "icon": "sicon-image",
+          "value": "https://cdn.files.salla.network/homepage/1553595151/684ce35d-cf02-4519-88f4-4d811450c58a.webp",
+          "required": false
+        },
+        {
+          "id": "img_overlay",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إضافة طبقة داكنة فوق الصورة",
+          "description": "فعّل الخيار إذا تبي تضيف طبقة شفافة (غامقة) فوق الصورة عشان النص يكون أوضح وأسهل في القراءة.",
+          "labelHTML": null,
+          "icon": "sicon-toggle-off",
+          "value": true,
+          "selected": true,
+          "required": false
+        },
+        {
+          "id": "img_overlay_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون الطبقة الشفافة",
+          "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#323839",
+          "required": false,
+          "conditions": [
+            {
+              "id": "img_overlay",
+              "operation": "=",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "img_overlay_opacity",
+          "type": "number",
+          "format": "slider",
+          "inputType": "range",
+          "label": "شفافية الطبقة",
+          "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
+          "labelHTML": null,
+          "icon": "sicon-pin",
+          "value": 50,
+          "required": false,
+          "step": "1",
+          "minimum": "0",
+          "maximum": "100",
+          "conditions": [
+            {
+              "id": "img_overlay",
+              "operation": "=",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "banner_desc",
+          "type": "string",
+          "format": "text",
+          "label": "وصف البانر",
+          "description": "ادخل الوصف الي تريد يظهر داخل البانر فوق العنوان الرئيسي",
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": "العد التنازلي الان",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "20"
+        },
+        {
+          "id": "banner_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان البانر",
+          "description": "ادخل العنوان الي تريد يظهر داخل البانر",
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": "الحق العروض قبل ما تنتهي",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "30"
+        },
+        {
+          "id": "banner_title_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون عنوان البانر و الوصف ويكون الوصف بدرجة افتح",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#ffffff",
+          "required": false
+        },
+        {
+          "id": "banner_btn_title",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر الي داخل البانر",
+          "description": "ادخل نص الزر الي تريد يظهر داخل البانر",
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": "اشتري الان",
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "20"
+        },
+        {
+          "id": "banner_btn_title_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون خط الزر",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#000000",
+          "required": false
+        },
+        {
+          "id": "banner_btn_bg_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون خلفية الزر ",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#ffffff",
+          "required": false
+        },
+        {
+          "type": "items",
+          "icon": "sicon-link",
+          "label": "رابط عرض الكل",
+          "id": "url",
+          "value": [],
+          "description": "اختر المكان الي يربط له لما العميل يضغط على الز. إذا تركت الحقل فارغ، الرابط راح يكون افتراضي ويروح لصفحة التصنيف نفسها.",
+          "required": false,
+          "format": "variable-list",
+          "searchable": true,
+          "source": "custom",
+          "sources": [
+            {
+              "label": "منتج",
+              "key": "products",
+              "value": "products"
+            },
+            {
+              "label": "تصنيف",
+              "key": "categories",
+              "value": "categories"
+            },
+            {
+              "label": "ماركة تجارية",
+              "key": "brands",
+              "value": "brands"
+            },
+            {
+              "label": "صفحة تعريفية",
+              "key": "pages",
+              "value": "pages"
+            },
+            {
+              "label": "مقالة",
+              "key": "blog_articles",
+              "value": "blog_articles"
+            },
+            {
+              "label": "تصنيف ضمن المدونة",
+              "key": "blog_categories",
+              "value": "blog_categories"
+            },
+            {
+              "label": "التخفيضات",
+              "key": "offers_link",
+              "value": "offers_link"
+            },
+            {
+              "label": "الماركات التجارية",
+              "key": "brands_link",
+              "value": "brands_link"
+            },
+            {
+              "label": "المدونة",
+              "key": "blog_link",
+              "value": "blog_link"
+            },
+            {
+              "label": "رابط خارجي",
+              "key": "custom",
+              "value": "custom"
+            }
+          ]
+        },
+        {
+          "id": "hero_timer",
+          "type": "string",
+          "format": "datetime",
+          "inputType": "datetime-local",
+          "label": "عدّ تنازلي ( تايمر )",
+          "description": "فعّل التايمر لو عندك عرض لفترة محدودة، عشان تحفّز العميل يشتري بسرعة",
+          "labelHTML": null,
+          "icon": "sicon-calendar-time",
+          "value": "06-06-2026,03:23:00 pm",
+          "required": false
+        },
+        {
+          "id": "banner_categories",
+          "type": "collection",
+          "format": "collection",
+          "label": "البنارات",
+          "description": "اضف البنارات الي تبيها تظهر في الصفحة",
+          "labelHTML": null,
+          "item_label": null,
+          "icon": "sicon-list-add",
+          "fields": [
+            {
+              "id": "banner_categories.image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البانر",
+              "description": "اضف الصورة الي تبيها تظهر كخلفية للبطاقة تفضل ان تكون بدون خلفية",
+              "labelHTML": null,
+              "placeholder": "e.g. https://hostname.com/image.png",
+              "icon": "sicon-image",
+              "value": null,
+              "required": false
+            },
+            {
+              "id": "banner_categories.banner_title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان البانر",
+              "description": "ادخل العنوان الي تريد يظهر داخل البانر",
+              "labelHTML": null,
+              "placeholder": "Placeholder text ..",
+              "icon": "sicon-format-text-alt",
+              "value": null,
+              "multilanguage": true,
+              "required": false,
+              "minLength": "0",
+              "maxLength": ""
+            },
+            {
+              "id": "banner_categories.banner_title_color",
+              "type": "string",
+              "format": "color",
+              "inputType": "color",
+              "label": "لون عنوان البانر",
+              "description": null,
+              "labelHTML": null,
+              "icon": "sicon-format-fill",
+              "value": "#ffffff",
+              "required": false
+            },
+            {
+              "type": "items",
+              "icon": "sicon-link",
+              "label": "رابط عرض الكل",
+              "id": "banner_categories.url",
+              "value": [],
+              "description": "اختر المكان الي يربط له لما العميل يضغط على الز. إذا تركت الحقل فارغ، الرابط راح يكون افتراضي ويروح لصفحة التصنيف نفسها.",
+              "required": false,
+              "format": "variable-list",
+              "searchable": true,
+              "source": "custom",
+              "sources": [
+                {
+                  "label": "منتج",
+                  "key": "products",
+                  "value": "products"
+                },
+                {
+                  "label": "تصنيف",
+                  "key": "categories",
+                  "value": "categories"
+                },
+                {
+                  "label": "ماركة تجارية",
+                  "key": "brands",
+                  "value": "brands"
+                },
+                {
+                  "label": "صفحة تعريفية",
+                  "key": "pages",
+                  "value": "pages"
+                },
+                {
+                  "label": "مقالة",
+                  "key": "blog_articles",
+                  "value": "blog_articles"
+                },
+                {
+                  "label": "تصنيف ضمن المدونة",
+                  "key": "blog_categories",
+                  "value": "blog_categories"
+                },
+                {
+                  "label": "التخفيضات",
+                  "key": "offers_link",
+                  "value": "offers_link"
+                },
+                {
+                  "label": "الماركات التجارية",
+                  "key": "brands_link",
+                  "value": "brands_link"
+                },
+                {
+                  "label": "المدونة",
+                  "key": "blog_link",
+                  "value": "blog_link"
+                },
+                {
+                  "label": "رابط خارجي",
+                  "key": "custom",
+                  "value": "custom"
+                }
+              ]
+            }
+          ],
+          "value": [
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1860023918",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/0afb6074-3c30-497c-88bd-262db6ca1d0a.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "كريم الأساس"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/485529453",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/c052e7b8-6a31-4865-9793-54e70987fb28.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "أحمر الشفاه"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/f55ab822-b72f-46ed-9e2e-5828141ccc9a.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1408967290",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/2c941ca9-90b3-4ca7-b754-a73bf8b2be37.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "العطور"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/951768431",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/90c2224a-e775-4e05-a47a-97d1c59819d3.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الماسكارا"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/176682088",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/03d81a97-c1c0-412d-b595-a71357efdd8b.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "ظلال العيون"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/49eda5fe-6201-4f18-974f-6046524baebf.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/c6f0242f-5be1-4200-bf2d-13d565a58eed.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/bc04c7ce-2886-40c0-a21e-2999c0eff918.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/7f68b16d-53c9-4c0b-b25a-8c5fcb35840f.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/8b2ed8ba-9ea2-4f4a-bf19-121e24ae5754.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            },
+            {
+              "banner_categories.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+              "banner_categories.image": "https://cdn.files.salla.network/homepage/1553595151/28929d46-084c-4c7a-890f-af65a97bff2c.webp",
+              "banner_categories.banner_title_color": "#000000",
+              "banner_categories.banner_title": "الكونسيلر"
+            }
+          ],
+          "minLength": 1,
+          "maxLength": "12"
+        }
+      ]
+    }
   ]
 }
