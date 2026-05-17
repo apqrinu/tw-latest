@@ -28,35 +28,8 @@ interface ComponentConfig {
 }
 
 export class VisualCategories extends LitElement {
-  @property({
-    type: Object,
-    converter: {
-      fromAttribute: (value: string | null) => {
-        if (!value) return undefined;
-
-        if (typeof value === "object") return value;
-
-        try {
-          return JSON.parse(value);
-        } catch {
-          return undefined;
-        }
-      },
-    },
-  })
+  @property({ type: Object })
   config?: ComponentConfig;
-
-  connectedCallback() {
-    super.connectedCallback();
-
-    if (typeof this.config === "string") {
-      try {
-        this.config = JSON.parse(this.config as any);
-      } catch (e) {
-        console.error("[category-grid] Failed to parse config:", e);
-      }
-    }
-  }
 
   static styles = css`
     :host {
