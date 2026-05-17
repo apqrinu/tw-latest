@@ -931,7 +931,7 @@
                     "item_label": "تصنيف",
                     "icon": "sicon-list-add",
                     "minLength": 1,
-                    "maxLength": 20,
+                    "maxLength": 5,
                     "fields": [
                         {
                             "id": "items.image",
