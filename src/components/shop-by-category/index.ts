@@ -500,7 +500,7 @@ export class ShopByCategory extends LitElement {
       console.log("Rendering banner item:", item);
       console.log("Rendering banner :", cfg);
     const alignH =
-      item.B_banner_align_h?.[0].value ;
+      item.B_banner_align_h?.[0].value  ;
     const alignV =
       item.B_banner_align_v?.[0].value;
 
@@ -596,8 +596,9 @@ export class ShopByCategory extends LitElement {
           ${item.banner_main_title
             ? html`
                 <h2
-                  class="banner-title"
+                  class="banner-title "
                   style="
+                  text-align: ${alignH === "center" ? "center" : "left"};
                     color:
                     ${item.banner_main_title_color};
                   "

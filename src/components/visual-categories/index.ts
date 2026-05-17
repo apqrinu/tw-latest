@@ -13,7 +13,7 @@ interface CategoryItem {
   img_overlay_color?: string;
   img_overlay_opacity?: number;
 
-  text_position?: string[];
+  text_position?: { value: string }[];
 
   [key: string]: any;
 }
@@ -162,7 +162,8 @@ export class VisualCategories extends LitElement {
           <div class="grid">
 
             ${items.map((item) => {
-              const position = item?.text_position?.[0] ?? "end";
+              console.log(item);
+              const position = item?.text_position?.[0]?.value ?? "end";
 
               const align = this._align(position);
               const textAlign = this._textAlign(position);
