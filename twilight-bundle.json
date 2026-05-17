@@ -791,6 +791,530 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "35f66f0d-80d4-475b-89d8-87cc4338175b",
+            "title": "تسوق حسب الفئة - البركة",
+            "icon": "sicon-layout-grid-rearrange",
+            "name": "shop-by-category",
+            "image": "https://i.ibb.co/vpkWSS0/6.webp",
+            "fields": [
+                {
+                    "id": "wide_banner_static_title",
+                    "type": "static",
+                    "format": "description",
+                    "label": null,
+                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/ns5kr1f3/Screenshot-2026-05-06-113826.webp'></div>",
+                    "variant": "h1",
+                    "icon": "sicon-format-size"
+                },
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "component_settings_label",
+                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#16a34a 0%,#22c55e 100%);color:#ffffff;padding:12px 50px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:999px;border:1px solid #16a34a;box-shadow:0 6px 16px rgba(34,197,94,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.6rem!important;border-radius:6px;font-size:17px;font-weight:700;align-items:center;background:#f0fdf4}.label-description{font-size:10px!important;color:#166534}.form--elements-wrapper{padding:10px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:6px 10px 7px 12px;border-radius:6px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #22c55e!important;padding:10px!important;border-radius:8px}.color-wrapper{border-color:#22c55e!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #22c55e;border-radius:6px;padding:8px!important;margin-top:8px!important;background:#f0fdf4}</style>"
+                },
+                {
+                    "id": "notmrb",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إزالة المسافة السفلية",
+                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "has_container",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إضافة العنصر داخل حاوية (Container)",
+                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "B_banner_overlay_sw",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "عرض طبقة شفافة اعلي الصورة",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "B_banner_overlay_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون الطبقة الشفافة",
+                    "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#323839",
+                    "required": false,
+                    "conditions": [
+                        {
+                            "id": "B_banner_overlay_sw",
+                            "operation": "=",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "id": "B_banner_color_opacity",
+                    "type": "number",
+                    "format": "slider",
+                    "inputType": "range",
+                    "label": "شفافية الطبقة",
+                    "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
+                    "labelHTML": null,
+                    "icon": "sicon-pin",
+                    "value": 35,
+                    "required": false,
+                    "step": "1",
+                    "minimum": "0",
+                    "maximum": "100",
+                    "conditions": [
+                        {
+                            "id": "B_banner_overlay_sw",
+                            "operation": "=",
+                            "value": true
+                        }
+                    ]
+                },
+                {
+                    "id": "has_promotion_txt",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إضافة نص ترويجي",
+                    "description": "تفعيل هذا الخيار لإضافة نص ترويجي اعلي العنوان الرئيسي للبانر.",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "B_banner_sec_collection",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "عناصر البانر",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "B_banner_sec_collection.banner_image_switcher",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "تريد اضافة فيديو بدلا من الصورة؟",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-toggle-off",
+                            "value": false,
+                            "selected": false,
+                            "required": false
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة البانر",
+                            "description": "حط صورة مناسبة للقسم عشان تطلع مرتبة وواضحة",
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-image",
+                            "value": "https://cdn.files.salla.network/homepage/1244157962/6b68cf9e-df93-416c-b899-1ac79cf1598f.webp",
+                            "required": true,
+                            "conditions": [
+                                {
+                                    "collection_id": "B_banner_sec_collection",
+                                    "value_index": ".",
+                                    "id": "B_banner_sec_collection.banner_image_switcher",
+                                    "operation": "!=",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_video",
+                            "type": "string",
+                            "format": "url",
+                            "inputType": "url",
+                            "label": "ادخل لينك الفيديو يظهر في الخلفية",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "https://top4top.com/1174744771?fl=pl&fe=sh",
+                            "icon": "sicon-link",
+                            "value": "https://i.top4top.io/m_37826j48y1.mp4",
+                            "required": false,
+                            "minLength": "3",
+                            "maxLength": "200",
+                            "conditions": [
+                                {
+                                    "collection_id": "B_banner_sec_collection",
+                                    "value_index": ".",
+                                    "id": "B_banner_sec_collection.banner_image_switcher",
+                                    "operation": "=",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "B_banner_sec_collection.B_banner_align_h",
+                            "type": "items",
+                            "format": "dropdown-list",
+                            "label": "محاذاة أفقية",
+                            "description": "حدد وين تبي المحتوى (النص والزر) يكون بالعرض: يمين، وسط، أو يسار",
+                            "labelHTML": null,
+                            "icon": "sicon-keyboard_arrow_down",
+                            "selected": [
+                                {
+                                    "label": "في المنتصف",
+                                    "value": "center",
+                                    "key": "80f00d83-23f5-4067-b6e4-fdb1cfca042e"
+                                }
+                            ],
+                            "options": [
+                                {
+                                    "label": "في المنتصف",
+                                    "value": "center",
+                                    "key": "80f00d83-23f5-4067-b6e4-fdb1cfca042e"
+                                },
+                                {
+                                    "label": "في البداية",
+                                    "value": "start",
+                                    "key": "a7717201-5da6-434d-9e4b-650eb7413a05"
+                                },
+                                {
+                                    "label": "في النهاية",
+                                    "value": "end",
+                                    "key": "4f0601fb-16e9-4805-b120-f131bd899454"
+                                }
+                            ],
+                            "source": "Manual",
+                            "multichoice": false,
+                            "searchable": true,
+                            "required": false
+                        },
+                        {
+                            "id": "B_banner_sec_collection.B_banner_align_v",
+                            "type": "items",
+                            "format": "dropdown-list",
+                            "label": "محاذاة عمودية",
+                            "description": "حدد وين تبي المحتوى (النص والزر) يكون بالطول: فوق، وسط، أو تحت",
+                            "labelHTML": null,
+                            "icon": "sicon-keyboard_arrow_down",
+                            "selected": [
+                                {
+                                    "label": "في المنتصف",
+                                    "value": "center",
+                                    "key": "d33b17aa-64c8-4fea-a034-ecb1414b122a"
+                                }
+                            ],
+                            "options": [
+                                {
+                                    "label": "في المنتصف",
+                                    "value": "center",
+                                    "key": "d33b17aa-64c8-4fea-a034-ecb1414b122a"
+                                },
+                                {
+                                    "label": "في الأعلى",
+                                    "value": "start",
+                                    "key": "4ee43f54-b66b-44a9-8313-d58bf22784f8"
+                                },
+                                {
+                                    "label": "في الأسفل",
+                                    "value": "end",
+                                    "key": "eabfbe0f-bed2-4e2c-aafc-48ae636ec771"
+                                }
+                            ],
+                            "source": "Manual",
+                            "multichoice": false,
+                            "searchable": true,
+                            "required": false
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_main_title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان الرئيسي",
+                            "description": "اكتب الكلام اللي تبيه يظهر كعنوان رئيسي وواضح للبانر",
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-format-text-alt",
+                            "value": "أفضــــــــل أضــــــــاحي العـــــــــــيد",
+                            "multilanguage": true,
+                            "required": false,
+                            "minLength": "3",
+                            "maxLength": "60"
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_main_title_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون العنوان الرئيسي",
+                            "description": "اختار اللون اللي يناسب شكل البانر ويخلي العنوان واضح وجذاب",
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_promotion_txt",
+                            "type": "string",
+                            "format": "text",
+                            "label": "النص الترويجي",
+                            "description": "أضف نصًا ترويجيًا قصيرًا يدعم العنوان الرئيسي، يوضح مميزات العرض أو المنتج، ويشجع العميل على اتخاذ قرار الشراء.",
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-format-text-alt",
+                            "value": "30% خصم",
+                            "multilanguage": true,
+                            "required": false,
+                            "minLength": "3",
+                            "maxLength": "25",
+                            "conditions": [
+                                {
+                                    "id": "has_promotion_txt",
+                                    "operation": "=",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_promotion_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون النص الترويجي",
+                            "description": "اختار لون متناسق مع العنوان الرئيسي ويكون سهل القراءة",
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false,
+                            "conditions": [
+                                {
+                                    "id": "has_promotion_txt",
+                                    "operation": "=",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_btn_txt",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر",
+                            "description": "اكتب النص اللي تبي يظهر على زر المجموعة، مثل: شاهد الكل أو تسوق الآن",
+                            "labelHTML": null,
+                            "placeholder": "تسوق الأن",
+                            "icon": "sicon-format-text-alt",
+                            "value": "تسوق الأن",
+                            "multilanguage": true,
+                            "required": false,
+                            "minLength": "3",
+                            "maxLength": "20"
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-link",
+                            "label": "الرابط",
+                            "id": "B_banner_sec_collection.banner_item_link",
+                            "value": [],
+                            "description": "اختار رابط العرض اللي تبي الزائر يروح لها لما يضغط على الزر",
+                            "required": false,
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "تصنيف ضمن المدونة",
+                                    "key": "blog_categories",
+                                    "value": "blog_categories"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_btn_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "اختر لون خلفيه الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#075F14",
+                            "required": false
+                        },
+                        {
+                            "id": "B_banner_sec_collection.banner_btn_txt_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "اختر لون نص الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        }
+                    ],
+                    "value": [
+                        {
+                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/6b68cf9e-df93-416c-b899-1ac79cf1598f.webp",
+                            "B_banner_sec_collection.B_banner_align_h": [
+                                "start"
+                            ],
+                            "B_banner_sec_collection.B_banner_align_v": [
+                                "center"
+                            ],
+                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
+                            "B_banner_sec_collection.banner_image_switcher": false,
+                            "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_main_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_btn_txt": {
+                                "ar": "تسوق الأن",
+                                "en": "Shop Now"
+                            },
+                            "B_banner_sec_collection.banner_main_title": {
+                                "ar": "أفضــــــــل أضــــــــاحي العـــــــــــيد",
+                                "en": "Best Eid Sacrifices"
+                            }
+                        },
+                        {
+                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/8a03cae3-bf82-4a04-9555-cd74b7953c06.webp",
+                            "B_banner_sec_collection.B_banner_align_h": [
+                                "center"
+                            ],
+                            "B_banner_sec_collection.B_banner_align_v": [
+                                "start"
+                            ],
+                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
+                            "B_banner_sec_collection.banner_image_switcher": false,
+                            "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_main_title_color": "#000000",
+                            "B_banner_sec_collection.banner_btn_txt": {
+                                "ar": "تسوق الأن",
+                                "en": "Shop Now"
+                            },
+                            "B_banner_sec_collection.banner_main_title": {
+                                "ar": "لحـــــــــــوم طـــــــــازجة يـــــــوم بيـــــــوم",
+                                "en": "Fresh Meat Daily"
+                            }
+                        },
+                        {
+                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/d4c10c57-c149-4835-9d30-c585d2f78949.webp",
+                            "B_banner_sec_collection.B_banner_align_h": [
+                                "center"
+                            ],
+                            "B_banner_sec_collection.B_banner_align_v": [
+                                "start"
+                            ],
+                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
+                            "B_banner_sec_collection.banner_image_switcher": false,
+                            "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_main_title_color": "#000000",
+                            "B_banner_sec_collection.banner_btn_txt": {
+                                "ar": "تسوق الأن",
+                                "en": "Shop Now"
+                            },
+                            "B_banner_sec_collection.banner_main_title": {
+                                "ar": "مشــــــــاوي بطعــــم لا يُقـــــــــاوم",
+                                "en": "Irresistible Grills"
+                            }
+                        },
+                        {
+                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/531527f2-9baa-4dda-a744-0247b1876f4e.webp",
+                            "B_banner_sec_collection.B_banner_align_h": [
+                                "center"
+                            ],
+                            "B_banner_sec_collection.B_banner_align_v": [
+                                "start"
+                            ],
+                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
+                            "B_banner_sec_collection.banner_image_switcher": false,
+                            "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_main_title_color": "#ffffff",
+                            "B_banner_sec_collection.banner_btn_txt": {
+                                "ar": "تسوق الأن",
+                                "en": "Shop Now"
+                            },
+                            "B_banner_sec_collection.banner_main_title": {
+                                "ar": "عـــــــروض العيــــــد لفتــــــرة محــــــــــدودة",
+                                "en": "Limited-Time Eid Offers"
+                            },
+                            "B_banner_sec_collection.banner_promotion_txt": {
+                                "ar": "خصم 30%",
+                                "en": "30% Off"
+                            }
+                        }
+                    ],
+                    "minLength": 2,
+                    "maxLength": 4
+                }
+            ]
         }
     ]
 }
