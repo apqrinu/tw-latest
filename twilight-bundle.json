@@ -864,6 +864,408 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "541cc423-90c7-4230-8a33-a0342cfde4ee",
+            "image": "https://i.ibb.co/WWfGMWQJ/d1b8a144-35d0-47cf-806e-5c36eced0f6b.webp",
+            "title": "تصنيفات بصرية - وعد",
+            "icon": "sicon-grid",
+            "name": "visual-categories",
+            "fields": [
+                {
+                    "id": "section_preview_image",
+                    "type": "static",
+                    "format": "description",
+                    "label": null,
+                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/WWfGMWQJ/d1b8a144-35d0-47cf-806e-5c36eced0f6b.webp'></div>",
+                    "variant": "h1",
+                    "icon": "sicon-format-size"
+                },
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "component_settings_header",
+                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
+                },
+                {
+                    "id": "main_categories_label",
+                    "type": "static",
+                    "format": "description",
+                    "label": "الأقسام الرئيسية",
+                    "value": null,
+                    "variant": "h1",
+                    "icon": "sicon-format-size"
+                },
+                {
+                    "id": "notmrb",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إزالة المسافة السفلية للمكون",
+                    "description": "فعّل هذا الخيار إذا تبي تشيل الفراغ اللي تحت المكون مباشرةً — مفيد لما تبي المكونات تكون ملتصقة ببعض.",
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "has_container",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تغليف المكون داخل حاوية (Container)",
+                    "description": "فعّل هذا الخيار عشان المكون يكون محاط بحاوية تحدد عرضه وتمنعه من الامتداد لأطراف الشاشة — يعطي شكل أنيق ومنظم.",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "slider_autoplay_enabled",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تشغيل السلايدر تلقائياً؟",
+                    "description": "شغّل هذا الخيار إذا تبي السلايدر يتحرك لوحده بدون ما يضغط المستخدم على أي شيء.",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "slider_loop_enabled",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تشغيل السلايدر بشكل متواصل (لووب)؟",
+                    "description": "شغّل هذا الخيار إذا تبي السلايدر ما يوقف — بعد ما ينتهي يرجع يبدأ من أول.",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "slider_autoplay_delay_ms",
+                    "type": "number",
+                    "format": "slider",
+                    "inputType": "range",
+                    "label": "كم ثانية ينتظر السلايدر قبل ما ينتقل للتصنيف التالي؟",
+                    "description": "حدّد وقت الانتظار بين كل سلايد وثاني. القيمة بالميلي ثانية — مثلاً: 2500 = ثانيتين ونص.",
+                    "labelHTML": null,
+                    "icon": "sicon-pin",
+                    "value": 2500,
+                    "required": false,
+                    "step": "1",
+                    "minimum": "0",
+                    "maximum": "4000"
+                },
+                {
+                    "id": "show_controls",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "اظهار أسهم التحكم",
+                    "description": "عند تفعيل هذا الخيار راح تظهر أسهم التنقل يمين ويسار داخل السلايد .",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "side-settings",
+                    "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "label": "اضف التصنيقات اللي تبيها تظهر",
+                    "item_label": "تصنيف",
+                    "icon": "sicon-list-add",
+                    "minLength": 1,
+                    "maxLength": 20,
+                    "fields": [
+                        {
+                            "id": "items.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة التصنيف",
+                            "description": "يفضل مقاس 800x1000",
+                            "placeholder": "رابط الصورة",
+                            "icon": "sicon-image",
+                            "required": true
+                        },
+                        {
+                            "id": "img_overlay",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "عرض طبقة شفافة اعلي الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-toggle-off",
+                            "value": false,
+                            "selected": false,
+                            "required": false
+                        },
+                        {
+                            "id": "img_overlay_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون الطبقة الشفافة",
+                            "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#323839",
+                            "required": false,
+                            "conditions": [
+                                {
+                                    "id": "img_overlay",
+                                    "operation": "=",
+                                    "collection_id": "items",
+                                    "value": true,
+                                    "value_index": "."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "img_overlay_opacity",
+                            "type": "number",
+                            "format": "slider",
+                            "inputType": "range",
+                            "label": "شفافية الطبقة",
+                            "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
+                            "labelHTML": null,
+                            "icon": "sicon-pin",
+                            "value": 50,
+                            "required": false,
+                            "step": "1",
+                            "minimum": "0",
+                            "maximum": "100",
+                            "conditions": [
+                                {
+                                    "id": "img_overlay",
+                                    "operation": "=",
+                                    "collection_id": "items",
+                                    "value": true,
+                                    "value_index": "."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "items.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "عنوان التصنيفات الرئيسي",
+                            "placeholder": "مثال: إكسسوارات",
+                            "icon": "sicon-format-text",
+                            "required": true,
+                            "multilanguage": true,
+                            "minLength": "0",
+                            "maxLength": "20"
+                        },
+                        {
+                            "id": "items.count",
+                            "type": "number",
+                            "format": "integer",
+                            "label": "عدد المنتجات الي يظهر تحت اسم التصنيف",
+                            "placeholder": "مثال: 12",
+                            "icon": "sicon-box",
+                            "minimum": 0,
+                            "required": false
+                        },
+                        {
+                            "id": "items.text_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون النص",
+                            "description": "اختار لون النص اللي تريده ,لون عدد المنتج يكون نفس لون النص ولكن بدرجة شفافية أعلى عشان يكون واضح",
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "id": "items.text_position",
+                            "type": "items",
+                            "format": "dropdown-list",
+                            "label": "مكان عرض النص على الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-list",
+                            "selected": [
+                                {
+                                    "label": "علي اليسار",
+                                    "value": "end",
+                                    "key": "f4adec13-6e4c-654b-b978-b2807935ce44"
+                                }
+                            ],
+                            "options": [
+                                {
+                                    "label": "علي اليمين",
+                                    "value": "start",
+                                    "key": "e9c8ea8f-c5c6-234e-935-3bce269afd32"
+                                },
+                                {
+                                    "label": "في الوسط",
+                                    "value": "center",
+                                    "key": "c1b2d3e4-f5a6-b7c8-d9e0-f1a2b3c4d5e6"
+                                },
+                                {
+                                    "label": "علي اليسار",
+                                    "value": "end",
+                                    "key": "f4adec13-6e4c-654b-b978-b2807935ce44"
+                                }
+                            ],
+                            "source": "Manual",
+                            "required": true
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-link",
+                            "label": "رابط عرض الكل",
+                            "id": "items.url",
+                            "value": [],
+                            "description": "اختر المكان الي يربط له لما العميل يضغط على اسم التصنيف أو صورته. إذا تركت الحقل فارغ، الرابط راح يكون افتراضي ويروح لصفحة التصنيف نفسها.",
+                            "required": false,
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "تصنيف ضمن المدونة",
+                                    "key": "blog_categories",
+                                    "value": "blog_categories"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        }
+                    ],
+                    "value": [
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/209590866",
+                            "items.count": 30,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/586df1d5-566f-447d-8964-079f93808d52.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#323839",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "العناية بالجسم"
+                        },
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/485529453",
+                            "items.count": 15,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/b79ca2f1-4e73-419d-9a36-bf0a3580138d.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#323839",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "أحمر الشفاه"
+                        },
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1684804457",
+                            "items.count": 33,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/15e8218b-37d6-4dcb-ada3-21572a544f56.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#323839",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "الكونسيلر"
+                        },
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1860023918",
+                            "items.count": 20,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/9b4631f7-540a-4647-b9d3-9a6efc6cc735.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#323839",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "كريم الأساس"
+                        },
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1408967290",
+                            "items.count": 50,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/8ef96be6-8c40-409d-8649-599fb9504978.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#4ccfe6",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "عطور"
+                        },
+                        {
+                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/176682088",
+                            "items.count": 12,
+                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/acc7f9c4-5af0-470d-8de1-f9b8e2932d4b.webp",
+                            "items.text_color": "#333333",
+                            "items.img_overlay": false,
+                            "items.text_position": [
+                                "end"
+                            ],
+                            "items.img_overlay_color": "#323839",
+                            "items.img_overlay_opacity": 50,
+                            "items.title": "ظلال العيون"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
