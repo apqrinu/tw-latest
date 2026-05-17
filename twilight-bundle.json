@@ -1135,19 +1135,6 @@
                     ],
                     "value": [
                         {
-                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/209590866",
-                            "items.count": 30,
-                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/586df1d5-566f-447d-8964-079f93808d52.webp",
-                            "items.text_color": "#333333",
-                            "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
-                            "items.title": "العناية بالجسم"
-                        },
-                        {
                             "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/485529453",
                             "items.count": 15,
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/b79ca2f1-4e73-419d-9a36-bf0a3580138d.webp",
