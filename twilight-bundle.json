@@ -425,9 +425,8 @@
         {
             "key": "4d51cd9e-cca7-415c-a7c2-1cc33266fbf5",
             "title": "بانر تخفيضات",
-            "icon": "sicon-store",
             "name": "discount-banner",
-            "image": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
+            "icon": "sicon-store",
             "fields": [
                 {
                     "id": "notmrb",
@@ -456,20 +455,25 @@
                     "type": "items",
                     "format": "dropdown-list",
                     "label": "مكان ظهور المحتوي افقيا",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-keyboard_arrow_down",
                     "selected": [],
                     "options": [
                         {
                             "label": "علي اليمين",
-                            "value": "right"
+                            "value": "right",
+                            "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
                         },
                         {
                             "label": "علي اليسار",
-                            "value": "left"
+                            "value": "left",
+                            "key": "219e9795-a83d-4008-ac41-996587504c05"
                         },
                         {
                             "label": "في المنتصف",
-                            "value": "middle"
+                            "value": "middle",
+                            "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
                         }
                     ],
                     "source": "Manual",
@@ -482,20 +486,25 @@
                     "type": "items",
                     "format": "dropdown-list",
                     "label": "مكان ظهور المحتوي رأسيا",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-keyboard_arrow_down",
                     "selected": [],
                     "options": [
                         {
                             "label": "في الاعلي",
-                            "value": "top"
+                            "value": "top",
+                            "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
                         },
                         {
                             "label": "في الاسفل",
-                            "value": "bottom"
+                            "value": "bottom",
+                            "key": "219e9795-a83d-4008-ac41-996587504c05"
                         },
                         {
                             "label": "في المنتصف",
-                            "value": "middle"
+                            "value": "middle",
+                            "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
                         }
                     ],
                     "source": "Manual",
@@ -508,10 +517,15 @@
                     "type": "string",
                     "format": "text",
                     "label": "عنوان البانر",
+                    "description": null,
+                    "labelHTML": null,
                     "placeholder": "Placeholder text ..",
                     "icon": "sicon-format-text-alt",
-                    "value": "تخفيضات كبيرة على جميع المنتجات",
-                    "multilanguage": false,
+                    "value": {
+                        "en": "Big discounts on all products",
+                        "ar": "تخفيضات كبيرة على جميع المنتجات"
+                    },
+                    "multilanguage": true,
                     "required": false,
                     "minLength": "0",
                     "maxLength": "100"
@@ -521,10 +535,15 @@
                     "type": "string",
                     "format": "text",
                     "label": "وصف البانر",
+                    "description": null,
+                    "labelHTML": null,
                     "placeholder": "Placeholder text ..",
                     "icon": "sicon-format-text-alt",
-                    "value": "لا تفوت عروضنا الحصرية وتخفيضاتنا. تسوق الآن ووفّر الكثير على منتجاتك المفضلة!",
-                    "multilanguage": false,
+                    "value": {
+                        "en": "Don't miss out on our exclusive offers and discounts. Shop now and save big on your favorite products!",
+                        "ar": "لا تفوت عروضنا الحصرية وتخفيضاتنا. تسوق الآن ووفّر الكثير على منتجاتك المفضلة!"
+                    },
+                    "multilanguage": true,
                     "required": false,
                     "minLength": "0",
                     "maxLength": "200"
@@ -535,6 +554,8 @@
                     "format": "color",
                     "inputType": "color",
                     "label": "لون النص",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-format-fill",
                     "value": "#004956",
                     "required": false
@@ -544,6 +565,9 @@
                     "type": "string",
                     "format": "image",
                     "label": "صورة البانر",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
                     "icon": "sicon-image",
                     "value": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
                     "required": false
@@ -553,10 +577,15 @@
                     "type": "string",
                     "format": "text",
                     "label": "النص الداخلي لزر",
+                    "description": null,
+                    "labelHTML": null,
                     "placeholder": "Placeholder text ..",
                     "icon": "sicon-format-text-alt",
-                    "value": "تسوق الآن",
-                    "multilanguage": false,
+                    "value": {
+                        "en": "Shop Now",
+                        "ar": "تسوق الآن"
+                    },
+                    "multilanguage": true,
                     "required": false,
                     "minLength": "0",
                     "maxLength": "100"
@@ -567,6 +596,8 @@
                     "format": "color",
                     "inputType": "color",
                     "label": "لون النص الداخلي",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-format-fill",
                     "value": "#004956",
                     "required": false
@@ -577,6 +608,8 @@
                     "format": "color",
                     "inputType": "color",
                     "label": "لون خلفية الزر",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-format-fill",
                     "value": "#004956",
                     "required": false
@@ -586,6 +619,8 @@
                     "type": "boolean",
                     "format": "switch",
                     "label": "هل تود ظهور عد تنازلي ؟",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-toggle-off",
                     "value": true,
                     "selected": true,
@@ -597,9 +632,18 @@
                     "format": "datetime",
                     "inputType": "datetime-local",
                     "label": "العدد التنازلي",
+                    "description": null,
+                    "labelHTML": null,
                     "icon": "sicon-calendar-time",
                     "value": "2028-10-08T15:23",
-                    "required": false
+                    "required": false,
+                    "conditions": [
+                        {
+                            "id": "banner_time_s",
+                            "operation": "=",
+                            "value": true
+                        }
+                    ]
                 }
             ]
         }
