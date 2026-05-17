@@ -1248,19 +1248,6 @@
                             "items.img_overlay_color": "#4ccfe6",
                             "items.img_overlay_opacity": 50,
                             "items.title": "عطور"
-                        },
-                        {
-                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/176682088",
-                            "items.count": 12,
-                            "items.image": "https://cdn.files.salla.network/homepage/1553595151/acc7f9c4-5af0-470d-8de1-f9b8e2932d4b.webp",
-                            "items.text_color": "#333333",
-                            "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
-                            "items.title": "ظلال العيون"
                         }
                     ]
                 }
