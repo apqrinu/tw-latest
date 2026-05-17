@@ -867,7 +867,7 @@
         },
         {
             "key": "541cc423-90c7-4230-8a33-a0342cfde4ee",
-            "title": "تصنيفات بصرية - وعد",
+            "title": "تصنيفات بصرية ",
             "icon": "sicon-grid",
             "name": "categories-grid",
             "fields": [
@@ -981,7 +981,7 @@
                     "item_label": "تصنيف",
                     "icon": "sicon-list-add",
                     "minLength": 1,
-                    "maxLength": 20,
+                    "maxLength": 5,
                     "fields": [
                         {
                             "id": "items.image",
