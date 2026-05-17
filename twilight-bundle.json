@@ -792,34 +792,19 @@
                 }
             ]
         },
-        {
-            "key": "1f152413-6ca3-45c6-9664-e538a6f19a33",
-            "image": "https://i.ibb.co/MDkSSJ21/899bded2-4767-4eb6-9f3c-df5e961d44ed.webp",
-            "title": "بنرات أكورديون ",
-            "icon": "sicon-store",
-            "name": "accordion-banner",
+       {
+            "key": "16452dcd-b70b-401d-8616-19bb9c1c21b0",
+            "title":"مجموعة المنتجات ",
+            
+            "icon": "sicon-braille",
+            "name": "product-set",
             "fields": [
-                {
-                    "id": "section_preview_image",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/MDkSSJ21/899bded2-4767-4eb6-9f3c-df5e961d44ed.webp'></div>",
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "component_settings_header",
-                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
-                },
                 {
                     "id": "notmrb",
                     "type": "boolean",
                     "format": "switch",
-                    "label": "إزالة المسافة السفلية للمكون",
-                    "description": "فعّل هذا الخيار إذا تبي تشيل الفراغ اللي تحت المكون مباشرةً — مفيد لما تبي المكونات تكون ملتصقة ببعض.",
+                    "label": "إزالة المسافة السفلية",
+                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
                     "icon": "sicon-toggle-off",
                     "value": false,
                     "selected": false,
@@ -829,336 +814,138 @@
                     "id": "has_container",
                     "type": "boolean",
                     "format": "switch",
-                    "label": "تغليف المكون داخل حاوية (Container)",
-                    "description": "فعّل هذا الخيار عشان المكون يكون محاط بحاوية تحدد عرضه وتمنعه من الامتداد لأطراف الشاشة — يعطي شكل أنيق ومنظم.",
+                    "label": "إضافة العنصر داخل حاوية (Container)",
+                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
                     "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
+                    "value": true,
+                    "selected": true,
                     "required": false
                 },
                 {
-                    "type": "static",
-                    "format": "description",
-                    "id": "side-settings",
-                    "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
+                    "id": "hide_subtitle_button_mobile",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إخفاء النص الفرعي والزر في الشاشات الصغيرة",
+                    "description": "يخفي النص الفرعي والزر في الشاشات الصغيرة، مع إبقاء العنوان الرئيسي وعدد المنتجات، وربط العنوان الأساسي بالرابط",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true
                 },
                 {
-                    "id": "accordion_banners_collection",
+                    "type": "static",
+                    "id": "static_line63152",
+                    "format": "line"
+                },
+                {
+                    "id": "main_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم (اختياري)",
+                    "description": "اكتب عنوان واضح للقسم والعميل بيشوفه أول شيء.",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": {
+                        "ar": "اكتشفي روعة العطور بلمسات فاخرة وعروض استثنائية",
+                        "en": "Discover the charm of perfumes with luxurious touches and exceptional offers"
+                    },
+                    "multilanguage": true,
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": 300
+                },
+                {
+                    "id": "sub_text",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص فرعي (اختياري)",
+                    "description": "اختياري — إذا تركته فارغًا فلن يظهر نص فرعي تحت العنوان.",
+                    "labelHTML": null,
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": null,
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": 3000,
+                    "multilanguage": true
+                },
+                {
+                    "type": "static",
+                    "id": "static_line4565",
+                    "format": "line"
+                },
+                {
+                    "id": "main_image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة الرئيسية",
+                    "description": "هذه هي الصورة الأساسية اللي بتظهر للمستخدم، وتجمع أكثر من منتج في صورة وحدة عشان توضح شكل الطقم أو المجموعة بشكل أوضح. يفضّل تكون بجودة عالية وواضحة من جميع الجوانب.",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": "https://cdn.files.salla.network/homepage/1398715320/8963cf45-8b90-468e-a3bb-589f65ef0331.webp",
+                    "required": true
+                },
+                {
+                    "id": "products_list",
                     "type": "collection",
                     "format": "collection",
-                    "label": "البنارات",
-                    "description": "اضف البنارات الي تبيها تظهر في الصفحة",
+                    "label": "قائمة المنتجات",
+                    "description": "هذي القائمة تجمع لك كل المنتجات اللي تبغى تربطها بالصورة الرئيسية. تقدر تحدد مكان كل منتج على الصورة عن طريق الإحداثيات، وتختار المنتج من القائمة بكل سهولة. الخيار مناسب لو تبغى تسوي صورة تفاعلية توضح تفاصيل كل منتج.",
                     "labelHTML": null,
                     "item_label": null,
                     "icon": "sicon-list-add",
                     "fields": [
                         {
-                            "id": "accordion_banners_collection.banner_image",
-                            "type": "string",
-                            "format": "image",
-                            "label": "صورة البانر",
-                            "description": "اضف الصورة الي تبيها تظهر كخلفية للبطاقة(تفضل ان تكون بمقاس 16:9)",
+                            "id": "products_list.x",
+                            "type": "number",
+                            "format": "slider",
+                            "inputType": "range",
+                            "label": "نقطة X",
+                            "description": "تحديد موقع المنتج على محور X داخل الصورة بشكل دقيق.",
                             "labelHTML": null,
-                            "placeholder": "e.g. https://hostname.com/image.png",
-                            "icon": "sicon-image",
-                            "value": null,
-                            "required": false
-                        },
-                        {
-                            "id": "accordion_banners_collection.img_overlay",
-                            "type": "boolean",
-                            "format": "switch",
-                            "label": "عرض طبقة ابيض و اسود اعلي الصورة",
-                            "description": "فعل هذا الخيار اذا كنت تريد اضافة طبقة ابيض و اسود اعلي الصورة",
-                            "labelHTML": null,
-                            "icon": "sicon-toggle-off",
-                            "value": true,
-                            "selected": true,
-                            "required": false
-                        },
-                        {
-                            "id": "accordion_banners_collection.banner_title",
-                            "type": "string",
-                            "format": "text",
-                            "label": "عنوان البانر",
-                            "description": "ادخل العنوان الي تريد يظهر داخل البانر",
-                            "labelHTML": null,
-                            "placeholder": "Placeholder text ..",
-                            "icon": "sicon-format-text-alt",
-                            "value": null,
-                            "multilanguage": true,
+                            "icon": "sicon-pin",
+                            "value": "50",
                             "required": false,
-                            "minLength": "0",
-                            "maxLength": "50"
+                            "step": "1",
+                            "minimum": "1",
+                            "maximum": "100"
                         },
                         {
-                            "id": "accordion_banners_collection.banner_title_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون عنوان البانر",
-                            "description": null,
+                            "id": "products_list.y",
+                            "type": "number",
+                            "format": "slider",
+                            "inputType": "range",
+                            "label": "نقطة Y",
+                            "description": "تحديد موقع المنتج على محور Y داخل الصورة بشكل دقيق.",
                             "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#ffffff",
-                            "required": false
-                        },
-                        {
-                            "id": "accordion_banners_collection.banner_btn_text",
-                            "type": "string",
-                            "format": "text",
-                            "label": "النص الداخلي لزر",
-                            "description": "ادخل النص الي تبي يظهر داخل الزر",
-                            "labelHTML": null,
-                            "placeholder": "مثال: اشتري الان",
-                            "icon": "sicon-format-text-alt",
-                            "value": null,
-                            "multilanguage": true,
+                            "icon": "sicon-pin",
+                            "value": "50",
                             "required": false,
-                            "minLength": "0",
-                            "maxLength": "20"
+                            "step": "1",
+                            "minimum": "1",
+                            "maximum": "100"
                         },
                         {
-                            "id": "accordion_banners_collection.banner_btn_text_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون النص الداخلي لزر",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#000000",
-                            "required": false
-                        },
-                        {
-                            "id": "accordion_banners_collection.banner_btn_bg_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون خلفية الزر",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#ffffff",
-                            "required": false
-                        },
-                        {
+                            "id": "products_list.product",
                             "type": "items",
-                            "icon": "sicon-link",
-                            "label": "رابط عرض الكل",
-                            "id": "accordion_banners_collection.url",
-                            "value": [],
-                            "description": "اختر المكان الي يربط له لما العميل يضغط على الز. إذا تركت الحقل فارغ، الرابط راح يكون افتراضي ويروح لصفحة التصنيف نفسها.",
-                            "required": false,
-                            "format": "variable-list",
+                            "format": "dropdown-list",
+                            "label": "اختيار المنتج",
+                            "description": "اختر المنتج اللي تبي تربطه بالنقطة المحددة داخل الصورة.",
+                            "labelHTML": null,
+                            "icon": "sicon-keyboard_arrow_down",
+                            "selected": [],
+                            "options": [],
+                            "source": "Products",
+                            "multichoice": false,
                             "searchable": true,
-                            "source": "custom",
-                            "sources": [
-                                {
-                                    "label": "منتج",
-                                    "key": "products",
-                                    "value": "products"
-                                },
-                                {
-                                    "label": "تصنيف",
-                                    "key": "categories",
-                                    "value": "categories"
-                                },
-                                {
-                                    "label": "ماركة تجارية",
-                                    "key": "brands",
-                                    "value": "brands"
-                                },
-                                {
-                                    "label": "صفحة تعريفية",
-                                    "key": "pages",
-                                    "value": "pages"
-                                },
-                                {
-                                    "label": "مقالة",
-                                    "key": "blog_articles",
-                                    "value": "blog_articles"
-                                },
-                                {
-                                    "label": "تصنيف ضمن المدونة",
-                                    "key": "blog_categories",
-                                    "value": "blog_categories"
-                                },
-                                {
-                                    "label": "التخفيضات",
-                                    "key": "offers_link",
-                                    "value": "offers_link"
-                                },
-                                {
-                                    "label": "الماركات التجارية",
-                                    "key": "brands_link",
-                                    "value": "brands_link"
-                                },
-                                {
-                                    "label": "المدونة",
-                                    "key": "blog_link",
-                                    "value": "blog_link"
-                                },
-                                {
-                                    "label": "رابط خارجي",
-                                    "key": "custom",
-                                    "value": "custom"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "accordion_banners_collection.justify_content",
-                            "type": "items",
-                            "format": "dropdown-list",
-                            "label": "مكان النص داخل الصورة (أفقي)",
-                            "description": "حدد مكان ظهور النص داخل الصورة بشكل أفقي: تبيه على اليمين، بالنص، أو على اليسار",
-                            "icon": "sicon-list",
-                            "selected": [
-                                {
-                                    "label": "على اليمين",
-                                    "value": "flex-start",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b0456"
-                                }
-                            ],
-                            "options": [
-                                {
-                                    "label": "على اليمين",
-                                    "value": "flex-start",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b0546"
-                                },
-                                {
-                                    "label": "في المنتصف",
-                                    "value": "center",
-                                    "key": "f3957795-1223-4ee8-a380-d8943793aea7"
-                                },
-                                {
-                                    "label": "على اليسار",
-                                    "value": "flex-end",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b0a57"
-                                }
-                            ],
-                            "source": "Manual",
-                            "required": true
-                        },
-                        {
-                            "id": "accordion_banners_collection.align_items",
-                            "type": "items",
-                            "format": "dropdown-list",
-                            "label": "مكان النص داخل الصورة (رأسي)",
-                            "description": "حدد مكان ظهور النص داخل الصورة بشكل رأسي: فوق، بالنص، أو تحت",
-                            "icon": "sicon-list",
-                            "selected": [
-                                {
-                                    "label": "في المنتصف",
-                                    "value": "center",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b2657"
-                                }
-                            ],
-                            "options": [
-                                {
-                                    "label": "في الأعلى",
-                                    "value": "flex-start",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b0157"
-                                },
-                                {
-                                    "label": "في المنتصف",
-                                    "value": "center",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b2657"
-                                },
-                                {
-                                    "label": "في الأسفل",
-                                    "value": "flex-end",
-                                    "key": "fa1b9564-9236-4760-b536-a042298b9980"
-                                }
-                            ],
-                            "source": "Manual",
-                            "required": true
+                            "required": true,
+                            "value": []
                         }
                     ],
-                    "value": [
-                        {
-                            "accordion_banners_collection.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1436232545",
-                            "accordion_banners_collection.align_items": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.img_overlay": true,
-                            "accordion_banners_collection.banner_image": "https://cdn.files.salla.network/homepage/1553595151/934855d8-12e1-4508-8db4-848e61568676.webp",
-                            "accordion_banners_collection.justify_content": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.banner_title_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_bg_color": "#000000",
-                            "accordion_banners_collection.banner_btn_text_color": "#ffffff",
-                            "accordion_banners_collection.banner_title": "اشتري كل الي محتاجة",
-                            "accordion_banners_collection.banner_btn_text": "اشتري الان"
-                        },
-                        {
-                            "accordion_banners_collection.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/products/340563374",
-                            "accordion_banners_collection.align_items": [
-                                "flex-start"
-                            ],
-                            "accordion_banners_collection.img_overlay": true,
-                            "accordion_banners_collection.banner_image": "https://cdn.files.salla.network/homepage/1553595151/60812697-fb86-4e61-af91-b4c0fdf7d0b9.webp",
-                            "accordion_banners_collection.justify_content": [
-                                "flex-start"
-                            ],
-                            "accordion_banners_collection.banner_title_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_bg_color": "#000000",
-                            "accordion_banners_collection.banner_btn_text_color": "#ffffff",
-                            "accordion_banners_collection.banner_title": "اشتري كل الي محتاجة",
-                            "accordion_banners_collection.banner_btn_text": "اشتري الان"
-                        },
-                        {
-                            "accordion_banners_collection.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1515505023",
-                            "accordion_banners_collection.align_items": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.img_overlay": true,
-                            "accordion_banners_collection.banner_image": "https://cdn.files.salla.network/homepage/1553595151/ae03fde3-74a1-41ab-9d7a-b1378cd13bbe.webp",
-                            "accordion_banners_collection.justify_content": [
-                                "flex-start"
-                            ],
-                            "accordion_banners_collection.banner_title_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_bg_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_text_color": "#000000",
-                            "accordion_banners_collection.banner_title": "اشتري كل الي محتاجة",
-                            "accordion_banners_collection.banner_btn_text": "اشتري الان"
-                        },
-                        {
-                            "accordion_banners_collection.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/485529453",
-                            "accordion_banners_collection.align_items": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.img_overlay": true,
-                            "accordion_banners_collection.banner_image": "https://cdn.files.salla.network/homepage/1553595151/447fcb8e-9f53-4e04-9a6b-f10e3f01fefd.webp",
-                            "accordion_banners_collection.justify_content": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.banner_title_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_bg_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_text_color": "#000000",
-                            "accordion_banners_collection.banner_title": "اشتري كل الي محتاجة",
-                            "accordion_banners_collection.banner_btn_text": "اشتري الان"
-                        },
-                        {
-                            "accordion_banners_collection.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1860023918",
-                            "accordion_banners_collection.align_items": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.img_overlay": true,
-                            "accordion_banners_collection.banner_image": "https://cdn.files.salla.network/homepage/1553595151/292100ee-6eaf-49e9-badf-0d266aebc6ce.webp",
-                            "accordion_banners_collection.justify_content": [
-                                "center"
-                            ],
-                            "accordion_banners_collection.banner_title_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_bg_color": "#ffffff",
-                            "accordion_banners_collection.banner_btn_text_color": "#000000",
-                            "accordion_banners_collection.banner_title": "اشتري كل الي محتاجة",
-                            "accordion_banners_collection.banner_btn_text": "اشتري الان"
-                        }
-                    ],
+                    "value": [],
                     "minLength": 1,
-                    "maxLength": "5"
+                    "maxLength": "10"
                 }
             ]
         }
