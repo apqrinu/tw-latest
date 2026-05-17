@@ -797,7 +797,7 @@
             "image": "https://i.ibb.co/MDkSSJ21/899bded2-4767-4eb6-9f3c-df5e961d44ed.webp",
             "title": "بنرات أكورديون ",
             "icon": "sicon-store",
-            "name": "accordion-banners",
+            "name": "accordion-banner",
             "fields": [
                 {
                     "id": "section_preview_image",
