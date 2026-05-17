@@ -795,10 +795,10 @@
         {
             "key": "8e163317-3bd8-468a-a163-654c524d8fe6",
             "image": "https://i.ibb.co/xSqbWhcT/27396bc7-8e07-4663-886d-8380a561e31f.webp",
-            "title": "استكشف الآن - وعد",
+            "title": "استكشف الآن",
             "is_default": true,
             "icon": "sicon-border-all",
-            "path": "home.W_explore_now",
+            "name": "explore-now",
             "fields": [
                 {
                     "id": "section_preview_image",
