@@ -1,620 +1,720 @@
 {
-    "name": {
-        "ar": "مجموعة ",
-        "en": "latest"
-    },
-    "description": {
-        "ar": "",
-        "en": ""
-    },
-    "author_email": "apqrinu@gmail.com",
-    "support_url": "https://apqrinu-co.com/",
-    "repository": "https://github.com/apqrinu/tw-latest",
-    "components": [
+  "name": {
+    "ar": "مجموعة ",
+    "en": "latest"
+  },
+  "description": {
+    "ar": "",
+    "en": ""
+  },
+  "author_email": "apqrinu@gmail.com",
+  "support_url": "https://apqrinu-co.com/",
+  "repository": "https://github.com/apqrinu/tw-latest",
+  "components": [
+    {
+      "key": "ea2eb343-dec7-4894-83ba-3d3f87fdae0b",
+      "title": "منتج مختار",
+      "icon": "sicon-packed-box",
+      "name": "selected-product",
+      "image": "https://i.ibb.co/jvNPxt4z/s-product.webp",
+      "fields": [
         {
-            "key": "ea2eb343-dec7-4894-83ba-3d3f87fdae0b",
-            "title": "منتج مختار",
-            "icon": "sicon-packed-box",
-            "name": "selected-product",
-            "image": "https://i.ibb.co/jvNPxt4z/s-product.webp",
-            "fields": [
-                {
-                    "id": "side_banner_static_title",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div><h6>معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/jvNPxt4z/s-product.webp'></div>",
-                    "icon": "sicon-format-size"
-                },
-                {
-                    "type": "static",
-                    "id": "side-setting-label",
-                    "format": "description",
-                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
-                },
-                {
-                    "id": "notmrb",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إزالة المسافة السفلية",
-                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
-                    "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
-                    "required": false
-                },
-                {
-                    "type": "static",
-                    "format": "description",
-                    "id": "side-settings",
-                    "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
-                },
-                {
-                    "id": "selected_product_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "العنوان الرئيسي",
-                    "description": "اكتب عنوان جذاب للسكشن",
-                    "labelHTML": null,
-                    "placeholder": null,
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "ar": "بشرة نقية خلال أسبوع",
-                        "en": "Spotless in 1 Week"
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": "45"
-                },
-                {
-                    "id": "selected_product_description",
-                    "type": "string",
-                    "format": "text",
-                    "label": "وصف المنتج",
-                    "description": "وصف قصير يوضح فائدة المنتج",
-                    "labelHTML": null,
-                    "placeholder": null,
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "ar": "مدعوم بسيروم مضاد لعلامات التقدم في العمر لبشرة أكثر نعومة وإشراقًا بشكل ملحوظ.",
-                        "en": "Powered by Anti–Aging Serum for visibly smoother, brighter skin."
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": "80"
-                },
-                {
-                    "id": "selected_product_img",
-                    "type": "string",
-                    "format": "image",
-                    "label": "صورة المنتج",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": "https://i.ibb.co/y768fk5/1351c61b-8f3c-40db-a70c-91defd97ebee-removebg-preview.webp",
-                    "required": true
-                },
-                {
-                    "id": "selected_product_feature_collection",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "مميزات المنتج",
-                    "description": "اضف المميزات اللي تبيها تظهر حوالين المنتج",
-                    "labelHTML": null,
-                    "item_label": null,
-                    "icon": "sicon-list-add",
-                    "fields": [
-                        {
-                            "id": "selected_product_feature_collection.selected_product_feature_title",
-                            "type": "string",
-                            "format": "text",
-                            "label": "عنوان الميزة",
-                            "description": "اكتب نص قصير يوضح فائدة أو ميزة المنتج",
-                            "labelHTML": null,
-                            "placeholder": null,
-                            "icon": "sicon-format-text-alt",
-                            "value": "ينعّم الخطوط الدقيقة",
-                            "multilanguage": true,
-                            "required": true,
-                            "minLength": 6,
-                            "maxLength": "30"
-                        },
-                        {
-                            "id": "line_1",
-                            "type": "static",
-                            "format": "line",
-                            "label": "Line 1",
-                            "icon": "sicon-minus"
-                        },
-                        {
-                            "id": "selected_product_feature_collection.selected_product_image_icon",
-                            "type": "items",
-                            "format": "dropdown-list",
-                            "label": "تبغى تحط أيقونة ولا صورة داخل الزر؟",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-keyboard_arrow_down",
-                            "selected": [
-                                {
-                                    "label": "وضع ايقونه",
-                                    "value": "icon_value",
-                                    "key": "dc54889e-8b95-462d-b5a8-7640c0e07b61"
-                                }
-                            ],
-                            "options": [
-                                {
-                                    "label": "وضع ايقونه",
-                                    "value": "icon_value",
-                                    "key": "dc54889e-8b95-462d-b5a8-7640c0e07b61"
-                                },
-                                {
-                                    "label": "وضع صورة",
-                                    "value": "img_value",
-                                    "key": "9d0381d6-6d1b-4c6a-a169-91d23462cf88"
-                                }
-                            ],
-                            "source": "Manual",
-                            "multichoice": false,
-                            "searchable": true,
-                            "required": false
-                        },
-                        {
-                            "id": "selected_product_feature_collection.selected_product_image_icon_btn",
-                            "type": "string",
-                            "format": "icon",
-                            "label": "اختر ايقونه مناسبة",
-                            "description": null,
-                            "labelHTML": null,
-                            "icon": "sicon-user-circle",
-                            "value": "sicon-cart2",
-                            "required": false,
-                            "conditions": [
-                                {
-                                    "collection_id": "selected_product_feature_collection",
-                                    "value_index": ".",
-                                    "id": "selected_product_feature_collection.selected_product_image_icon",
-                                    "operation": "=",
-                                    "value": "icon_value"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "selected_product_feature_collection.selected_product_img_btn",
-                            "type": "string",
-                            "format": "image",
-                            "label": "اختر صورة مناسبة",
-                            "description": "مقاس الصورة المناسب 500 * 500 بكسل",
-                            "labelHTML": null,
-                            "placeholder": null,
-                            "icon": "sicon-image",
-                            "value": "https://cdn-icons-png.flaticon.com/512/649/649931.png",
-                            "required": false,
-                            "conditions": [
-                                {
-                                    "collection_id": "selected_product_feature_collection",
-                                    "value_index": ".",
-                                    "id": "selected_product_feature_collection.selected_product_image_icon",
-                                    "operation": "=",
-                                    "value": "img_value"
-                                }
-                            ],
-                            "settings": {
-                                "height": 500,
-                                "width": 500
-                            }
-                        },
-                        {
-                            "id": "selected_product_feature_collection.selected_product_feature_txt_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون النص",
-                            "description": "اختار لون النص و الايقون اللي يناسب تصميمك ويكون واضح للعميل",
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#161a18",
-                            "required": false
-                        },
-                        {
-                            "id": "selected_product_feature_collection.selected_product_feature_bg_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون الخلفية",
-                            "description": "حدد لون الخلفية للميزة بحيث يكون متناسق مع لون النص",
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#c5c5c5",
-                            "required": false
-                        }
-                    ],
-                    "value": [
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "ينعّم الخطوط الدقيقة",
-                                "en": "Smooths fine lines"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "https://cdn-icons-png.flaticon.com/512/649/649931.png",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-magic-wand",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        },
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "تعزيز إنتاج الكولاجين",
-                                "en": "Boosts collagen production"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-check-circle2",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        },
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "حماية من علامات التجعد",
-                                "en": "Protects against wrinkles"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-block",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        },
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "ترطيب يدوم 48 ساعة",
-                                "en": "48-hour hydration"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-alarm",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        },
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "تفتيح وإشراقة للبشرة",
-                                "en": "Brightens and enhances skin radiance"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-magic-wand",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        },
-                        {
-                            "selected_product_feature_collection.selected_product_feature_title": {
-                                "ar": "سريع الامتصاص",
-                                "en": "Fast absorbing"
-                            },
-                            "selected_product_feature_collection.selected_product_img_btn": "",
-                            "selected_product_feature_collection.selected_product_image_icon": [
-                                "icon_value"
-                            ],
-                            "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-check",
-                            "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
-                            "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
-                        }
-                    ],
-                    "minLength": "0",
-                    "maxLength": "6"
-                },
-                {
-                    "id": "selected_product_btn_txt",
-                    "type": "string",
-                    "format": "text",
-                    "label": "نص الزر",
-                    "description": "اكتب النص اللي تبي يظهر على زر المجموعة، مثل: شاهد الكل أو تسوق الآن",
-                    "labelHTML": null,
-                    "placeholder": "تسوق الأن",
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "ar": "اعرض المنتج",
-                        "en": "View Product"
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "3",
-                    "maxLength": "20"
-                },
-                {
-                    "type": "items",
-                    "icon": "sicon-link",
-                    "label": "الرابط",
-                    "id": "selected_product_item_link",
-                    "value": [],
-                    "description": "اختار رابط العرض اللي تبي الزائر يروح لها لما يضغط على الزر",
-                    "required": false,
-                    "format": "variable-list",
-                    "searchable": true,
-                    "source": "custom",
-                    "sources": [
-                        {
-                            "label": "منتج",
-                            "key": "products",
-                            "value": "products"
-                        },
-                        {
-                            "label": "تصنيف",
-                            "key": "categories",
-                            "value": "categories"
-                        },
-                        {
-                            "label": "ماركة تجارية",
-                            "key": "brands",
-                            "value": "brands"
-                        },
-                        {
-                            "label": "صفحة تعريفية",
-                            "key": "pages",
-                            "value": "pages"
-                        },
-                        {
-                            "label": "مقالة",
-                            "key": "blog_articles",
-                            "value": "blog_articles"
-                        },
-                        {
-                            "label": "تصنيف ضمن المدونة",
-                            "key": "blog_categories",
-                            "value": "blog_categories"
-                        },
-                        {
-                            "label": "التخفيضات",
-                            "key": "offers_link",
-                            "value": "offers_link"
-                        },
-                        {
-                            "label": "الماركات التجارية",
-                            "key": "brands_link",
-                            "value": "brands_link"
-                        },
-                        {
-                            "label": "المدونة",
-                            "key": "blog_link",
-                            "value": "blog_link"
-                        },
-                        {
-                            "label": "رابط خارجي",
-                            "key": "custom",
-                            "value": "custom"
-                        }
-                    ]
-                },
-                {
-                    "id": "selected_product_btn_txt_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "اختر لون نص الزر",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#ffffff",
-                    "required": false
-                },
-                {
-                    "id": "selected_product_btn_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "اختر لون خلفيةالزر",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#000000",
-                    "required": false
-                }
-            ]
+          "id": "side_banner_static_title",
+          "type": "static",
+          "format": "description",
+          "label": null,
+          "value": "<div><h6>معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/jvNPxt4z/s-product.webp'></div>",
+          "icon": "sicon-format-size"
         },
         {
-            "key": "4d51cd9e-cca7-415c-a7c2-1cc33266fbf5",
-            "title": "بانر تخفيضات",
-            "name": "discount-banner",
-            "icon": "sicon-store",
-            "fields": [
+          "type": "static",
+          "id": "side-setting-label",
+          "format": "description",
+          "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
+        },
+        {
+          "id": "notmrb",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إزالة المسافة السفلية",
+          "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
+          "icon": "sicon-toggle-off",
+          "value": false,
+          "selected": false,
+          "required": false
+        },
+        {
+          "type": "static",
+          "format": "description",
+          "id": "side-settings",
+          "value": "<div class='label-floating'><span class='label-text'>بيانات المكون</span></div>"
+        },
+        {
+          "id": "selected_product_title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الرئيسي",
+          "description": "اكتب عنوان جذاب للسكشن",
+          "labelHTML": null,
+          "placeholder": null,
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "ar": "بشرة نقية خلال أسبوع",
+            "en": "Spotless in 1 Week"
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": 6,
+          "maxLength": "45"
+        },
+        {
+          "id": "selected_product_description",
+          "type": "string",
+          "format": "text",
+          "label": "وصف المنتج",
+          "description": "وصف قصير يوضح فائدة المنتج",
+          "labelHTML": null,
+          "placeholder": null,
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "ar": "مدعوم بسيروم مضاد لعلامات التقدم في العمر لبشرة أكثر نعومة وإشراقًا بشكل ملحوظ.",
+            "en": "Powered by Anti–Aging Serum for visibly smoother, brighter skin."
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": 6,
+          "maxLength": "80"
+        },
+        {
+          "id": "selected_product_img",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "e.g. https://hostname.com/image.png",
+          "icon": "sicon-image",
+          "value": "https://i.ibb.co/y768fk5/1351c61b-8f3c-40db-a70c-91defd97ebee-removebg-preview.webp",
+          "required": true
+        },
+        {
+          "id": "selected_product_feature_collection",
+          "type": "collection",
+          "format": "collection",
+          "label": "مميزات المنتج",
+          "description": "اضف المميزات اللي تبيها تظهر حوالين المنتج",
+          "labelHTML": null,
+          "item_label": null,
+          "icon": "sicon-list-add",
+          "fields": [
+            {
+              "id": "selected_product_feature_collection.selected_product_feature_title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الميزة",
+              "description": "اكتب نص قصير يوضح فائدة أو ميزة المنتج",
+              "labelHTML": null,
+              "placeholder": null,
+              "icon": "sicon-format-text-alt",
+              "value": "ينعّم الخطوط الدقيقة",
+              "multilanguage": true,
+              "required": true,
+              "minLength": 6,
+              "maxLength": "30"
+            },
+            {
+              "id": "line_1",
+              "type": "static",
+              "format": "line",
+              "label": "Line 1",
+              "icon": "sicon-minus"
+            },
+            {
+              "id": "selected_product_feature_collection.selected_product_image_icon",
+              "type": "items",
+              "format": "dropdown-list",
+              "label": "تبغى تحط أيقونة ولا صورة داخل الزر؟",
+              "description": null,
+              "labelHTML": null,
+              "icon": "sicon-keyboard_arrow_down",
+              "selected": [
                 {
-                    "id": "notmrb",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إزالة المسافة السفلية",
-                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
-                    "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
-                    "required": false
-                },
-                {
-                    "id": "has_container",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إضافة العنصر داخل حاوية (Container)",
-                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "content_position_h",
-                    "type": "items",
-                    "format": "dropdown-list",
-                    "label": "مكان ظهور المحتوي افقيا",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-keyboard_arrow_down",
-                    "selected": [],
-                    "options": [
-                        {
-                            "label": "علي اليمين",
-                            "value": "right",
-                            "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
-                        },
-                        {
-                            "label": "علي اليسار",
-                            "value": "left",
-                            "key": "219e9795-a83d-4008-ac41-996587504c05"
-                        },
-                        {
-                            "label": "في المنتصف",
-                            "value": "middle",
-                            "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
-                        }
-                    ],
-                    "source": "Manual",
-                    "multichoice": false,
-                    "searchable": true,
-                    "required": false
-                },
-                {
-                    "id": "content_position_v",
-                    "type": "items",
-                    "format": "dropdown-list",
-                    "label": "مكان ظهور المحتوي رأسيا",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-keyboard_arrow_down",
-                    "selected": [],
-                    "options": [
-                        {
-                            "label": "في الاعلي",
-                            "value": "top",
-                            "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
-                        },
-                        {
-                            "label": "في الاسفل",
-                            "value": "bottom",
-                            "key": "219e9795-a83d-4008-ac41-996587504c05"
-                        },
-                        {
-                            "label": "في المنتصف",
-                            "value": "middle",
-                            "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
-                        }
-                    ],
-                    "source": "Manual",
-                    "multichoice": false,
-                    "searchable": true,
-                    "required": false
-                },
-                {
-                    "id": "banner_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "عنوان البانر",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "en": "Big discounts on all products",
-                        "ar": "تخفيضات كبيرة على جميع المنتجات"
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "100"
-                },
-                {
-                    "id": "banner_subtitle",
-                    "type": "string",
-                    "format": "text",
-                    "label": "وصف البانر",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "en": "Don't miss out on our exclusive offers and discounts. Shop now and save big on your favorite products!",
-                        "ar": "لا تفوت عروضنا الحصرية وتخفيضاتنا. تسوق الآن ووفّر الكثير على منتجاتك المفضلة!"
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "200"
-                },
-                {
-                    "id": "banner_text_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون النص",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#004956",
-                    "required": false
-                },
-                {
-                    "id": "banner_image",
-                    "type": "string",
-                    "format": "image",
-                    "label": "صورة البانر",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
-                    "required": false
-                },
-                {
-                    "id": "banner_btn_text",
-                    "type": "string",
-                    "format": "text",
-                    "label": "النص الداخلي لزر",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "Placeholder text ..",
-                    "icon": "sicon-format-text-alt",
-                    "value": {
-                        "en": "Shop Now",
-                        "ar": "تسوق الآن"
-                    },
-                    "multilanguage": true,
-                    "required": false,
-                    "minLength": "0",
-                    "maxLength": "100"
-                },
-                {
-                    "id": "banner_btn_text_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون النص الداخلي",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#004956",
-                    "required": false
-                },
-                {
-                    "id": "banner_btn_bg_color",
-                    "type": "string",
-                    "format": "color",
-                    "inputType": "color",
-                    "label": "لون خلفية الزر",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-format-fill",
-                    "value": "#004956",
-                    "required": false
+                  "label": "وضع ايقونه",
+                  "value": "icon_value",
+                  "key": "dc54889e-8b95-462d-b5a8-7640c0e07b61"
                 }
-            ]
+              ],
+              "options": [
+                {
+                  "label": "وضع ايقونه",
+                  "value": "icon_value",
+                  "key": "dc54889e-8b95-462d-b5a8-7640c0e07b61"
+                },
+                {
+                  "label": "وضع صورة",
+                  "value": "img_value",
+                  "key": "9d0381d6-6d1b-4c6a-a169-91d23462cf88"
+                }
+              ],
+              "source": "Manual",
+              "multichoice": false,
+              "searchable": true,
+              "required": false
+            },
+            {
+              "id": "selected_product_feature_collection.selected_product_image_icon_btn",
+              "type": "string",
+              "format": "icon",
+              "label": "اختر ايقونه مناسبة",
+              "description": null,
+              "labelHTML": null,
+              "icon": "sicon-user-circle",
+              "value": "sicon-cart2",
+              "required": false,
+              "conditions": [
+                {
+                  "collection_id": "selected_product_feature_collection",
+                  "value_index": ".",
+                  "id": "selected_product_feature_collection.selected_product_image_icon",
+                  "operation": "=",
+                  "value": "icon_value"
+                }
+              ]
+            },
+            {
+              "id": "selected_product_feature_collection.selected_product_img_btn",
+              "type": "string",
+              "format": "image",
+              "label": "اختر صورة مناسبة",
+              "description": "مقاس الصورة المناسب 500 * 500 بكسل",
+              "labelHTML": null,
+              "placeholder": null,
+              "icon": "sicon-image",
+              "value": "https://cdn-icons-png.flaticon.com/512/649/649931.png",
+              "required": false,
+              "conditions": [
+                {
+                  "collection_id": "selected_product_feature_collection",
+                  "value_index": ".",
+                  "id": "selected_product_feature_collection.selected_product_image_icon",
+                  "operation": "=",
+                  "value": "img_value"
+                }
+              ],
+              "settings": {
+                "height": 500,
+                "width": 500
+              }
+            },
+            {
+              "id": "selected_product_feature_collection.selected_product_feature_txt_color",
+              "type": "string",
+              "format": "color",
+              "inputType": "color",
+              "label": "لون النص",
+              "description": "اختار لون النص و الايقون اللي يناسب تصميمك ويكون واضح للعميل",
+              "labelHTML": null,
+              "icon": "sicon-format-fill",
+              "value": "#161a18",
+              "required": false
+            },
+            {
+              "id": "selected_product_feature_collection.selected_product_feature_bg_color",
+              "type": "string",
+              "format": "color",
+              "inputType": "color",
+              "label": "لون الخلفية",
+              "description": "حدد لون الخلفية للميزة بحيث يكون متناسق مع لون النص",
+              "labelHTML": null,
+              "icon": "sicon-format-fill",
+              "value": "#c5c5c5",
+              "required": false
+            }
+          ],
+          "value": [
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "ينعّم الخطوط الدقيقة",
+                "en": "Smooths fine lines"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "https://cdn-icons-png.flaticon.com/512/649/649931.png",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-magic-wand",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            },
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "تعزيز إنتاج الكولاجين",
+                "en": "Boosts collagen production"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-check-circle2",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            },
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "حماية من علامات التجعد",
+                "en": "Protects against wrinkles"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-block",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            },
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "ترطيب يدوم 48 ساعة",
+                "en": "48-hour hydration"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-alarm",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            },
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "تفتيح وإشراقة للبشرة",
+                "en": "Brightens and enhances skin radiance"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-magic-wand",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            },
+            {
+              "selected_product_feature_collection.selected_product_feature_title": {
+                "ar": "سريع الامتصاص",
+                "en": "Fast absorbing"
+              },
+              "selected_product_feature_collection.selected_product_img_btn": "",
+              "selected_product_feature_collection.selected_product_image_icon": [
+                "icon_value"
+              ],
+              "selected_product_feature_collection.selected_product_image_icon_btn": "sicon-check",
+              "selected_product_feature_collection.selected_product_feature_bg_color": "#c5c5c5",
+              "selected_product_feature_collection.selected_product_feature_txt_color": "#161a18"
+            }
+          ],
+          "minLength": "0",
+          "maxLength": "6"
+        },
+        {
+          "id": "selected_product_btn_txt",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "description": "اكتب النص اللي تبي يظهر على زر المجموعة، مثل: شاهد الكل أو تسوق الآن",
+          "labelHTML": null,
+          "placeholder": "تسوق الأن",
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "ar": "اعرض المنتج",
+            "en": "View Product"
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": "3",
+          "maxLength": "20"
+        },
+        {
+          "type": "items",
+          "icon": "sicon-link",
+          "label": "الرابط",
+          "id": "selected_product_item_link",
+          "value": [],
+          "description": "اختار رابط العرض اللي تبي الزائر يروح لها لما يضغط على الزر",
+          "required": false,
+          "format": "variable-list",
+          "searchable": true,
+          "source": "custom",
+          "sources": [
+            {
+              "label": "منتج",
+              "key": "products",
+              "value": "products"
+            },
+            {
+              "label": "تصنيف",
+              "key": "categories",
+              "value": "categories"
+            },
+            {
+              "label": "ماركة تجارية",
+              "key": "brands",
+              "value": "brands"
+            },
+            {
+              "label": "صفحة تعريفية",
+              "key": "pages",
+              "value": "pages"
+            },
+            {
+              "label": "مقالة",
+              "key": "blog_articles",
+              "value": "blog_articles"
+            },
+            {
+              "label": "تصنيف ضمن المدونة",
+              "key": "blog_categories",
+              "value": "blog_categories"
+            },
+            {
+              "label": "التخفيضات",
+              "key": "offers_link",
+              "value": "offers_link"
+            },
+            {
+              "label": "الماركات التجارية",
+              "key": "brands_link",
+              "value": "brands_link"
+            },
+            {
+              "label": "المدونة",
+              "key": "blog_link",
+              "value": "blog_link"
+            },
+            {
+              "label": "رابط خارجي",
+              "key": "custom",
+              "value": "custom"
+            }
+          ]
+        },
+        {
+          "id": "selected_product_btn_txt_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "اختر لون نص الزر",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#ffffff",
+          "required": false
+        },
+        {
+          "id": "selected_product_btn_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "اختر لون خلفيةالزر",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#000000",
+          "required": false
         }
-    ]
+      ]
+    },
+    {
+      "key": "4d51cd9e-cca7-415c-a7c2-1cc33266fbf5",
+      "title": "بانر تخفيضات",
+      "name": "discount-banner",
+      "icon": "sicon-store",
+      "fields": [
+        {
+          "id": "notmrb",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إزالة المسافة السفلية",
+          "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
+          "icon": "sicon-toggle-off",
+          "value": false,
+          "selected": false,
+          "required": false
+        },
+        {
+          "id": "has_container",
+          "type": "boolean",
+          "format": "switch",
+          "label": "إضافة العنصر داخل حاوية (Container)",
+          "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
+          "icon": "sicon-toggle-off",
+          "value": true,
+          "selected": true,
+          "required": false
+        },
+        {
+          "id": "content_position_h",
+          "type": "items",
+          "format": "dropdown-list",
+          "label": "مكان ظهور المحتوي افقيا",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-keyboard_arrow_down",
+          "selected": [],
+          "options": [
+            {
+              "label": "علي اليمين",
+              "value": "right",
+              "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
+            },
+            {
+              "label": "علي اليسار",
+              "value": "left",
+              "key": "219e9795-a83d-4008-ac41-996587504c05"
+            },
+            {
+              "label": "في المنتصف",
+              "value": "middle",
+              "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
+            }
+          ],
+          "source": "Manual",
+          "multichoice": false,
+          "searchable": true,
+          "required": false
+        },
+        {
+          "id": "content_position_v",
+          "type": "items",
+          "format": "dropdown-list",
+          "label": "مكان ظهور المحتوي رأسيا",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-keyboard_arrow_down",
+          "selected": [],
+          "options": [
+            {
+              "label": "في الاعلي",
+              "value": "top",
+              "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
+            },
+            {
+              "label": "في الاسفل",
+              "value": "bottom",
+              "key": "219e9795-a83d-4008-ac41-996587504c05"
+            },
+            {
+              "label": "في المنتصف",
+              "value": "middle",
+              "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
+            }
+          ],
+          "source": "Manual",
+          "multichoice": false,
+          "searchable": true,
+          "required": false
+        },
+        {
+          "id": "banner_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان البانر",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "en": "Big discounts on all products",
+            "ar": "تخفيضات كبيرة على جميع المنتجات"
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "100"
+        },
+        {
+          "id": "banner_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "وصف البانر",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "en": "Don't miss out on our exclusive offers and discounts. Shop now and save big on your favorite products!",
+            "ar": "لا تفوت عروضنا الحصرية وتخفيضاتنا. تسوق الآن ووفّر الكثير على منتجاتك المفضلة!"
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "200"
+        },
+        {
+          "id": "banner_text_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون النص",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false
+        },
+        {
+          "id": "banner_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة البانر",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "e.g. https://hostname.com/image.png",
+          "icon": "sicon-image",
+          "value": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
+          "required": false
+        },
+        {
+          "id": "banner_btn_text",
+          "type": "string",
+          "format": "text",
+          "label": "النص الداخلي لزر",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "en": "Shop Now",
+            "ar": "تسوق الآن"
+          },
+          "multilanguage": true,
+          "required": false,
+          "minLength": "0",
+          "maxLength": "100"
+        },
+        {
+          "id": "banner_btn_text_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون النص الداخلي",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false
+        },
+        {
+          "id": "banner_btn_bg_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون خلفية الزر",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false
+        }
+      ]
+    },
+    {
+      "key": "4235fec5-b755-4b55-9801-881e2eed3d48",
+      "title": "النص الترويجي",
+      "name": "promotional-text",
+      "icon": "sicon-format-shapes",
+      "fields": [
+        {
+          "id": "section_text",
+          "type": "string",
+          "format": "text",
+          "label": "النص الاساسي للقسم",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "Placeholder text ..",
+          "icon": "sicon-format-text-alt",
+          "value": {
+            "en": "Discover the Future of Shopping with Our Interactive Video Experience! Dive into a world where you can explore products, watch demos, and get inspired all in one place. Don’t just shop, experience it like never before!",
+            "ar": "اكتشف مستقبل التسوق مع تجربتنا التفاعلية بالفيديو! انغمس في عالم يمكنك فيه استكشاف المنتجات، مشاهدة العروض التوضيحية، والحصول على الإلهام كل ذلك في مكان واحد. لا تكتفِ بالتسوق، بل عش التجربة كما لم يحدث من قبل!"
+          },
+          "multilanguage": true,
+          "required": true,
+          "minLength": "0",
+          "maxLength": "500"
+        },
+        {
+          "id": "section_text_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون النص",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false
+        },
+        {
+          "id": "section_text_color_to",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "اللون الذي سوف يتغير اليه النص",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false
+        },
+        {
+          "id": "section_image_s",
+          "type": "boolean",
+          "format": "switch",
+          "label": "هل تود اضافة صورة ك خلفية للقسم ؟",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-toggle-off",
+          "value": false,
+          "selected": false,
+          "required": false
+        },
+        {
+          "id": "section_bg_color",
+          "type": "string",
+          "format": "color",
+          "inputType": "color",
+          "label": "لون خلفية القسم",
+          "description": null,
+          "labelHTML": null,
+          "icon": "sicon-format-fill",
+          "value": "#004956",
+          "required": false,
+          "conditions": [
+            {
+              "id": "section_image_s",
+              "operation": "=",
+              "value": false
+            }
+          ]
+        },
+        {
+          "id": "section_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الخلفية",
+          "description": null,
+          "labelHTML": null,
+          "placeholder": "e.g. https://hostname.com/image.png",
+          "icon": "sicon-image",
+          "value": null,
+          "required": false,
+          "conditions": [
+            {
+              "id": "section_image_s",
+              "operation": "=",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
