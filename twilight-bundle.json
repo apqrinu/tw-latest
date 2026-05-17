@@ -884,7 +884,7 @@
                     "type": "static",
                     "format": "description",
                     "id": "component_settings_header",
-                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div><style>.label-floating{display:flex;justify-content:center;margin:30px auto}.label-floating .label-text{background:linear-gradient(135deg,#e91e63 0%,#f06292 100%);color:#ffffff;padding:12px 45px;font-weight:700;font-size:16px;letter-spacing:1px;display:inline-block;position:relative;border-radius:25px 4px;border:1px solid #e91e63;border-left:4px solid #e91e63;border-right:4px solid #e91e63;box-shadow:0 8px 20px rgba(233,30,99,0.25)}.flex.flex-row.justify-between.items-center{justify-content:center!important}.text-start.mb-8.form--boolean-switch{margin-bottom:12px!important;padding:.5rem!important;border-radius:2px;font-size:18px;font-weight:700;align-items:center}.label-description{font-size:9px!important}.form--elements-wrapper{padding:8px!important}input:not([type=radio]):not([type=checkbox]):not([type=color]):not([type=range]){min-height:36px;padding:5px 8px 7px 12px}.form--collection-item.mb-8,[class*=form--].mb-8{border:1px solid #e91e63!important;padding:8px!important}.color-wrapper{border-color:#e91e63!important}.form--collection-item.mb-8 .form--string-color{display:flex;justify-content:space-between;align-items:center;border:1px solid #e91e63;border-radius:2px;padding:8px!important;margin-top:8px!important}</style>"
+                    "value": "<div class='label-floating'><span class='label-text'>إعدادات المكون</span></div>"
                 },
                 {
                     "id": "main_categories_label",
@@ -918,57 +918,6 @@
                     "required": false
                 },
                 {
-                    "id": "slider_autoplay_enabled",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "تشغيل السلايدر تلقائياً؟",
-                    "description": "شغّل هذا الخيار إذا تبي السلايدر يتحرك لوحده بدون ما يضغط المستخدم على أي شيء.",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "slider_loop_enabled",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "تشغيل السلايدر بشكل متواصل (لووب)؟",
-                    "description": "شغّل هذا الخيار إذا تبي السلايدر ما يوقف — بعد ما ينتهي يرجع يبدأ من أول.",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "slider_autoplay_delay_ms",
-                    "type": "number",
-                    "format": "slider",
-                    "inputType": "range",
-                    "label": "كم ثانية ينتظر السلايدر قبل ما ينتقل للتصنيف التالي؟",
-                    "description": "حدّد وقت الانتظار بين كل سلايد وثاني. القيمة بالميلي ثانية — مثلاً: 2500 = ثانيتين ونص.",
-                    "labelHTML": null,
-                    "icon": "sicon-pin",
-                    "value": 2500,
-                    "required": false,
-                    "step": "1",
-                    "minimum": "0",
-                    "maximum": "4000"
-                },
-                {
-                    "id": "show_controls",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "اظهار أسهم التحكم",
-                    "description": "عند تفعيل هذا الخيار راح تظهر أسهم التنقل يمين ويسار داخل السلايد .",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
-                    "required": false
-                },
-                {
                     "type": "static",
                     "format": "description",
                     "id": "side-settings",
@@ -998,8 +947,6 @@
                             "type": "boolean",
                             "format": "switch",
                             "label": "عرض طبقة شفافة اعلي الصورة",
-                            "description": null,
-                            "labelHTML": null,
                             "icon": "sicon-toggle-off",
                             "value": false,
                             "selected": false,
@@ -1011,20 +958,9 @@
                             "format": "color",
                             "inputType": "color",
                             "label": "لون الطبقة الشفافة",
-                            "description": "اختار لون الطبقة الشفافة اللي فوق الصور، عادةً أسود أو رمادي غامق عشان النص يبين واضح",
-                            "labelHTML": null,
                             "icon": "sicon-format-fill",
                             "value": "#323839",
-                            "required": false,
-                            "conditions": [
-                                {
-                                    "id": "img_overlay",
-                                    "operation": "=",
-                                    "collection_id": "items",
-                                    "value": true,
-                                    "value_index": "."
-                                }
-                            ]
+                            "required": false
                         },
                         {
                             "id": "img_overlay_opacity",
@@ -1032,30 +968,15 @@
                             "format": "slider",
                             "inputType": "range",
                             "label": "شفافية الطبقة",
-                            "description": "حدد قد إيش الطبقة شفافة: 0 يعني شفافة تماماً (ما تبين)، 100 يعني غامقة تماماً (تغطي الصورة)",
-                            "labelHTML": null,
                             "icon": "sicon-pin",
                             "value": 50,
-                            "required": false,
-                            "step": "1",
-                            "minimum": "0",
-                            "maximum": "100",
-                            "conditions": [
-                                {
-                                    "id": "img_overlay",
-                                    "operation": "=",
-                                    "collection_id": "items",
-                                    "value": true,
-                                    "value_index": "."
-                                }
-                            ]
+                            "required": false
                         },
                         {
                             "id": "items.title",
                             "type": "string",
                             "format": "text",
                             "label": "عنوان التصنيفات الرئيسي",
-                            "placeholder": "مثال: إكسسوارات",
                             "icon": "sicon-format-text",
                             "required": true,
                             "multilanguage": true,
@@ -1066,8 +987,7 @@
                             "id": "items.count",
                             "type": "number",
                             "format": "integer",
-                            "label": "عدد المنتجات الي يظهر تحت اسم التصنيف",
-                            "placeholder": "مثال: 12",
+                            "label": "عدد المنتجات",
                             "icon": "sicon-box",
                             "minimum": 0,
                             "required": false
@@ -1076,9 +996,7 @@
                             "id": "items.text_color",
                             "type": "string",
                             "format": "color",
-                            "inputType": "color",
                             "label": "لون النص",
-                            "description": "اختار لون النص اللي تريده ,لون عدد المنتج يكون نفس لون النص ولكن بدرجة شفافية أعلى عشان يكون واضح",
                             "icon": "sicon-format-fill",
                             "value": "#ffffff",
                             "required": false
@@ -1087,35 +1005,8 @@
                             "id": "items.text_position",
                             "type": "items",
                             "format": "dropdown-list",
-                            "label": "مكان عرض النص على الصورة",
-                            "description": null,
-                            "labelHTML": null,
+                            "label": "مكان عرض النص",
                             "icon": "sicon-list",
-                            "selected": [
-                                {
-                                    "label": "علي اليسار",
-                                    "value": "end",
-                                    "key": "f4adec13-6e4c-654b-b978-b2807935ce44"
-                                }
-                            ],
-                            "options": [
-                                {
-                                    "label": "علي اليمين",
-                                    "value": "start",
-                                    "key": "e9c8ea8f-c5c6-234e-935-3bce269afd32"
-                                },
-                                {
-                                    "label": "في الوسط",
-                                    "value": "center",
-                                    "key": "c1b2d3e4-f5a6-b7c8-d9e0-f1a2b3c4d5e6"
-                                },
-                                {
-                                    "label": "علي اليسار",
-                                    "value": "end",
-                                    "key": "f4adec13-6e4c-654b-b978-b2807935ce44"
-                                }
-                            ],
-                            "source": "Manual",
                             "required": true
                         },
                         {
@@ -1124,63 +1015,10 @@
                             "label": "رابط عرض الكل",
                             "id": "items.url",
                             "value": [],
-                            "description": "اختر المكان الي يربط له لما العميل يضغط على اسم التصنيف أو صورته. إذا تركت الحقل فارغ، الرابط راح يكون افتراضي ويروح لصفحة التصنيف نفسها.",
                             "required": false,
                             "format": "variable-list",
                             "searchable": true,
-                            "source": "custom",
-                            "sources": [
-                                {
-                                    "label": "منتج",
-                                    "key": "products",
-                                    "value": "products"
-                                },
-                                {
-                                    "label": "تصنيف",
-                                    "key": "categories",
-                                    "value": "categories"
-                                },
-                                {
-                                    "label": "ماركة تجارية",
-                                    "key": "brands",
-                                    "value": "brands"
-                                },
-                                {
-                                    "label": "صفحة تعريفية",
-                                    "key": "pages",
-                                    "value": "pages"
-                                },
-                                {
-                                    "label": "مقالة",
-                                    "key": "blog_articles",
-                                    "value": "blog_articles"
-                                },
-                                {
-                                    "label": "تصنيف ضمن المدونة",
-                                    "key": "blog_categories",
-                                    "value": "blog_categories"
-                                },
-                                {
-                                    "label": "التخفيضات",
-                                    "key": "offers_link",
-                                    "value": "offers_link"
-                                },
-                                {
-                                    "label": "الماركات التجارية",
-                                    "key": "brands_link",
-                                    "value": "brands_link"
-                                },
-                                {
-                                    "label": "المدونة",
-                                    "key": "blog_link",
-                                    "value": "blog_link"
-                                },
-                                {
-                                    "label": "رابط خارجي",
-                                    "key": "custom",
-                                    "value": "custom"
-                                }
-                            ]
+                            "source": "custom"
                         }
                     ],
                     "value": [
@@ -1193,8 +1031,6 @@
                             "items.text_position": [
                                 "end"
                             ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
                             "items.title": "العناية بالجسم"
                         },
                         {
@@ -1206,8 +1042,6 @@
                             "items.text_position": [
                                 "end"
                             ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
                             "items.title": "أحمر الشفاه"
                         },
                         {
@@ -1219,8 +1053,6 @@
                             "items.text_position": [
                                 "end"
                             ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
                             "items.title": "الكونسيلر"
                         },
                         {
@@ -1232,8 +1064,6 @@
                             "items.text_position": [
                                 "end"
                             ],
-                            "items.img_overlay_color": "#323839",
-                            "items.img_overlay_opacity": 50,
                             "items.title": "كريم الأساس"
                         },
                         {
@@ -1245,8 +1075,6 @@
                             "items.text_position": [
                                 "end"
                             ],
-                            "items.img_overlay_color": "#4ccfe6",
-                            "items.img_overlay_opacity": 50,
                             "items.title": "عطور"
                         }
                     ]
