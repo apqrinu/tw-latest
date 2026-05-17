@@ -11,7 +11,7 @@
     "support_url": "https://apqrinu-co.com/",
     "repository": "https://github.com/apqrinu/tw-latest",
     "components": [
-           {
+        {
             "key": "ea2eb343-dec7-4894-83ba-3d3f87fdae0b",
             "title": "منتج مختار",
             "icon": "sicon-packed-box",
@@ -418,6 +418,187 @@
                     "labelHTML": null,
                     "icon": "sicon-format-fill",
                     "value": "#000000",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "key": "4d51cd9e-cca7-415c-a7c2-1cc33266fbf5",
+            "title": "بانر تخفيضات",
+            "icon": "sicon-store",
+            "name": "discount-banner",
+            "image": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
+            "fields": [
+                {
+                    "id": "notmrb",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إزالة المسافة السفلية",
+                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة السفلية للمكون.",
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "has_container",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إضافة العنصر داخل حاوية (Container)",
+                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "content_position_h",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "مكان ظهور المحتوي افقيا",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [
+                        {
+                            "label": "علي اليمين",
+                            "value": "right"
+                        },
+                        {
+                            "label": "علي اليسار",
+                            "value": "left"
+                        },
+                        {
+                            "label": "في المنتصف",
+                            "value": "middle"
+                        }
+                    ],
+                    "source": "Manual",
+                    "multichoice": false,
+                    "searchable": true,
+                    "required": false
+                },
+                {
+                    "id": "content_position_v",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "مكان ظهور المحتوي رأسيا",
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [
+                        {
+                            "label": "في الاعلي",
+                            "value": "top"
+                        },
+                        {
+                            "label": "في الاسفل",
+                            "value": "bottom"
+                        },
+                        {
+                            "label": "في المنتصف",
+                            "value": "middle"
+                        }
+                    ],
+                    "source": "Manual",
+                    "multichoice": false,
+                    "searchable": true,
+                    "required": false
+                },
+                {
+                    "id": "banner_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان البانر",
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "تخفيضات كبيرة على جميع المنتجات",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "0",
+                    "maxLength": "100"
+                },
+                {
+                    "id": "banner_subtitle",
+                    "type": "string",
+                    "format": "text",
+                    "label": "وصف البانر",
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "لا تفوت عروضنا الحصرية وتخفيضاتنا. تسوق الآن ووفّر الكثير على منتجاتك المفضلة!",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "0",
+                    "maxLength": "200"
+                },
+                {
+                    "id": "banner_text_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون النص",
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
+                    "id": "banner_image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة البانر",
+                    "icon": "sicon-image",
+                    "value": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
+                    "required": false
+                },
+                {
+                    "id": "banner_btn_text",
+                    "type": "string",
+                    "format": "text",
+                    "label": "النص الداخلي لزر",
+                    "placeholder": "Placeholder text ..",
+                    "icon": "sicon-format-text-alt",
+                    "value": "تسوق الآن",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "0",
+                    "maxLength": "100"
+                },
+                {
+                    "id": "banner_btn_text_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون النص الداخلي",
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
+                    "id": "banner_btn_bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون خلفية الزر",
+                    "icon": "sicon-format-fill",
+                    "value": "#004956",
+                    "required": false
+                },
+                {
+                    "id": "banner_time_s",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "هل تود ظهور عد تنازلي ؟",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "banner_time",
+                    "type": "string",
+                    "format": "datetime",
+                    "inputType": "datetime-local",
+                    "label": "العدد التنازلي",
+                    "icon": "sicon-calendar-time",
+                    "value": "2028-10-08T15:23",
                     "required": false
                 }
             ]

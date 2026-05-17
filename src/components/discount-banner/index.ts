@@ -1,0 +1,473 @@
+import { css, html, LitElement, TemplateResult } from "lit";
+import { property } from "lit/decorators.js";
+
+// ============================================
+// TYPES
+// ============================================
+
+type HorizontalPosition = "left" | "right" | "middle";
+type VerticalPosition = "top" | "bottom" | "middle";
+
+interface ComponentConfig {
+  notmrb?: boolean;
+  has_container?: boolean;
+
+  content_position_h?: HorizontalPosition;
+  content_position_v?: VerticalPosition;
+
+  banner_title?: string;
+  banner_subtitle?: string;
+
+  banner_text_color?: string;
+  banner_image?: string;
+
+  banner_btn_text?: string;
+  banner_btn_text_color?: string;
+  banner_btn_bg_color?: string;
+
+  banner_time_s?: boolean;
+  banner_time?: string;
+
+  [key: string]: any;
+}
+
+// ============================================
+// COMPONENT
+// ============================================
+
+export class DiscountBanner extends LitElement {
+
+  @property({
+    type: Object,
+    converter: {
+      fromAttribute: (value: string | null) => {
+        if (!value) return undefined;
+
+        if (typeof value === "object") return value;
+
+        try {
+          return JSON.parse(value);
+        } catch {
+          return undefined;
+        }
+      },
+    },
+  })
+  config?: ComponentConfig;
+
+  @property({ type: String })
+  position: string = "0";
+
+  @property({ type: Boolean })
+  isRtl: boolean = false;
+
+  // ─────────────────────────────────────────────
+  // LIFECYCLE
+  // ─────────────────────────────────────────────
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    if (typeof this.config === "string") {
+      try {
+        this.config = JSON.parse(this.config as any);
+      } catch (e) {
+        console.error("[discount-banner] Failed to parse config:", e);
+      }
+    }
+  }
+
+  // ─────────────────────────────────────────────
+  // STYLES
+  // ─────────────────────────────────────────────
+
+  static styles = css`
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :host {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .S_discount_banner {
+      width: 100%;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .db-container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-inline: 1rem;
+    }
+
+    /* ───────────────────────────── */
+
+    .db-banner {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+      border-radius: 1.5rem;
+    }
+
+    .db-banner:hover .db-bg {
+      transform: scale(1.05);
+    }
+
+    /* ───────────────────────────── */
+
+    .db-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    /* ───────────────────────────── */
+
+    .db-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        );
+    }
+
+    /* ───────────────────────────── */
+
+    .db-content {
+      position: relative;
+      z-index: 2;
+
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      padding: 1.5rem;
+    }
+
+    /* Vertical Position */
+
+    .db-content--top {
+      justify-content: flex-start;
+    }
+
+    .db-content--middle {
+      justify-content: center;
+    }
+
+    .db-content--bottom {
+      justify-content: flex-end;
+    }
+
+    /* Horizontal Position */
+
+    .db-content--left {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .db-content--middle-x {
+      align-items: center;
+      text-align: center;
+    }
+
+    .db-content--right {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    /* ───────────────────────────── */
+
+    .db-title {
+      margin: 0;
+
+      font-size: 1.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 768px) {
+      .db-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* ───────────────────────────── */
+
+    .db-subtitle {
+      margin: 0;
+
+      max-width: 32rem;
+
+      font-size: 0.95rem;
+      line-height: 1.7;
+
+      opacity: 0.9;
+    }
+
+    @media (min-width: 768px) {
+      .db-subtitle {
+        font-size: 1.125rem;
+      }
+    }
+
+    /* ───────────────────────────── */
+
+    .db-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      width: fit-content;
+
+      padding: 0.875rem 1.5rem;
+
+      border-radius: 1rem;
+
+      font-size: 0.95rem;
+      font-weight: 700;
+
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    .db-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .db-btn-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .db-btn:hover .db-btn-icon {
+      transform: translateX(-4px);
+    }
+
+    /* ───────────────────────────── */
+
+    .db-countdown {
+      width: fit-content;
+    }
+
+    .db-countdown ::slotted(.s-count-down-item) {
+      width: 50px;
+      background-color: white;
+    }
+
+    /* ───────────────────────────── */
+
+    @media (max-width: 767px) {
+
+      .db-banner {
+        min-height: 420px;
+      }
+
+      .db-content {
+        padding: 1.25rem;
+      }
+
+      .db-title {
+        font-size: 1.5rem;
+      }
+
+      .db-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+  `;
+
+  // ─────────────────────────────────────────────
+  // HELPERS
+  // ─────────────────────────────────────────────
+
+  private _horizontalClass(pos?: HorizontalPosition): string {
+    switch (pos) {
+      case "left":
+        return "db-content--left";
+
+      case "middle":
+        return "db-content--middle-x";
+
+      case "right":
+      default:
+        return "db-content--right";
+    }
+  }
+
+  private _verticalClass(pos?: VerticalPosition): string {
+    switch (pos) {
+      case "top":
+        return "db-content--top";
+
+      case "bottom":
+        return "db-content--bottom";
+
+      case "middle":
+      default:
+        return "db-content--middle";
+    }
+  }
+
+  // ─────────────────────────────────────────────
+  // RENDER COUNTDOWN
+  // ─────────────────────────────────────────────
+
+  private _renderCountdown(date?: string): TemplateResult | string {
+
+    if (!date) return "";
+
+    return html`
+      <div class="db-countdown">
+        <salla-count-down
+          date="${date}"
+          digits="${this.isRtl ? "ar" : "en"}"
+          boxed="true"
+          labeled="true"
+          size="md"
+        >
+        </salla-count-down>
+      </div>
+    `;
+  }
+
+  // ─────────────────────────────────────────────
+  // RENDER
+  // ─────────────────────────────────────────────
+
+  render() {
+
+    const cfg = this.config;
+
+    // Safety re-parse
+    if (typeof cfg === "string") {
+      try {
+        this.config = JSON.parse(cfg as any);
+      } catch { /* ignore */ }
+
+      return html``;
+    }
+
+    const sectionId = `S_discount_banner-${this.position}`;
+
+    const contentClasses = [
+      "db-content",
+      this._horizontalClass(cfg?.content_position_h),
+      this._verticalClass(cfg?.content_position_v),
+    ].join(" ");
+
+    const content = html`
+
+      <div class="db-banner">
+
+        <!-- Background Image -->
+        ${cfg?.banner_image
+          ? html`
+              <img
+                src="${cfg.banner_image}"
+                alt="${cfg.banner_title ?? "banner"}"
+                class="db-bg"
+              />
+            `
+          : ""
+        }
+
+        <!-- Overlay -->
+        <div class="db-overlay"></div>
+
+        <!-- Content -->
+        <div class="${contentClasses}">
+
+          <!-- Countdown -->
+          ${cfg?.banner_time_s
+            ? this._renderCountdown(cfg?.banner_time)
+            : ""
+          }
+
+          <!-- Title -->
+          ${cfg?.banner_title
+            ? html`
+                <h2
+                  class="db-title"
+                  style="color: ${cfg.banner_text_color ?? "#fff"}"
+                >
+                  ${cfg.banner_title}
+                </h2>
+              `
+            : ""
+          }
+
+          <!-- Subtitle -->
+          ${cfg?.banner_subtitle
+            ? html`
+                <p
+                  class="db-subtitle"
+                  style="color: ${cfg.banner_text_color ?? "#fff"}"
+                >
+                  ${cfg.banner_subtitle}
+                </p>
+              `
+            : ""
+          }
+
+          <!-- Button -->
+          ${cfg?.banner_btn_text
+            ? html`
+                <a
+                  href="#"
+                  class="db-btn"
+                  style="
+                    background-color: ${cfg.banner_btn_bg_color ?? "#000"};
+                    color: ${cfg.banner_btn_text_color ?? "#fff"};
+                  "
+                >
+                  <span>${cfg.banner_btn_text}</span>
+
+                  <span class="db-btn-icon">
+                    ${this.isRtl ? "←" : "→"}
+                  </span>
+                </a>
+              `
+            : ""
+          }
+
+        </div>
+      </div>
+    `;
+
+    return html`
+      <section
+        class="S_discount_banner"
+        id="${sectionId}"
+        aria-label="Section ${sectionId}"
+        dir="${this.isRtl ? "rtl" : "ltr"}"
+        data-notmrb="${cfg?.notmrb ? "true" : "false"}"
+      >
+        ${cfg?.has_container
+          ? html`
+              <div class="db-container">
+                ${content}
+              </div>
+            `
+          : content
+        }
+      </section>
+    `;
+  }
+}
