@@ -1,11 +1,11 @@
 {
     "name": {
-        "ar": "مجموعة ",
-        "en": "latest"
+        "ar": "مجموعة بريق",
+        "en": "Bareeq Collection"
     },
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": "مجموعة مختارة من الملابس تمنحك إطلالة أنيقة ومشرقة.",
+        "en": "A curated fashion collection that gives you a bright and elegant look."
     },
     "author_email": "apqrinu@gmail.com",
     "support_url": "https://apqrinu-co.com/",
@@ -47,7 +47,13 @@
                     "description": null,
                     "labelHTML": null,
                     "icon": "sicon-keyboard_arrow_down",
-                    "selected": [],
+                    "selected": [
+                        {
+                            "label": "علي اليمين",
+                            "value": "right",
+                            "key": "ee3b7fc8-98ef-46ae-a098-47b786eadabc"
+                        }
+                    ],
                     "options": [
                         {
                             "label": "علي اليمين",
@@ -78,7 +84,13 @@
                     "description": null,
                     "labelHTML": null,
                     "icon": "sicon-keyboard_arrow_down",
-                    "selected": [],
+                    "selected": [
+                        {
+                            "label": "في المنتصف",
+                            "value": "middle",
+                            "key": "09e7a38e-6a68-4e74-a3bd-b991bd558cb2"
+                        }
+                    ],
                     "options": [
                         {
                             "label": "في الاعلي",
@@ -158,7 +170,7 @@
                     "labelHTML": null,
                     "placeholder": "e.g. https://hostname.com/image.png",
                     "icon": "sicon-image",
-                    "value": "https://cdn.files.salla.network/homepage/1728749068/af937034-5917-4486-85bb-ca91168399dd.webp",
+                    "value": "https://i.ibb.co/vxpC1Ppd/pexels-cottonbro-7654041.jpg",
                     "required": false
                 },
                 {
@@ -212,15 +224,6 @@
             "name": "about-us",
             "fields": [
                 {
-                    "id": "section_preview_image",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/mrRRS5SB/f729037a-534f-4ee4-ab7c-ee773e71de25.webp'></div>",
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
-                },
-                {
                     "type": "static",
                     "format": "description",
                     "id": "component_settings_header",
@@ -263,7 +266,7 @@
                     "labelHTML": null,
                     "placeholder": "مثال: https://example.com/banner-image.jpg",
                     "icon": "sicon-image",
-                    "value": "https://cdn.files.salla.network/homepage/1553595151/76ea7a16-fe8c-41fe-890b-7546dae8e1e1.webp",
+                    "value": "https://i.ibb.co/CCTS8BR/Gemini-Generated-Image-ggo9h3ggo9h3ggo9.png",
                     "required": false
                 },
                 {
@@ -456,7 +459,6 @@
         },
         {
             "key": "541cc423-90c7-4230-8a33-a0342cfde4ee",
-            "image": "https://i.ibb.co/WWfGMWQJ/d1b8a144-35d0-47cf-806e-5c36eced0f6b.webp",
             "title": "تصنيفات بصرية ",
             "icon": "sicon-grid",
             "name": "visual-categories",
@@ -720,9 +722,6 @@
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/b79ca2f1-4e73-419d-9a36-bf0a3580138d.webp",
                             "items.text_color": "#333333",
                             "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
                             "items.img_overlay_color": "#323839",
                             "items.img_overlay_opacity": 50,
                             "items.title": "أحمر الشفاه"
@@ -733,48 +732,33 @@
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/15e8218b-37d6-4dcb-ada3-21572a544f56.webp",
                             "items.text_color": "#333333",
                             "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
                             "items.img_overlay_color": "#323839",
                             "items.img_overlay_opacity": 50,
                             "items.title": "الكونسيلر"
                         },
                         {
-                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1860023918",
                             "items.count": 20,
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/9b4631f7-540a-4647-b9d3-9a6efc6cc735.webp",
                             "items.text_color": "#333333",
                             "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
                             "items.img_overlay_color": "#323839",
                             "items.img_overlay_opacity": 50,
                             "items.title": "كريم الأساس"
                         },
                         {
-                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/1408967290",
                             "items.count": 50,
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/8ef96be6-8c40-409d-8649-599fb9504978.webp",
                             "items.text_color": "#333333",
                             "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
                             "items.img_overlay_color": "#4ccfe6",
                             "items.img_overlay_opacity": 50,
                             "items.title": "عطور"
                         },
                         {
-                            "items.url": "https://salla.design/ar/dev-olwl3hbbyyzsa6wn/redirect/categories/176682088",
                             "items.count": 12,
                             "items.image": "https://cdn.files.salla.network/homepage/1553595151/acc7f9c4-5af0-470d-8de1-f9b8e2932d4b.webp",
                             "items.text_color": "#333333",
                             "items.img_overlay": false,
-                            "items.text_position": [
-                                "end"
-                            ],
                             "items.img_overlay_color": "#323839",
                             "items.img_overlay_opacity": 50,
                             "items.title": "ظلال العيون"
@@ -1050,47 +1034,6 @@
                             "required": false
                         },
                         {
-                            "id": "B_banner_sec_collection.banner_promotion_txt",
-                            "type": "string",
-                            "format": "text",
-                            "label": "النص الترويجي",
-                            "description": "أضف نصًا ترويجيًا قصيرًا يدعم العنوان الرئيسي، يوضح مميزات العرض أو المنتج، ويشجع العميل على اتخاذ قرار الشراء.",
-                            "labelHTML": null,
-                            "placeholder": null,
-                            "icon": "sicon-format-text-alt",
-                            "value": "30% خصم",
-                            "multilanguage": true,
-                            "required": false,
-                            "minLength": "3",
-                            "maxLength": "25",
-                            "conditions": [
-                                {
-                                    "id": "has_promotion_txt",
-                                    "operation": "=",
-                                    "value": true
-                                }
-                            ]
-                        },
-                        {
-                            "id": "B_banner_sec_collection.banner_promotion_color",
-                            "type": "string",
-                            "format": "color",
-                            "inputType": "color",
-                            "label": "لون النص الترويجي",
-                            "description": "اختار لون متناسق مع العنوان الرئيسي ويكون سهل القراءة",
-                            "labelHTML": null,
-                            "icon": "sicon-format-fill",
-                            "value": "#ffffff",
-                            "required": false,
-                            "conditions": [
-                                {
-                                    "id": "has_promotion_txt",
-                                    "operation": "=",
-                                    "value": true
-                                }
-                            ]
-                        },
-                        {
                             "id": "B_banner_sec_collection.banner_btn_txt",
                             "type": "string",
                             "format": "text",
@@ -1197,12 +1140,6 @@
                     "value": [
                         {
                             "B_banner_sec_collection.banner_image": "https://i.ibb.co/6c4kCR13/download-80.png",
-                            "B_banner_sec_collection.B_banner_align_h": [
-                                "start"
-                            ],
-                            "B_banner_sec_collection.B_banner_align_v": [
-                                "center"
-                            ],
                             "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
                             "B_banner_sec_collection.banner_btn_color": "#1F2937",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
@@ -1220,12 +1157,6 @@
                         },
                         {
                             "B_banner_sec_collection.banner_image": "https://i.ibb.co/qMvPVdms/download-75.png",
-                            "B_banner_sec_collection.B_banner_align_h": [
-                                "center"
-                            ],
-                            "B_banner_sec_collection.B_banner_align_v": [
-                                "start"
-                            ],
                             "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
                             "B_banner_sec_collection.banner_btn_color": "#111827",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
@@ -1243,12 +1174,6 @@
                         },
                         {
                             "B_banner_sec_collection.banner_image": "https://i.ibb.co/6c4kCR13/download-80.png",
-                            "B_banner_sec_collection.B_banner_align_h": [
-                                "center"
-                            ],
-                            "B_banner_sec_collection.B_banner_align_v": [
-                                "start"
-                            ],
                             "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
                             "B_banner_sec_collection.banner_btn_color": "#374151",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
@@ -1266,12 +1191,6 @@
                         },
                         {
                             "B_banner_sec_collection.banner_image": "https://i.ibb.co/9H3gKZtv/download-83.png",
-                            "B_banner_sec_collection.B_banner_align_h": [
-                                "center"
-                            ],
-                            "B_banner_sec_collection.B_banner_align_v": [
-                                "start"
-                            ],
                             "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
                             "B_banner_sec_collection.banner_btn_color": "#111827",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
@@ -1285,10 +1204,6 @@
                             "B_banner_sec_collection.banner_main_title": {
                                 "ar": "عــــــــروض الفاشــــــــون لفترة محــــــــدودة",
                                 "en": "Limited-Time Fashion Offers"
-                            },
-                            "B_banner_sec_collection.banner_promotion_txt": {
-                                "ar": "خصم 50%",
-                                "en": "50% Off"
                             }
                         }
                     ],

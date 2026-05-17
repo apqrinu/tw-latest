@@ -4,10 +4,12 @@ import { property } from "lit/decorators.js";
 // ============================================
 // TYPES
 // ============================================
-
+interface PositionContent {
+  value: string;
+}
 interface BannerItem {
-  B_banner_align_h?: string[];
-  B_banner_align_v?: string[];
+  B_banner_align_h?: PositionContent[];
+  B_banner_align_v?: PositionContent[];
 
   banner_image_switcher?: boolean;
 
@@ -494,12 +496,13 @@ export class ShopByCategory extends LitElement {
     cfg: ComponentConfig,
     idx: number
   ): TemplateResult {
-
+    
+      console.log("Rendering banner item:", item);
+      console.log("Rendering banner :", cfg);
     const alignH =
-      item.B_banner_align_h?.[0] ?? "center";
-
+      item.B_banner_align_h?.[0].value ;
     const alignV =
-      item.B_banner_align_v?.[0] ?? "center";
+      item.B_banner_align_v?.[0].value;
 
     const useVideo =
       item.banner_image_switcher === true;
@@ -588,9 +591,7 @@ export class ShopByCategory extends LitElement {
           "
         >
 
-          ${cfg.has_promotion_txt
-            ? this._renderPromotion(item)
-            : ""}
+
 
           ${item.banner_main_title
             ? html`
