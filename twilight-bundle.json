@@ -868,7 +868,7 @@
         {
             "key": "541cc423-90c7-4230-8a33-a0342cfde4ee",
             "image": "https://i.ibb.co/WWfGMWQJ/d1b8a144-35d0-47cf-806e-5c36eced0f6b.webp",
-            "title": "تصنيفات بصرية - وعد",
+            "title": "تصنيفات بصرية ",
             "icon": "sicon-grid",
             "name": "visual-categories",
             "fields": [
@@ -916,57 +916,6 @@
                     "icon": "sicon-toggle-off",
                     "value": true,
                     "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "slider_autoplay_enabled",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "تشغيل السلايدر تلقائياً؟",
-                    "description": "شغّل هذا الخيار إذا تبي السلايدر يتحرك لوحده بدون ما يضغط المستخدم على أي شيء.",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "slider_loop_enabled",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "تشغيل السلايدر بشكل متواصل (لووب)؟",
-                    "description": "شغّل هذا الخيار إذا تبي السلايدر ما يوقف — بعد ما ينتهي يرجع يبدأ من أول.",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
-                    "id": "slider_autoplay_delay_ms",
-                    "type": "number",
-                    "format": "slider",
-                    "inputType": "range",
-                    "label": "كم ثانية ينتظر السلايدر قبل ما ينتقل للتصنيف التالي؟",
-                    "description": "حدّد وقت الانتظار بين كل سلايد وثاني. القيمة بالميلي ثانية — مثلاً: 2500 = ثانيتين ونص.",
-                    "labelHTML": null,
-                    "icon": "sicon-pin",
-                    "value": 2500,
-                    "required": false,
-                    "step": "1",
-                    "minimum": "0",
-                    "maximum": "4000"
-                },
-                {
-                    "id": "show_controls",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "اظهار أسهم التحكم",
-                    "description": "عند تفعيل هذا الخيار راح تظهر أسهم التنقل يمين ويسار داخل السلايد .",
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": false,
-                    "selected": false,
                     "required": false
                 },
                 {
