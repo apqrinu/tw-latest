@@ -462,15 +462,6 @@
             "name": "visual-categories",
             "fields": [
                 {
-                    "id": "section_preview_image",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/WWfGMWQJ/d1b8a144-35d0-47cf-806e-5c36eced0f6b.webp'></div>",
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
-                },
-                {
                     "type": "static",
                     "format": "description",
                     "id": "component_settings_header",
@@ -794,20 +785,10 @@
         },
         {
             "key": "35f66f0d-80d4-475b-89d8-87cc4338175b",
-            "title": "تسوق حسب الفئة - البركة",
+            "title": "تسوق حسب الفئة",
             "icon": "sicon-layout-grid-rearrange",
             "name": "shop-by-category",
-            "image": "https://i.ibb.co/vpkWSS0/6.webp",
             "fields": [
-                {
-                    "id": "wide_banner_static_title",
-                    "type": "static",
-                    "format": "description",
-                    "label": null,
-                    "value": "<div ><h6 >معاينة العنصر</h6><img class='w-full' src='https://i.ibb.co/ns5kr1f3/Screenshot-2026-05-06-113826.webp'></div>",
-                    "variant": "h1",
-                    "icon": "sicon-format-size"
-                },
                 {
                     "type": "static",
                     "format": "description",
@@ -931,7 +912,7 @@
                             "labelHTML": null,
                             "placeholder": null,
                             "icon": "sicon-image",
-                            "value": "https://cdn.files.salla.network/homepage/1244157962/6b68cf9e-df93-416c-b899-1ac79cf1598f.webp",
+                            "value": "https://i.ibb.co/6c4kCR13/download-80.png",
                             "required": true,
                             "conditions": [
                                 {
@@ -1050,7 +1031,7 @@
                             "labelHTML": null,
                             "placeholder": null,
                             "icon": "sicon-format-text-alt",
-                            "value": "أفضــــــــل أضــــــــاحي العـــــــــــيد",
+                            "value": "أحدث صيحات الموضة والأزياء",
                             "multilanguage": true,
                             "required": false,
                             "minLength": "3",
@@ -1215,99 +1196,99 @@
                     ],
                     "value": [
                         {
-                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/6b68cf9e-df93-416c-b899-1ac79cf1598f.webp",
+                            "B_banner_sec_collection.banner_image": "https://i.ibb.co/6c4kCR13/download-80.png",
                             "B_banner_sec_collection.B_banner_align_h": [
                                 "start"
                             ],
                             "B_banner_sec_collection.B_banner_align_v": [
                                 "center"
                             ],
-                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
-                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#1F2937",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
                             "B_banner_sec_collection.banner_image_switcher": false,
                             "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_main_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_btn_txt": {
-                                "ar": "تسوق الأن",
+                                "ar": "تسوق الآن",
                                 "en": "Shop Now"
                             },
                             "B_banner_sec_collection.banner_main_title": {
-                                "ar": "أفضــــــــل أضــــــــاحي العـــــــــــيد",
-                                "en": "Best Eid Sacrifices"
+                                "ar": "أحــــــــدث صيحــــــــات الموضــــــــة",
+                                "en": "Latest Fashion Trends"
                             }
                         },
                         {
-                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/8a03cae3-bf82-4a04-9555-cd74b7953c06.webp",
+                            "B_banner_sec_collection.banner_image": "https://i.ibb.co/qMvPVdms/download-75.png",
                             "B_banner_sec_collection.B_banner_align_h": [
                                 "center"
                             ],
                             "B_banner_sec_collection.B_banner_align_v": [
                                 "start"
                             ],
-                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
-                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#111827",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
                             "B_banner_sec_collection.banner_image_switcher": false,
                             "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_main_title_color": "#000000",
                             "B_banner_sec_collection.banner_btn_txt": {
-                                "ar": "تسوق الأن",
+                                "ar": "تسوق الآن",
                                 "en": "Shop Now"
                             },
                             "B_banner_sec_collection.banner_main_title": {
-                                "ar": "لحـــــــــــوم طـــــــــازجة يـــــــوم بيـــــــوم",
-                                "en": "Fresh Meat Daily"
+                                "ar": "إطلالــــــــة أنيقــــــــة لكــــــــل يــــــــوم",
+                                "en": "Stylish Looks Everyday"
                             }
                         },
                         {
-                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/d4c10c57-c149-4835-9d30-c585d2f78949.webp",
+                            "B_banner_sec_collection.banner_image": "https://i.ibb.co/6c4kCR13/download-80.png",
                             "B_banner_sec_collection.B_banner_align_h": [
                                 "center"
                             ],
                             "B_banner_sec_collection.B_banner_align_v": [
                                 "start"
                             ],
-                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
-                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#374151",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
                             "B_banner_sec_collection.banner_image_switcher": false,
                             "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_main_title_color": "#000000",
                             "B_banner_sec_collection.banner_btn_txt": {
-                                "ar": "تسوق الأن",
+                                "ar": "تسوق الآن",
                                 "en": "Shop Now"
                             },
                             "B_banner_sec_collection.banner_main_title": {
-                                "ar": "مشــــــــاوي بطعــــم لا يُقـــــــــاوم",
-                                "en": "Irresistible Grills"
+                                "ar": "تشكيلــــــــة صيفيــــــــة عصريــــــــة",
+                                "en": "Modern Summer Collection"
                             }
                         },
                         {
-                            "B_banner_sec_collection.banner_image": "https://cdn.files.salla.network/homepage/1244157962/531527f2-9baa-4dda-a744-0247b1876f4e.webp",
+                            "B_banner_sec_collection.banner_image": "https://i.ibb.co/9H3gKZtv/download-83.png",
                             "B_banner_sec_collection.B_banner_align_h": [
                                 "center"
                             ],
                             "B_banner_sec_collection.B_banner_align_v": [
                                 "start"
                             ],
-                            "B_banner_sec_collection.banner_video": "https://i.top4top.io/m_37826j48y1.mp4",
-                            "B_banner_sec_collection.banner_btn_color": "#022E04",
+                            "B_banner_sec_collection.banner_video": "https://f.top4top.io/m_3789nrgbk1.mp4",
+                            "B_banner_sec_collection.banner_btn_color": "#111827",
                             "B_banner_sec_collection.banner_btn_txt_color": "#ffffff",
                             "B_banner_sec_collection.banner_image_switcher": false,
                             "B_banner_sec_collection.banner_sub_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_main_title_color": "#ffffff",
                             "B_banner_sec_collection.banner_btn_txt": {
-                                "ar": "تسوق الأن",
+                                "ar": "تسوق الآن",
                                 "en": "Shop Now"
                             },
                             "B_banner_sec_collection.banner_main_title": {
-                                "ar": "عـــــــروض العيــــــد لفتــــــرة محــــــــــدودة",
-                                "en": "Limited-Time Eid Offers"
+                                "ar": "عــــــــروض الفاشــــــــون لفترة محــــــــدودة",
+                                "en": "Limited-Time Fashion Offers"
                             },
                             "B_banner_sec_collection.banner_promotion_txt": {
-                                "ar": "خصم 30%",
-                                "en": "30% Off"
+                                "ar": "خصم 50%",
+                                "en": "50% Off"
                             }
                         }
                     ],
