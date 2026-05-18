@@ -1,11 +1,11 @@
 {
     "name": {
-        "ar": "مجموعة بريق",
-        "en": "Bareeq Collection"
+        "ar": "بريق",
+        "en": "latest"
     },
     "description": {
-        "ar": "مجموعة مختارة من الملابس تمنحك إطلالة أنيقة ومشرقة.",
-        "en": "A curated fashion collection that gives you a bright and elegant look."
+        "ar": null,
+        "en": null
     },
     "author_email": "apqrinu@gmail.com",
     "support_url": "https://apqrinu-co.com/",
