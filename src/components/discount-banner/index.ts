@@ -255,16 +255,6 @@ export class DiscountBanner extends LitElement {
       transform: translateX(-4px);
     }
 
-    /* ───────────────────────────── */
-
-    .db-countdown {
-      width: fit-content;
-    }
-
-    .db-countdown ::slotted(.s-count-down-item) {
-      width: 50px;
-      background-color: white;
-    }
 
     /* ───────────────────────────── */
 

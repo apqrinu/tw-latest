@@ -861,17 +861,6 @@
                     ]
                 },
                 {
-                    "id": "has_promotion_txt",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "إضافة نص ترويجي",
-                    "description": "تفعيل هذا الخيار لإضافة نص ترويجي اعلي العنوان الرئيسي للبانر.",
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": true,
-                    "required": false
-                },
-                {
                     "id": "B_banner_sec_collection",
                     "type": "collection",
                     "format": "collection",

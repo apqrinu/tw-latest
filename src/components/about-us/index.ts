@@ -44,9 +44,10 @@ export class AboutUs extends LitElement {
     .wrapper {
       display: flex;
       flex-direction: column;
+      width: 100%;
       gap: 2.5rem;
-      padding: 3.5rem 1rem;
       align-items: center;
+      justify-content: space-between;
     }
 
     @media (min-width: 1024px) {
@@ -86,11 +87,16 @@ export class AboutUs extends LitElement {
       flex-direction: column;
       gap: 1.25rem;
       text-align: center;
+          align-items: center;
+
     }
 
     @media (min-width: 1024px) {
       .content {
         text-align: right;
+            align-items: flex-start;
+
+
       }
     }
 
