@@ -1,21 +1,21 @@
-import { LitElement as d, css as m, html as i } from "lit";
-import { property as p } from "lit/decorators.js";
-var c = Object.defineProperty, f = (o, e, s, g) => {
-  for (var t = void 0, r = o.length - 1, l; r >= 0; r--)
-    (l = o[r]) && (t = l(e, s, t) || t);
-  return t && c(e, s, t), t;
+import { LitElement as c, css as p, html as n } from "lit";
+import { property as f } from "lit/decorators.js";
+import { l as s } from "./localizedString-8Sg-A_T6.js";
+var g = Object.defineProperty, x = (d, e, i, o) => {
+  for (var t = void 0, a = d.length - 1, m; a >= 0; a--)
+    (m = d[a]) && (t = m(e, i, t) || t);
+  return t && g(e, i, t), t;
 };
-const a = class a extends d {
+const l = class l extends c {
   render() {
-    const e = this.config;
-    return i`
+    const e = this.config, i = s(e == null ? void 0 : e.banner_title), o = s(e == null ? void 0 : e.banner_description), t = s(e == null ? void 0 : e.banner_btn_text);
+    return n`
       <section class="section">
         <div class="${e != null && e.has_container ? "container" : ""}">
           <div class="wrapper">
-
             <!-- Image -->
             <div class="imageBox">
-              ${e != null && e.img_overlay ? i`
+              ${e != null && e.img_overlay ? n`
                     <div
                       class="overlay"
                       style="
@@ -24,12 +24,11 @@ const a = class a extends d {
                       "
                     ></div>
                   ` : ""}
-
-              ${e != null && e.banner_image ? i`
+              ${e != null && e.banner_image ? n`
                     <img
                       class="image"
                       src="${e.banner_image}"
-                      alt="${e.banner_title ?? ""}"
+                      alt="${i ?? ""}"
                       loading="lazy"
                     />
                   ` : ""}
@@ -37,11 +36,9 @@ const a = class a extends d {
 
             <!-- Content -->
             <div class="content">
-              ${e != null && e.banner_title ? i`<h2 class="title">${e.banner_title}</h2>` : ""}
-
-              ${e != null && e.banner_description ? i`<p class="desc">${e.banner_description}</p>` : ""}
-
-              ${e != null && e.banner_btn_text ? i`
+              ${i ? n`<h2 class="title">${i}</h2>` : ""}
+              ${o ? n`<p class="desc">${o}</p>` : ""}
+              ${e != null && e.banner_btn_text ? n`
                     <a
                       class="btn"
                       href="${(e == null ? void 0 : e.url) ?? "#"}"
@@ -51,18 +48,17 @@ const a = class a extends d {
                         border:1.5px solid ${e.banner_btn_text_color ?? "#fff"};
                       "
                     >
-                      ${e.banner_btn_text}
+                      ${t}
                     </a>
                   ` : ""}
             </div>
-
           </div>
         </div>
       </section>
     `;
   }
 };
-a.styles = m`
+l.styles = p`
     :host {
       display: block;
     }
@@ -123,16 +119,13 @@ a.styles = m`
       flex-direction: column;
       gap: 1.25rem;
       text-align: center;
-          align-items: center;
-
+      align-items: center;
     }
 
     @media (min-width: 1024px) {
       .content {
         text-align: right;
-            align-items: flex-start;
-
-
+        align-items: flex-start;
       }
     }
 
@@ -168,14 +161,14 @@ a.styles = m`
 
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
   `;
-let n = a;
-f([
-  p({ type: Object })
-], n.prototype, "config");
-typeof n < "u" && n.registerSallaComponent("salla-about-us");
+let r = l;
+x([
+  f({ type: Object })
+], r.prototype, "config");
+typeof r < "u" && r.registerSallaComponent("salla-about-us");
 export {
-  n as AboutUs
+  r as AboutUs
 };

@@ -1,5 +1,6 @@
 import { css, html, LitElement, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
+import { localizedString, LocalizedString } from "../../utils/localizedString.js";
 
 // ============================================
 // TYPES
@@ -15,13 +16,13 @@ interface ComponentConfig {
   content_position_h?: HorizontalPosition;
   content_position_v?: VerticalPosition;
 
-  banner_title?: string;
-  banner_subtitle?: string;
+  banner_title?: LocalizedString;
+  banner_subtitle?: LocalizedString;
 
   banner_text_color?: string;
   banner_image?: string;
 
-  banner_btn_text?: string;
+  banner_btn_text?: LocalizedString;
   banner_btn_text_color?: string;
   banner_btn_bg_color?: string;
 
@@ -255,7 +256,6 @@ export class DiscountBanner extends LitElement {
       transform: translateX(-4px);
     }
 
-
     /* ───────────────────────────── */
 
     @media (max-width: 767px) {
@@ -332,8 +332,6 @@ export class DiscountBanner extends LitElement {
 
   render() {
     const cfg = this.config;
-    console.log("H:", cfg?.content_position_h);
-    console.log("V:", cfg?.content_position_v);
 
     // Safety re-parse
     if (typeof cfg === "string") {
@@ -355,7 +353,10 @@ export class DiscountBanner extends LitElement {
       cfg?.content_position_v,
     ) as VerticalPosition;
 
-    console.log("parsed:", { hPos, vPos });
+    // Resolve multilanguage fields
+    const title = localizedString(cfg?.banner_title);
+    const subtitle = localizedString(cfg?.banner_subtitle);
+    const btnText = localizedString(cfg?.banner_btn_text);
 
     const contentClasses = [
       "db-content",
@@ -370,7 +371,7 @@ export class DiscountBanner extends LitElement {
           ? html`
               <img
                 src="${cfg.banner_image}"
-                alt="${cfg.banner_title ?? "banner"}"
+                alt="${title ?? "banner"}"
                 class="db-bg"
               />
             `
@@ -382,31 +383,31 @@ export class DiscountBanner extends LitElement {
         <!-- Content -->
         <div class="${contentClasses}">
           <!-- Title -->
-          ${cfg?.banner_title
+          ${title
             ? html`
                 <h2
                   class="db-title"
                   style="color: ${cfg.banner_text_color ?? "#fff"}"
                 >
-                  ${cfg.banner_title}
+                  ${title}
                 </h2>
               `
             : ""}
 
           <!-- Subtitle -->
-          ${cfg?.banner_subtitle
+          ${subtitle
             ? html`
                 <p
                   class="db-subtitle"
                   style="color: ${cfg.banner_text_color ?? "#fff"}"
                 >
-                  ${cfg.banner_subtitle}
+                  ${subtitle}
                 </p>
               `
             : ""}
 
           <!-- Button -->
-          ${cfg?.banner_btn_text
+          ${btnText
             ? html`
                 <a
                   href="#"
@@ -416,7 +417,7 @@ export class DiscountBanner extends LitElement {
                     color: ${cfg.banner_btn_text_color ?? "#fff"};
                   "
                 >
-                  <span>${cfg.banner_btn_text}</span>
+                  <span>${btnText}</span>
 
                   <span class="db-btn-icon"> ${this.isRtl ? "←" : "→"} </span>
                 </a>

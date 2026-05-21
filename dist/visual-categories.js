@@ -1,13 +1,14 @@
-import { LitElement as g, css as m, html as i } from "lit";
-import { property as u } from "lit/decorators.js";
-var v = Object.defineProperty, h = (c, e, s, t) => {
-  for (var r = void 0, n = c.length - 1, o; n >= 0; n--)
-    (o = c[n]) && (r = o(e, s, r) || r);
-  return r && v(e, s, r), r;
+import { LitElement as m, css as u, html as i } from "lit";
+import { property as v } from "lit/decorators.js";
+import { l as h } from "./localizedString-8Sg-A_T6.js";
+var y = Object.defineProperty, x = (c, r, s, t) => {
+  for (var e = void 0, n = c.length - 1, o; n >= 0; n--)
+    (o = c[n]) && (e = o(r, s, e) || e);
+  return e && y(r, s, e), e;
 };
-const l = class l extends g {
-  _align(e) {
-    switch (e) {
+const l = class l extends m {
+  _align(r) {
+    switch (r) {
       case "start":
         return "flex-start";
       case "center":
@@ -16,8 +17,8 @@ const l = class l extends g {
         return "flex-end";
     }
   }
-  _textAlign(e) {
-    switch (e) {
+  _textAlign(r) {
+    switch (r) {
       case "start":
         return "left";
       case "center":
@@ -27,27 +28,23 @@ const l = class l extends g {
     }
   }
   render() {
-    const e = this.config, s = (e == null ? void 0 : e.items) ?? [];
+    const r = this.config, s = (r == null ? void 0 : r.items) ?? [];
     return i`
       <section class="section">
-        <div class="${e != null && e.has_container ? "container" : ""}">
+        <div class="${r != null && r.has_container ? "container" : ""}">
           <div class="grid">
-
             ${s.map((t) => {
       var d, p;
-      console.log(t);
-      const r = ((p = (d = t == null ? void 0 : t.text_position) == null ? void 0 : d[0]) == null ? void 0 : p.value) ?? "end", n = this._align(r), o = this._textAlign(r), f = ((t == null ? void 0 : t.img_overlay_opacity) ?? 50) / 100;
+      const e = ((p = (d = t == null ? void 0 : t.text_position) == null ? void 0 : d[0]) == null ? void 0 : p.value) ?? "end", n = h(t == null ? void 0 : t.title), o = this._align(e), f = this._textAlign(e), g = ((t == null ? void 0 : t.img_overlay_opacity) ?? 50) / 100;
       return i`
                 <a class="card" href="${t.url ?? "#"}">
-
                   ${t.image ? i`<img class="img" src="${t.image}" />` : i`<div class="img"></div>`}
-
                   ${t.img_overlay ? i`
                         <div
                           class="overlay"
                           style="
                             background:${t.img_overlay_color ?? "#000"};
-                            opacity:${f};
+                            opacity:${g};
                           "
                         ></div>
                       ` : ""}
@@ -57,15 +54,15 @@ const l = class l extends g {
                     style="
                       display:flex;
                       flex-direction:column;
-                      align-items:${n};
-                      text-align:${o};
+                      align-items:${o};
+                      text-align:${f};
                     "
                   >
                     <h2
                       class="title"
                       style="color:${t.text_color ?? "#fff"}"
                     >
-                      ${t.title ?? ""}
+                      ${n ?? ""}
                     </h2>
 
                     ${t.count ? i`
@@ -77,18 +74,16 @@ const l = class l extends g {
                           </span>
                         ` : ""}
                   </div>
-
                 </a>
               `;
     })}
-
           </div>
         </div>
       </section>
     `;
   }
 };
-l.styles = m`
+l.styles = u`
     :host {
       display: block;
     }
@@ -187,8 +182,8 @@ l.styles = m`
     }
   `;
 let a = l;
-h([
-  u({ type: Object })
+x([
+  v({ type: Object })
 ], a.prototype, "config");
 typeof a < "u" && a.registerSallaComponent("salla-visual-categories");
 export {

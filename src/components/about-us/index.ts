@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { localizedString, LocalizedString } from "../../utils/localizedString";
 
 interface ComponentConfig {
   notmrb?: boolean;
@@ -10,12 +11,12 @@ interface ComponentConfig {
   img_overlay_opacity?: number;
 
   banner_image?: string;
-  banner_title?: string;
-  banner_description?: string;
+  banner_title?: LocalizedString;
+  banner_description?: LocalizedString;
 
   url?: string;
 
-  banner_btn_text?: string;
+  banner_btn_text?: LocalizedString;
   banner_btn_text_color?: string;
   banner_btn_bg_color?: string;
 
@@ -87,16 +88,13 @@ export class AboutUs extends LitElement {
       flex-direction: column;
       gap: 1.25rem;
       text-align: center;
-          align-items: center;
-
+      align-items: center;
     }
 
     @media (min-width: 1024px) {
       .content {
         text-align: right;
-            align-items: flex-start;
-
-
+        align-items: flex-start;
       }
     }
 
@@ -132,18 +130,20 @@ export class AboutUs extends LitElement {
 
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
   `;
 
   render() {
     const c = this.config;
+    const title = localizedString(c?.banner_title);
+    const desc = localizedString(c?.banner_description);
+    const btnText = localizedString(c?.banner_btn_text);
 
     return html`
       <section class="section">
         <div class="${c?.has_container ? "container" : ""}">
           <div class="wrapper">
-
             <!-- Image -->
             <div class="imageBox">
               ${c?.img_overlay
@@ -157,13 +157,12 @@ export class AboutUs extends LitElement {
                     ></div>
                   `
                 : ""}
-
               ${c?.banner_image
                 ? html`
                     <img
                       class="image"
                       src="${c.banner_image}"
-                      alt="${c.banner_title ?? ""}"
+                      alt="${title ?? ""}"
                       loading="lazy"
                     />
                   `
@@ -172,14 +171,8 @@ export class AboutUs extends LitElement {
 
             <!-- Content -->
             <div class="content">
-              ${c?.banner_title
-                ? html`<h2 class="title">${c.banner_title}</h2>`
-                : ""}
-
-              ${c?.banner_description
-                ? html`<p class="desc">${c.banner_description}</p>`
-                : ""}
-
+              ${title ? html`<h2 class="title">${title}</h2>` : ""}
+              ${desc ? html`<p class="desc">${desc}</p>` : ""}
               ${c?.banner_btn_text
                 ? html`
                     <a
@@ -191,12 +184,11 @@ export class AboutUs extends LitElement {
                         border:1.5px solid ${c.banner_btn_text_color ?? "#fff"};
                       "
                     >
-                      ${c.banner_btn_text}
+                      ${btnText}
                     </a>
                   `
                 : ""}
             </div>
-
           </div>
         </div>
       </section>

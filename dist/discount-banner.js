@@ -1,11 +1,12 @@
-import { LitElement as p, css as m, html as i } from "lit";
-import { property as l } from "lit/decorators.js";
-var h = Object.defineProperty, b = (o, t, n, s) => {
-  for (var e = void 0, a = o.length - 1, d; a >= 0; a--)
-    (d = o[a]) && (e = d(t, n, e) || e);
-  return e && h(t, n, e), e;
+import { LitElement as u, css as g, html as i } from "lit";
+import { property as b } from "lit/decorators.js";
+import { l } from "./localizedString-8Sg-A_T6.js";
+var _ = Object.defineProperty, c = (o, t, e, a) => {
+  for (var n = void 0, r = o.length - 1, d; r >= 0; r--)
+    (d = o[r]) && (n = d(t, e, n) || n);
+  return n && _(t, e, n), n;
 };
-const c = class c extends p {
+const m = class m extends u {
   constructor() {
     super(...arguments), this.position = "0", this.isRtl = !1;
   }
@@ -49,39 +50,37 @@ const c = class c extends p {
   // RENDER HELPERS
   // ─────────────────────────────────────────────
   _getSelectValue(t) {
-    var n, s;
+    var e, a;
     if (t)
-      return Array.isArray(t) ? ((n = t[0]) == null ? void 0 : n.value) ?? ((s = t[0]) == null ? void 0 : s.key) ?? t[0] : typeof t == "object" ? (t == null ? void 0 : t.value) ?? (t == null ? void 0 : t.key) : t;
+      return Array.isArray(t) ? ((e = t[0]) == null ? void 0 : e.value) ?? ((a = t[0]) == null ? void 0 : a.key) ?? t[0] : typeof t == "object" ? (t == null ? void 0 : t.value) ?? (t == null ? void 0 : t.key) : t;
   }
   // ─────────────────────────────────────────────
   // RENDER
   // ─────────────────────────────────────────────
   render() {
     const t = this.config;
-    if (console.log("H:", t == null ? void 0 : t.content_position_h), console.log("V:", t == null ? void 0 : t.content_position_v), typeof t == "string") {
+    if (typeof t == "string") {
       try {
         this.config = JSON.parse(t);
       } catch {
       }
       return i``;
     }
-    const n = `S_discount_banner-${this.position}`, s = this._getSelectValue(
+    const e = `S_discount_banner-${this.position}`, a = this._getSelectValue(
       t == null ? void 0 : t.content_position_h
-    ), e = this._getSelectValue(
+    ), n = this._getSelectValue(
       t == null ? void 0 : t.content_position_v
-    );
-    console.log("parsed:", { hPos: s, vPos: e });
-    const a = [
+    ), r = l(t == null ? void 0 : t.banner_title), d = l(t == null ? void 0 : t.banner_subtitle), p = l(t == null ? void 0 : t.banner_btn_text), f = [
       "db-content",
-      this._horizontalClass(s),
-      this._verticalClass(e)
-    ].join(" "), d = i`
+      this._horizontalClass(a),
+      this._verticalClass(n)
+    ].join(" "), h = i`
       <div class="db-banner">
         <!-- Background Image -->
         ${t != null && t.banner_image ? i`
               <img
                 src="${t.banner_image}"
-                alt="${t.banner_title ?? "banner"}"
+                alt="${r ?? "banner"}"
                 class="db-bg"
               />
             ` : ""}
@@ -90,29 +89,29 @@ const c = class c extends p {
         <div class="db-overlay"></div>
 
         <!-- Content -->
-        <div class="${a}">
+        <div class="${f}">
           <!-- Title -->
-          ${t != null && t.banner_title ? i`
+          ${r ? i`
                 <h2
                   class="db-title"
                   style="color: ${t.banner_text_color ?? "#fff"}"
                 >
-                  ${t.banner_title}
+                  ${r}
                 </h2>
               ` : ""}
 
           <!-- Subtitle -->
-          ${t != null && t.banner_subtitle ? i`
+          ${d ? i`
                 <p
                   class="db-subtitle"
                   style="color: ${t.banner_text_color ?? "#fff"}"
                 >
-                  ${t.banner_subtitle}
+                  ${d}
                 </p>
               ` : ""}
 
           <!-- Button -->
-          ${t != null && t.banner_btn_text ? i`
+          ${p ? i`
                 <a
                   href="#"
                   class="db-btn"
@@ -121,7 +120,7 @@ const c = class c extends p {
                     color: ${t.banner_btn_text_color ?? "#fff"};
                   "
                 >
-                  <span>${t.banner_btn_text}</span>
+                  <span>${p}</span>
 
                   <span class="db-btn-icon"> ${this.isRtl ? "←" : "→"} </span>
                 </a>
@@ -132,17 +131,17 @@ const c = class c extends p {
     return i`
       <section
         class="S_discount_banner"
-        id="${n}"
-        aria-label="Section ${n}"
+        id="${e}"
+        aria-label="Section ${e}"
         dir="${this.isRtl ? "rtl" : "ltr"}"
         data-notmrb="${t != null && t.notmrb ? "true" : "false"}"
       >
-        ${t != null && t.has_container ? i` <div class="db-container">${d}</div> ` : d}
+        ${t != null && t.has_container ? i` <div class="db-container">${h}</div> ` : h}
       </section>
     `;
   }
 };
-c.styles = m`
+m.styles = g`
     *,
     *::before,
     *::after {
@@ -317,7 +316,6 @@ c.styles = m`
       transform: translateX(-4px);
     }
 
-
     /* ───────────────────────────── */
 
     @media (max-width: 767px) {
@@ -338,9 +336,9 @@ c.styles = m`
       }
     }
   `;
-let r = c;
-b([
-  l({
+let s = m;
+c([
+  b({
     type: Object,
     converter: {
       fromAttribute: (o) => {
@@ -355,14 +353,14 @@ b([
       }
     }
   })
-], r.prototype, "config");
-b([
-  l({ type: String })
-], r.prototype, "position");
-b([
-  l({ type: Boolean })
-], r.prototype, "isRtl");
-typeof r < "u" && r.registerSallaComponent("salla-discount-banner");
+], s.prototype, "config");
+c([
+  b({ type: String })
+], s.prototype, "position");
+c([
+  b({ type: Boolean })
+], s.prototype, "isRtl");
+typeof s < "u" && s.registerSallaComponent("salla-discount-banner");
 export {
-  r as DiscountBanner
+  s as DiscountBanner
 };

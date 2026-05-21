@@ -1,10 +1,11 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { localizedString, LocalizedString } from "../../utils/localizedString";
 
 interface CategoryItem {
   url?: string;
   image?: string;
-  title?: string;
+  title?: LocalizedString;
   count?: number;
 
   text_color?: string;
@@ -160,10 +161,10 @@ export class VisualCategories extends LitElement {
       <section class="section">
         <div class="${c?.has_container ? "container" : ""}">
           <div class="grid">
-
             ${items.map((item) => {
-              console.log(item);
               const position = item?.text_position?.[0]?.value ?? "end";
+
+              const title = localizedString(item?.title);
 
               const align = this._align(position);
               const textAlign = this._textAlign(position);
@@ -172,11 +173,9 @@ export class VisualCategories extends LitElement {
 
               return html`
                 <a class="card" href="${item.url ?? "#"}">
-
                   ${item.image
                     ? html`<img class="img" src="${item.image}" />`
                     : html`<div class="img"></div>`}
-
                   ${item.img_overlay
                     ? html`
                         <div
@@ -202,7 +201,7 @@ export class VisualCategories extends LitElement {
                       class="title"
                       style="color:${item.text_color ?? "#fff"}"
                     >
-                      ${item.title ?? ""}
+                      ${title ?? ""}
                     </h2>
 
                     ${item.count
@@ -216,11 +215,9 @@ export class VisualCategories extends LitElement {
                         `
                       : ""}
                   </div>
-
                 </a>
               `;
             })}
-
           </div>
         </div>
       </section>
