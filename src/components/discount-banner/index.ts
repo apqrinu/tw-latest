@@ -1,6 +1,6 @@
 import { css, html, LitElement, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
-import { localizedString, LocalizedString } from "../../utils/localizedString.js";
+import { localizedString, LocalizedString, isRtl } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
@@ -58,8 +58,15 @@ export class DiscountBanner extends LitElement {
   @property({ type: String })
   position: string = "0";
 
+  // Optional explicit override from Twilight. When unset, direction is derived
+  // from the centralized i18n source of truth (see `_isRtl`).
   @property({ type: Boolean })
-  isRtl: boolean = false;
+  isRtl?: boolean;
+
+  /** Effective text direction: explicit prop wins, else the active language. */
+  private get _isRtl(): boolean {
+    return this.isRtl ?? isRtl();
+  }
 
   // ─────────────────────────────────────────────
   // LIFECYCLE
@@ -387,7 +394,7 @@ export class DiscountBanner extends LitElement {
             ? html`
                 <h2
                   class="db-title"
-                  style="color: ${cfg.banner_text_color ?? "#fff"}"
+                  style="color: ${cfg?.banner_text_color ?? "#fff"}"
                 >
                   ${title}
                 </h2>
@@ -399,7 +406,7 @@ export class DiscountBanner extends LitElement {
             ? html`
                 <p
                   class="db-subtitle"
-                  style="color: ${cfg.banner_text_color ?? "#fff"}"
+                  style="color: ${cfg?.banner_text_color ?? "#fff"}"
                 >
                   ${subtitle}
                 </p>
@@ -413,13 +420,13 @@ export class DiscountBanner extends LitElement {
                   href="#"
                   class="db-btn"
                   style="
-                    background-color: ${cfg.banner_btn_bg_color ?? "#000"};
-                    color: ${cfg.banner_btn_text_color ?? "#fff"};
+                    background-color: ${cfg?.banner_btn_bg_color ?? "#000"};
+                    color: ${cfg?.banner_btn_text_color ?? "#fff"};
                   "
                 >
                   <span>${btnText}</span>
 
-                  <span class="db-btn-icon"> ${this.isRtl ? "←" : "→"} </span>
+                  <span class="db-btn-icon"> ${this._isRtl ? "←" : "→"} </span>
                 </a>
               `
             : ""}
@@ -432,7 +439,7 @@ export class DiscountBanner extends LitElement {
         class="S_discount_banner"
         id="${sectionId}"
         aria-label="Section ${sectionId}"
-        dir="${this.isRtl ? "rtl" : "ltr"}"
+        dir="${this._isRtl ? "rtl" : "ltr"}"
         data-notmrb="${cfg?.notmrb ? "true" : "false"}"
       >
         ${cfg?.has_container

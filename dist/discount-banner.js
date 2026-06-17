@@ -1,14 +1,18 @@
 import { LitElement as u, css as g, html as i } from "lit";
 import { property as b } from "lit/decorators.js";
-import { l } from "./localizedString-8Sg-A_T6.js";
-var _ = Object.defineProperty, c = (o, t, e, a) => {
-  for (var n = void 0, r = o.length - 1, d; r >= 0; r--)
-    (d = o[r]) && (n = d(t, e, n) || n);
-  return n && _(t, e, n), n;
+import { i as _, l } from "./i18n-CQL1wib0.js";
+var x = Object.defineProperty, c = (r, t, e, a) => {
+  for (var n = void 0, o = r.length - 1, d; o >= 0; o--)
+    (d = r[o]) && (n = d(t, e, n) || n);
+  return n && x(t, e, n), n;
 };
 const m = class m extends u {
   constructor() {
-    super(...arguments), this.position = "0", this.isRtl = !1;
+    super(...arguments), this.position = "0";
+  }
+  /** Effective text direction: explicit prop wins, else the active language. */
+  get _isRtl() {
+    return this.isRtl ?? _();
   }
   // ─────────────────────────────────────────────
   // LIFECYCLE
@@ -70,7 +74,7 @@ const m = class m extends u {
       t == null ? void 0 : t.content_position_h
     ), n = this._getSelectValue(
       t == null ? void 0 : t.content_position_v
-    ), r = l(t == null ? void 0 : t.banner_title), d = l(t == null ? void 0 : t.banner_subtitle), p = l(t == null ? void 0 : t.banner_btn_text), f = [
+    ), o = l(t == null ? void 0 : t.banner_title), d = l(t == null ? void 0 : t.banner_subtitle), p = l(t == null ? void 0 : t.banner_btn_text), f = [
       "db-content",
       this._horizontalClass(a),
       this._verticalClass(n)
@@ -80,7 +84,7 @@ const m = class m extends u {
         ${t != null && t.banner_image ? i`
               <img
                 src="${t.banner_image}"
-                alt="${r ?? "banner"}"
+                alt="${o ?? "banner"}"
                 class="db-bg"
               />
             ` : ""}
@@ -91,12 +95,12 @@ const m = class m extends u {
         <!-- Content -->
         <div class="${f}">
           <!-- Title -->
-          ${r ? i`
+          ${o ? i`
                 <h2
                   class="db-title"
-                  style="color: ${t.banner_text_color ?? "#fff"}"
+                  style="color: ${(t == null ? void 0 : t.banner_text_color) ?? "#fff"}"
                 >
-                  ${r}
+                  ${o}
                 </h2>
               ` : ""}
 
@@ -104,7 +108,7 @@ const m = class m extends u {
           ${d ? i`
                 <p
                   class="db-subtitle"
-                  style="color: ${t.banner_text_color ?? "#fff"}"
+                  style="color: ${(t == null ? void 0 : t.banner_text_color) ?? "#fff"}"
                 >
                   ${d}
                 </p>
@@ -116,13 +120,13 @@ const m = class m extends u {
                   href="#"
                   class="db-btn"
                   style="
-                    background-color: ${t.banner_btn_bg_color ?? "#000"};
-                    color: ${t.banner_btn_text_color ?? "#fff"};
+                    background-color: ${(t == null ? void 0 : t.banner_btn_bg_color) ?? "#000"};
+                    color: ${(t == null ? void 0 : t.banner_btn_text_color) ?? "#fff"};
                   "
                 >
                   <span>${p}</span>
 
-                  <span class="db-btn-icon"> ${this.isRtl ? "←" : "→"} </span>
+                  <span class="db-btn-icon"> ${this._isRtl ? "←" : "→"} </span>
                 </a>
               ` : ""}
         </div>
@@ -133,7 +137,7 @@ const m = class m extends u {
         class="S_discount_banner"
         id="${e}"
         aria-label="Section ${e}"
-        dir="${this.isRtl ? "rtl" : "ltr"}"
+        dir="${this._isRtl ? "rtl" : "ltr"}"
         data-notmrb="${t != null && t.notmrb ? "true" : "false"}"
       >
         ${t != null && t.has_container ? i` <div class="db-container">${h}</div> ` : h}
@@ -341,11 +345,11 @@ c([
   b({
     type: Object,
     converter: {
-      fromAttribute: (o) => {
-        if (o) {
-          if (typeof o == "object") return o;
+      fromAttribute: (r) => {
+        if (r) {
+          if (typeof r == "object") return r;
           try {
-            return JSON.parse(o);
+            return JSON.parse(r);
           } catch {
             return;
           }

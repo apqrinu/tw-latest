@@ -1,6 +1,6 @@
 import { LitElement as f, css as v, html as r } from "lit";
 import { property as g } from "lit/decorators.js";
-import { l as d } from "./localizedString-8Sg-A_T6.js";
+import { l as d } from "./i18n-CQL1wib0.js";
 var y = Object.defineProperty, m = (o, e, n, l) => {
   for (var t = void 0, i = o.length - 1, a; i >= 0; i--)
     (a = o[i]) && (t = a(e, n, t) || t);

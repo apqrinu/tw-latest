@@ -1,6 +1,6 @@
 import { css, html, LitElement, TemplateResult } from "lit";
 import { property } from "lit/decorators.js";
-import { localizedString, LocalizedString } from "../../utils/localizedString";
+import { localizedString, LocalizedString } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
