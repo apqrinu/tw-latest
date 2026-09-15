@@ -1,21 +1,63 @@
-import { LitElement as c, css as p, html as n } from "lit";
-import { property as f } from "lit/decorators.js";
-import { l as s } from "./i18n-CQL1wib0.js";
-var g = Object.defineProperty, x = (d, e, i, o) => {
-  for (var t = void 0, a = d.length - 1, m; a >= 0; a--)
-    (m = d[a]) && (t = m(e, i, t) || t);
-  return t && g(e, i, t), t;
+import { LitElement as w, css as $, html as f } from "lit";
+import { property as z } from "lit/decorators.js";
+const p = "ar";
+function g(n) {
+  return !n || typeof n != "string" ? void 0 : n.trim().toLowerCase().split(/[-_]/)[0] || void 0;
+}
+function k() {
+  var n, e, i, r, o, a, s, b, d, x, h, y, _;
+  try {
+    const t = globalThis.Salla ?? globalThis.salla, v = g(
+      ((e = (n = t == null ? void 0 : t.lang) == null ? void 0 : n.getLocale) == null ? void 0 : e.call(n)) || ((r = (i = t == null ? void 0 : t.config) == null ? void 0 : i.get) == null ? void 0 : r.call(i, "user.language_code")) || ((a = (o = t == null ? void 0 : t.config) == null ? void 0 : o.get) == null ? void 0 : a.call(o, "user.language.code")) || ((b = (s = t == null ? void 0 : t.config) == null ? void 0 : s.get) == null ? void 0 : b.call(s, "user.language")) || ((x = (d = t == null ? void 0 : t.config) == null ? void 0 : d.get) == null ? void 0 : x.call(d, "store.language")) || ((h = t == null ? void 0 : t.lang) == null ? void 0 : h.locale) || ((y = t == null ? void 0 : t.config) == null ? void 0 : y.language)
+    );
+    if (v) return v;
+  } catch {
+  }
+  if (typeof document < "u") {
+    const t = g((_ = document.documentElement) == null ? void 0 : _.lang);
+    if (t) return t;
+  }
+  if (typeof navigator < "u") {
+    const t = g(navigator.language);
+    if (t) return t;
+  }
+  return p;
+}
+function l(n, e) {
+  const i = n[e];
+  return typeof i == "string" && i !== "" ? i : void 0;
+}
+function m(n, e) {
+  if (n == null) return;
+  if (typeof n == "string") return n !== "" ? n : void 0;
+  if (typeof n == "number" || typeof n == "boolean") return String(n);
+  if (typeof n != "object") return;
+  const i = g(e) ?? k(), r = l(n, i);
+  if (r !== void 0) return r;
+  if (i !== p) {
+    const o = l(n, p);
+    if (o !== void 0) return o;
+  }
+  for (const o of Object.keys(n)) {
+    const a = l(n, o);
+    if (a !== void 0) return a;
+  }
+}
+var L = Object.defineProperty, j = (n, e, i, r) => {
+  for (var o = void 0, a = n.length - 1, s; a >= 0; a--)
+    (s = n[a]) && (o = s(e, i, o) || o);
+  return o && L(e, i, o), o;
 };
-const l = class l extends c {
+const u = class u extends w {
   render() {
-    const e = this.config, i = s(e == null ? void 0 : e.banner_title), o = s(e == null ? void 0 : e.banner_description), t = s(e == null ? void 0 : e.banner_btn_text);
-    return n`
+    const e = this.config, i = m(e == null ? void 0 : e.banner_title), r = m(e == null ? void 0 : e.banner_description), o = m(e == null ? void 0 : e.banner_btn_text);
+    return f`
       <section class="section">
         <div class="${e != null && e.has_container ? "container" : ""}">
           <div class="wrapper">
             <!-- Image -->
             <div class="imageBox">
-              ${e != null && e.img_overlay ? n`
+              ${e != null && e.img_overlay ? f`
                     <div
                       class="overlay"
                       style="
@@ -24,7 +66,7 @@ const l = class l extends c {
                       "
                     ></div>
                   ` : ""}
-              ${e != null && e.banner_image ? n`
+              ${e != null && e.banner_image ? f`
                     <img
                       class="image"
                       src="${e.banner_image}"
@@ -36,9 +78,9 @@ const l = class l extends c {
 
             <!-- Content -->
             <div class="content">
-              ${i ? n`<h2 class="title">${i}</h2>` : ""}
-              ${o ? n`<p class="desc">${o}</p>` : ""}
-              ${e != null && e.banner_btn_text ? n`
+              ${i ? f`<h2 class="title">${i}</h2>` : ""}
+              ${r ? f`<p class="desc">${r}</p>` : ""}
+              ${e != null && e.banner_btn_text ? f`
                     <a
                       class="btn"
                       href="${(e == null ? void 0 : e.url) ?? "#"}"
@@ -48,7 +90,7 @@ const l = class l extends c {
                         border:1.5px solid ${e.banner_btn_text_color ?? "#fff"};
                       "
                     >
-                      ${t}
+                      ${o}
                     </a>
                   ` : ""}
             </div>
@@ -58,7 +100,7 @@ const l = class l extends c {
     `;
   }
 };
-l.styles = p`
+u.styles = $`
     :host {
       display: block;
     }
@@ -164,11 +206,11 @@ l.styles = p`
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
   `;
-let r = l;
-x([
-  f({ type: Object })
-], r.prototype, "config");
-typeof r < "u" && r.registerSallaComponent("salla-about-us");
+let c = u;
+j([
+  z({ type: Object })
+], c.prototype, "config");
+typeof c < "u" && c.registerSallaComponent("salla-about-us");
 export {
-  r as AboutUs
+  c as AboutUs
 };

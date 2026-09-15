@@ -1,18 +1,63 @@
-import { LitElement as u, css as g, html as i } from "lit";
-import { property as b } from "lit/decorators.js";
-import { i as _, l } from "./i18n-CQL1wib0.js";
-var x = Object.defineProperty, c = (r, t, e, a) => {
-  for (var n = void 0, o = r.length - 1, d; o >= 0; o--)
-    (d = r[o]) && (n = d(t, e, n) || n);
-  return n && x(t, e, n), n;
+import { LitElement as z, css as C, html as d } from "lit";
+import { property as h } from "lit/decorators.js";
+const g = "ar", j = /* @__PURE__ */ new Set(["ar", "he", "fa", "ur"]);
+function u(e) {
+  return !e || typeof e != "string" ? void 0 : e.trim().toLowerCase().split(/[-_]/)[0] || void 0;
+}
+function w() {
+  var e, t, i, s, o, r, a, l, b, f, x, $, S;
+  try {
+    const n = globalThis.Salla ?? globalThis.salla, v = u(
+      ((t = (e = n == null ? void 0 : n.lang) == null ? void 0 : e.getLocale) == null ? void 0 : t.call(e)) || ((s = (i = n == null ? void 0 : n.config) == null ? void 0 : i.get) == null ? void 0 : s.call(i, "user.language_code")) || ((r = (o = n == null ? void 0 : n.config) == null ? void 0 : o.get) == null ? void 0 : r.call(o, "user.language.code")) || ((l = (a = n == null ? void 0 : n.config) == null ? void 0 : a.get) == null ? void 0 : l.call(a, "user.language")) || ((f = (b = n == null ? void 0 : n.config) == null ? void 0 : b.get) == null ? void 0 : f.call(b, "store.language")) || ((x = n == null ? void 0 : n.lang) == null ? void 0 : x.locale) || (($ = n == null ? void 0 : n.config) == null ? void 0 : $.language)
+    );
+    if (v) return v;
+  } catch {
+  }
+  if (typeof document < "u") {
+    const n = u((S = document.documentElement) == null ? void 0 : S.lang);
+    if (n) return n;
+  }
+  if (typeof navigator < "u") {
+    const n = u(navigator.language);
+    if (n) return n;
+  }
+  return g;
+}
+function k(e) {
+  return j.has(u(e) ?? w());
+}
+function m(e, t) {
+  const i = e[t];
+  return typeof i == "string" && i !== "" ? i : void 0;
+}
+function p(e, t) {
+  if (e == null) return;
+  if (typeof e == "string") return e !== "" ? e : void 0;
+  if (typeof e == "number" || typeof e == "boolean") return String(e);
+  if (typeof e != "object") return;
+  const i = u(t) ?? w(), s = m(e, i);
+  if (s !== void 0) return s;
+  if (i !== g) {
+    const o = m(e, g);
+    if (o !== void 0) return o;
+  }
+  for (const o of Object.keys(e)) {
+    const r = m(e, o);
+    if (r !== void 0) return r;
+  }
+}
+var L = Object.defineProperty, y = (e, t, i, s) => {
+  for (var o = void 0, r = e.length - 1, a; r >= 0; r--)
+    (a = e[r]) && (o = a(t, i, o) || o);
+  return o && L(t, i, o), o;
 };
-const m = class m extends u {
+const _ = class _ extends z {
   constructor() {
     super(...arguments), this.position = "0";
   }
   /** Effective text direction: explicit prop wins, else the active language. */
   get _isRtl() {
-    return this.isRtl ?? _();
+    return this.isRtl ?? k();
   }
   // ─────────────────────────────────────────────
   // LIFECYCLE
@@ -54,9 +99,9 @@ const m = class m extends u {
   // RENDER HELPERS
   // ─────────────────────────────────────────────
   _getSelectValue(t) {
-    var e, a;
+    var i, s;
     if (t)
-      return Array.isArray(t) ? ((e = t[0]) == null ? void 0 : e.value) ?? ((a = t[0]) == null ? void 0 : a.key) ?? t[0] : typeof t == "object" ? (t == null ? void 0 : t.value) ?? (t == null ? void 0 : t.key) : t;
+      return Array.isArray(t) ? ((i = t[0]) == null ? void 0 : i.value) ?? ((s = t[0]) == null ? void 0 : s.key) ?? t[0] : typeof t == "object" ? (t == null ? void 0 : t.value) ?? (t == null ? void 0 : t.key) : t;
   }
   // ─────────────────────────────────────────────
   // RENDER
@@ -68,23 +113,23 @@ const m = class m extends u {
         this.config = JSON.parse(t);
       } catch {
       }
-      return i``;
+      return d``;
     }
-    const e = `S_discount_banner-${this.position}`, a = this._getSelectValue(
+    const i = `S_discount_banner-${this.position}`, s = this._getSelectValue(
       t == null ? void 0 : t.content_position_h
-    ), n = this._getSelectValue(
+    ), o = this._getSelectValue(
       t == null ? void 0 : t.content_position_v
-    ), o = l(t == null ? void 0 : t.banner_title), d = l(t == null ? void 0 : t.banner_subtitle), p = l(t == null ? void 0 : t.banner_btn_text), f = [
+    ), r = p(t == null ? void 0 : t.banner_title), a = p(t == null ? void 0 : t.banner_subtitle), l = p(t == null ? void 0 : t.banner_btn_text), b = [
       "db-content",
-      this._horizontalClass(a),
-      this._verticalClass(n)
-    ].join(" "), h = i`
+      this._horizontalClass(s),
+      this._verticalClass(o)
+    ].join(" "), f = d`
       <div class="db-banner">
         <!-- Background Image -->
-        ${t != null && t.banner_image ? i`
+        ${t != null && t.banner_image ? d`
               <img
                 src="${t.banner_image}"
-                alt="${o ?? "banner"}"
+                alt="${r ?? "banner"}"
                 class="db-bg"
               />
             ` : ""}
@@ -93,29 +138,29 @@ const m = class m extends u {
         <div class="db-overlay"></div>
 
         <!-- Content -->
-        <div class="${f}">
+        <div class="${b}">
           <!-- Title -->
-          ${o ? i`
+          ${r ? d`
                 <h2
                   class="db-title"
                   style="color: ${(t == null ? void 0 : t.banner_text_color) ?? "#fff"}"
                 >
-                  ${o}
+                  ${r}
                 </h2>
               ` : ""}
 
           <!-- Subtitle -->
-          ${d ? i`
+          ${a ? d`
                 <p
                   class="db-subtitle"
                   style="color: ${(t == null ? void 0 : t.banner_text_color) ?? "#fff"}"
                 >
-                  ${d}
+                  ${a}
                 </p>
               ` : ""}
 
           <!-- Button -->
-          ${p ? i`
+          ${l ? d`
                 <a
                   href="#"
                   class="db-btn"
@@ -124,7 +169,7 @@ const m = class m extends u {
                     color: ${(t == null ? void 0 : t.banner_btn_text_color) ?? "#fff"};
                   "
                 >
-                  <span>${p}</span>
+                  <span>${l}</span>
 
                   <span class="db-btn-icon"> ${this._isRtl ? "←" : "→"} </span>
                 </a>
@@ -132,20 +177,20 @@ const m = class m extends u {
         </div>
       </div>
     `;
-    return i`
+    return d`
       <section
         class="S_discount_banner"
-        id="${e}"
-        aria-label="Section ${e}"
+        id="${i}"
+        aria-label="Section ${i}"
         dir="${this._isRtl ? "rtl" : "ltr"}"
         data-notmrb="${t != null && t.notmrb ? "true" : "false"}"
       >
-        ${t != null && t.has_container ? i` <div class="db-container">${h}</div> ` : h}
+        ${t != null && t.has_container ? d` <div class="db-container">${f}</div> ` : f}
       </section>
     `;
   }
 };
-m.styles = g`
+_.styles = C`
     *,
     *::before,
     *::after {
@@ -340,16 +385,16 @@ m.styles = g`
       }
     }
   `;
-let s = m;
-c([
-  b({
+let c = _;
+y([
+  h({
     type: Object,
     converter: {
-      fromAttribute: (r) => {
-        if (r) {
-          if (typeof r == "object") return r;
+      fromAttribute: (e) => {
+        if (e) {
+          if (typeof e == "object") return e;
           try {
-            return JSON.parse(r);
+            return JSON.parse(e);
           } catch {
             return;
           }
@@ -357,14 +402,14 @@ c([
       }
     }
   })
-], s.prototype, "config");
-c([
-  b({ type: String })
-], s.prototype, "position");
-c([
-  b({ type: Boolean })
-], s.prototype, "isRtl");
-typeof s < "u" && s.registerSallaComponent("salla-discount-banner");
+], c.prototype, "config");
+y([
+  h({ type: String })
+], c.prototype, "position");
+y([
+  h({ type: Boolean })
+], c.prototype, "isRtl");
+typeof c < "u" && c.registerSallaComponent("salla-discount-banner");
 export {
-  s as DiscountBanner
+  c as DiscountBanner
 };

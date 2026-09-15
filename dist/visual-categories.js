@@ -1,12 +1,54 @@
-import { LitElement as m, css as u, html as i } from "lit";
-import { property as v } from "lit/decorators.js";
-import { l as h } from "./i18n-CQL1wib0.js";
-var y = Object.defineProperty, x = (c, r, s, t) => {
-  for (var e = void 0, n = c.length - 1, o; n >= 0; n--)
-    (o = c[n]) && (e = o(r, s, e) || e);
-  return e && y(r, s, e), e;
+import { LitElement as _, css as $, html as f } from "lit";
+import { property as w } from "lit/decorators.js";
+const y = "ar";
+function p(e) {
+  return !e || typeof e != "string" ? void 0 : e.trim().toLowerCase().split(/[-_]/)[0] || void 0;
+}
+function k() {
+  var e, r, i, n, o, s, a, u, c, d, l, h, x;
+  try {
+    const t = globalThis.Salla ?? globalThis.salla, b = p(
+      ((r = (e = t == null ? void 0 : t.lang) == null ? void 0 : e.getLocale) == null ? void 0 : r.call(e)) || ((n = (i = t == null ? void 0 : t.config) == null ? void 0 : i.get) == null ? void 0 : n.call(i, "user.language_code")) || ((s = (o = t == null ? void 0 : t.config) == null ? void 0 : o.get) == null ? void 0 : s.call(o, "user.language.code")) || ((u = (a = t == null ? void 0 : t.config) == null ? void 0 : a.get) == null ? void 0 : u.call(a, "user.language")) || ((d = (c = t == null ? void 0 : t.config) == null ? void 0 : c.get) == null ? void 0 : d.call(c, "store.language")) || ((l = t == null ? void 0 : t.lang) == null ? void 0 : l.locale) || ((h = t == null ? void 0 : t.config) == null ? void 0 : h.language)
+    );
+    if (b) return b;
+  } catch {
+  }
+  if (typeof document < "u") {
+    const t = p((x = document.documentElement) == null ? void 0 : x.lang);
+    if (t) return t;
+  }
+  if (typeof navigator < "u") {
+    const t = p(navigator.language);
+    if (t) return t;
+  }
+  return y;
+}
+function m(e, r) {
+  const i = e[r];
+  return typeof i == "string" && i !== "" ? i : void 0;
+}
+function L(e, r) {
+  if (e == null) return;
+  if (typeof e == "string") return e !== "" ? e : void 0;
+  if (typeof e == "number" || typeof e == "boolean") return String(e);
+  if (typeof e != "object") return;
+  const i = p(r) ?? k(), n = m(e, i);
+  if (n !== void 0) return n;
+  if (i !== y) {
+    const o = m(e, y);
+    if (o !== void 0) return o;
+  }
+  for (const o of Object.keys(e)) {
+    const s = m(e, o);
+    if (s !== void 0) return s;
+  }
+}
+var j = Object.defineProperty, A = (e, r, i, n) => {
+  for (var o = void 0, s = e.length - 1, a; s >= 0; s--)
+    (a = e[s]) && (o = a(r, i, o) || o);
+  return o && j(r, i, o), o;
 };
-const l = class l extends m {
+const v = class v extends _ {
   _align(r) {
     switch (r) {
       case "start":
@@ -28,23 +70,23 @@ const l = class l extends m {
     }
   }
   render() {
-    const r = this.config, s = (r == null ? void 0 : r.items) ?? [];
-    return i`
+    const r = this.config, i = (r == null ? void 0 : r.items) ?? [];
+    return f`
       <section class="section">
         <div class="${r != null && r.has_container ? "container" : ""}">
           <div class="grid">
-            ${s.map((t) => {
-      var d, p;
-      const e = ((p = (d = t == null ? void 0 : t.text_position) == null ? void 0 : d[0]) == null ? void 0 : p.value) ?? "end", n = h(t == null ? void 0 : t.title), o = this._align(e), f = this._textAlign(e), g = ((t == null ? void 0 : t.img_overlay_opacity) ?? 50) / 100;
-      return i`
-                <a class="card" href="${t.url ?? "#"}">
-                  ${t.image ? i`<img class="img" src="${t.image}" />` : i`<div class="img"></div>`}
-                  ${t.img_overlay ? i`
+            ${i.map((n) => {
+      var d, l;
+      const o = ((l = (d = n == null ? void 0 : n.text_position) == null ? void 0 : d[0]) == null ? void 0 : l.value) ?? "end", s = L(n == null ? void 0 : n.title), a = this._align(o), u = this._textAlign(o), c = ((n == null ? void 0 : n.img_overlay_opacity) ?? 50) / 100;
+      return f`
+                <a class="card" href="${n.url ?? "#"}">
+                  ${n.image ? f`<img class="img" src="${n.image}" />` : f`<div class="img"></div>`}
+                  ${n.img_overlay ? f`
                         <div
                           class="overlay"
                           style="
-                            background:${t.img_overlay_color ?? "#000"};
-                            opacity:${g};
+                            background:${n.img_overlay_color ?? "#000"};
+                            opacity:${c};
                           "
                         ></div>
                       ` : ""}
@@ -54,23 +96,23 @@ const l = class l extends m {
                     style="
                       display:flex;
                       flex-direction:column;
-                      align-items:${o};
-                      text-align:${f};
+                      align-items:${a};
+                      text-align:${u};
                     "
                   >
                     <h2
                       class="title"
-                      style="color:${t.text_color ?? "#fff"}"
+                      style="color:${n.text_color ?? "#fff"}"
                     >
-                      ${n ?? ""}
+                      ${s ?? ""}
                     </h2>
 
-                    ${t.count ? i`
+                    ${n.count ? f`
                           <span
                             class="count"
-                            style="color:${t.text_color ?? "#fff"}"
+                            style="color:${n.text_color ?? "#fff"}"
                           >
-                            ${t.count}
+                            ${n.count}
                           </span>
                         ` : ""}
                   </div>
@@ -83,7 +125,7 @@ const l = class l extends m {
     `;
   }
 };
-l.styles = u`
+v.styles = $`
     :host {
       display: block;
     }
@@ -181,11 +223,11 @@ l.styles = u`
       transform: translateY(0);
     }
   `;
-let a = l;
-x([
-  v({ type: Object })
-], a.prototype, "config");
-typeof a < "u" && a.registerSallaComponent("salla-visual-categories");
+let g = v;
+A([
+  w({ type: Object })
+], g.prototype, "config");
+typeof g < "u" && g.registerSallaComponent("salla-visual-categories");
 export {
-  a as VisualCategories
+  g as VisualCategories
 };

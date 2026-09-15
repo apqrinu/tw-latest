@@ -13,6 +13,8 @@
  */
 export type LocalizedString =
   | string
+  | number
+  | boolean
   | Record<string, string>
   | null
   | undefined;
@@ -42,11 +44,19 @@ export function normalizeLang(raw?: string | null): string | undefined {
  */
 export function getCurrentLang(): string {
   // 1. Salla global — only present in the live Twilight runtime.
+  //    The storefront exposes both `Salla` and lowercase `window.salla`, and
+  //    the locale surfaces under several keys depending on runtime version, so
+  //    probe the full chain (`||`, not `??`, so empty strings keep falling
+  //    through) rather than trusting a single accessor.
   try {
-    const salla = (globalThis as any).salla;
+    const salla = (globalThis as any).Salla ?? (globalThis as any).salla;
     const fromSalla = normalizeLang(
-      salla?.config?.get?.("user.language") ??
-        salla?.lang?.locale ??
+      salla?.lang?.getLocale?.() ||
+        salla?.config?.get?.("user.language_code") ||
+        salla?.config?.get?.("user.language.code") ||
+        salla?.config?.get?.("user.language") ||
+        salla?.config?.get?.("store.language") ||
+        salla?.lang?.locale ||
         salla?.config?.language,
     );
     if (fromSalla) return fromSalla;
@@ -96,6 +106,9 @@ export function localizedString(
 ): string | undefined {
   if (val == null) return undefined;
   if (typeof val === "string") return val !== "" ? val : undefined;
+  // Salla may deliver a settings value as a number/boolean (e.g. a count or a
+  // toggle rendered as text); stringify instead of silently dropping it.
+  if (typeof val === "number" || typeof val === "boolean") return String(val);
   if (typeof val !== "object") return undefined;
 
   const preferred = normalizeLang(lang) ?? getCurrentLang();

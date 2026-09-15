@@ -1,12 +1,54 @@
-import { LitElement as f, css as v, html as r } from "lit";
-import { property as g } from "lit/decorators.js";
-import { l as d } from "./i18n-CQL1wib0.js";
-var y = Object.defineProperty, m = (o, e, n, l) => {
-  for (var t = void 0, i = o.length - 1, a; i >= 0; i--)
-    (a = o[i]) && (t = a(e, n, t) || t);
-  return t && y(e, n, t), t;
+import { LitElement as $, css as k, html as d } from "lit";
+import { property as C } from "lit/decorators.js";
+const m = "ar";
+function f(n) {
+  return !n || typeof n != "string" ? void 0 : n.trim().toLowerCase().split(/[-_]/)[0] || void 0;
+}
+function O() {
+  var n, e, t, s, o, i, a, b, c, p, g, y, v;
+  try {
+    const r = globalThis.Salla ?? globalThis.salla, x = f(
+      ((e = (n = r == null ? void 0 : r.lang) == null ? void 0 : n.getLocale) == null ? void 0 : e.call(n)) || ((s = (t = r == null ? void 0 : r.config) == null ? void 0 : t.get) == null ? void 0 : s.call(t, "user.language_code")) || ((i = (o = r == null ? void 0 : r.config) == null ? void 0 : o.get) == null ? void 0 : i.call(o, "user.language.code")) || ((b = (a = r == null ? void 0 : r.config) == null ? void 0 : a.get) == null ? void 0 : b.call(a, "user.language")) || ((p = (c = r == null ? void 0 : r.config) == null ? void 0 : c.get) == null ? void 0 : p.call(c, "store.language")) || ((g = r == null ? void 0 : r.lang) == null ? void 0 : g.locale) || ((y = r == null ? void 0 : r.config) == null ? void 0 : y.language)
+    );
+    if (x) return x;
+  } catch {
+  }
+  if (typeof document < "u") {
+    const r = f((v = document.documentElement) == null ? void 0 : v.lang);
+    if (r) return r;
+  }
+  if (typeof navigator < "u") {
+    const r = f(navigator.language);
+    if (r) return r;
+  }
+  return m;
+}
+function u(n, e) {
+  const t = n[e];
+  return typeof t == "string" && t !== "" ? t : void 0;
+}
+function h(n, e) {
+  if (n == null) return;
+  if (typeof n == "string") return n !== "" ? n : void 0;
+  if (typeof n == "number" || typeof n == "boolean") return String(n);
+  if (typeof n != "object") return;
+  const t = f(e) ?? O(), s = u(n, t);
+  if (s !== void 0) return s;
+  if (t !== m) {
+    const o = u(n, m);
+    if (o !== void 0) return o;
+  }
+  for (const o of Object.keys(n)) {
+    const i = u(n, o);
+    if (i !== void 0) return i;
+  }
+}
+var B = Object.defineProperty, w = (n, e, t, s) => {
+  for (var o = void 0, i = n.length - 1, a; i >= 0; i--)
+    (a = n[i]) && (o = a(e, t, o) || o);
+  return o && B(e, t, o), o;
 };
-const c = class c extends f {
+const _ = class _ extends $ {
   constructor() {
     super(...arguments), this.position = "0";
   }
@@ -31,8 +73,8 @@ const c = class c extends f {
   // BUTTON
   // ─────────────────────────────────────────────
   _renderButton(e) {
-    const n = d(e.banner_btn_txt);
-    return n ? r`
+    const t = h(e.banner_btn_txt);
+    return t ? d`
       <a
         href="${this._resolveLink(e.banner_item_link)}"
         class="banner-btn"
@@ -41,7 +83,7 @@ const c = class c extends f {
           color: ${e.banner_btn_txt_color};
         "
       >
-        ${n}
+        ${t}
       </a>
     ` : "";
   }
@@ -49,8 +91,8 @@ const c = class c extends f {
   // PROMOTION
   // ─────────────────────────────────────────────
   _renderPromotion(e) {
-    const n = d(e.banner_promotion_txt);
-    return n ? r`
+    const t = h(e.banner_promotion_txt);
+    return t ? d`
       <div class="promotion-wrap">
         <svg
           class="promotion-svg"
@@ -78,7 +120,7 @@ const c = class c extends f {
                 color: ${e.banner_promotion_color};
               "
             >
-              ${n}
+              ${t}
             </span>
           </div>
         </div>
@@ -88,14 +130,14 @@ const c = class c extends f {
   // ─────────────────────────────────────────────
   // CARD
   // ─────────────────────────────────────────────
-  _renderCard(e, n, l) {
-    var b, h;
-    const t = d(e.banner_main_title), i = (b = e.B_banner_align_h) == null ? void 0 : b[0].value, a = (h = e.B_banner_align_v) == null ? void 0 : h[0].value, _ = e.banner_image_switcher === !0, p = Number(this.position) < 3 && l === 0;
-    return r`
+  _renderCard(e, t, s) {
+    var p, g;
+    const o = h(e.banner_main_title), i = (p = e.B_banner_align_h) == null ? void 0 : p[0].value, a = (g = e.B_banner_align_v) == null ? void 0 : g[0].value, b = e.banner_image_switcher === !0, c = Number(this.position) < 3 && s === 0;
+    return d`
       <div
         class="
           banner-card
-          ${n.B_banner_overlay_sw ? "rounded" : ""}
+          ${t.B_banner_overlay_sw ? "rounded" : ""}
         "
         style="
           --banner-align-h: ${i};
@@ -103,7 +145,7 @@ const c = class c extends f {
         "
       >
         <!-- Media -->
-        ${_ && e.banner_video ? r`
+        ${b && e.banner_video ? d`
               <div class="shine" style="grid-area: 1/1;">
                 <video
                   src="${e.banner_video}"
@@ -114,7 +156,7 @@ const c = class c extends f {
                   class="banner-video"
                 ></video>
               </div>
-            ` : e.banner_image ? r`
+            ` : e.banner_image ? d`
                 <a
                   href="${this._resolveLink(e.banner_item_link)}"
                   class="shine"
@@ -124,27 +166,27 @@ const c = class c extends f {
                   <img
                     class="banner-image"
                     src="${e.banner_image}"
-                    alt="${t ?? ""}"
-                    loading="${p ? "eager" : "lazy"}"
-                    fetchpriority="${p ? "high" : "auto"}"
+                    alt="${o ?? ""}"
+                    loading="${c ? "eager" : "lazy"}"
+                    fetchpriority="${c ? "high" : "auto"}"
                     decoding="async"
                   />
                 </a>
               ` : ""}
 
         <!-- Overlay -->
-        ${n.B_banner_overlay_sw ? r`
+        ${t.B_banner_overlay_sw ? d`
               <div
                 class="
                   banner-overlay
-                  ${n.B_banner_overlay_sw ? "rounded" : ""}
+                  ${t.B_banner_overlay_sw ? "rounded" : ""}
                 "
                 style="
                   background-color:
-                  ${n.B_banner_overlay_color};
+                  ${t.B_banner_overlay_color};
 
                   opacity:
-                  ${(n.B_banner_color_opacity ?? 0) / 100};
+                  ${(t.B_banner_color_opacity ?? 0) / 100};
                 "
               ></div>
             ` : ""}
@@ -157,7 +199,7 @@ const c = class c extends f {
             justify-content: ${a};
           "
         >
-          ${t ? r`
+          ${o ? d`
                 <h2
                   class="banner-title "
                   style="
@@ -166,7 +208,7 @@ const c = class c extends f {
                     ${e.banner_main_title_color};
                   "
                 >
-                  ${t}
+                  ${o}
                 </h2>
               ` : ""}
           ${this._renderButton(e)}
@@ -184,28 +226,28 @@ const c = class c extends f {
         this.config = JSON.parse(e);
       } catch {
       }
-      return r``;
+      return d``;
     }
-    const n = (e == null ? void 0 : e.B_banner_sec_collection) ?? [], l = `B_shop_by_category-${this.position}`, t = n.length ? r`
+    const t = (e == null ? void 0 : e.B_banner_sec_collection) ?? [], s = `B_shop_by_category-${this.position}`, o = t.length ? d`
           <div class="sbc-grid">
-            ${n.map(
+            ${t.map(
       (i, a) => this._renderCard(i, e ?? {}, a)
     )}
           </div>
         ` : "";
-    return r`
+    return d`
       <section
         class="B_shop_by_category"
-        id="${l}"
-        aria-label="Section ${l}"
+        id="${s}"
+        aria-label="Section ${s}"
         data-notmrb="${e != null && e.notmrb ? "true" : "false"}"
       >
-        ${e != null && e.has_container ? r` <div class="sbc-container">${t}</div> ` : t}
+        ${e != null && e.has_container ? d` <div class="sbc-container">${o}</div> ` : o}
       </section>
     `;
   }
 };
-c.styles = v`
+_.styles = k`
     *,
     *::before,
     *::after {
@@ -484,16 +526,16 @@ c.styles = v`
       line-height: 1.2;
     }
   `;
-let s = c;
-m([
-  g({
+let l = _;
+w([
+  C({
     type: Object,
     converter: {
-      fromAttribute: (o) => {
-        if (o) {
-          if (typeof o == "object") return o;
+      fromAttribute: (n) => {
+        if (n) {
+          if (typeof n == "object") return n;
           try {
-            return JSON.parse(o);
+            return JSON.parse(n);
           } catch {
             return;
           }
@@ -501,11 +543,11 @@ m([
       }
     }
   })
-], s.prototype, "config");
-m([
-  g({ type: String })
-], s.prototype, "position");
-typeof s < "u" && s.registerSallaComponent("salla-shop-by-category");
+], l.prototype, "config");
+w([
+  C({ type: String })
+], l.prototype, "position");
+typeof l < "u" && l.registerSallaComponent("salla-shop-by-category");
 export {
-  s as ShopByCategory
+  l as ShopByCategory
 };
