@@ -1203,5 +1203,8 @@
                 }
             ]
         }
+    ],
+    "features": [
+        "landing-page-templates"
     ]
 }
